@@ -1,0 +1,673 @@
+
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>KISSY RichBase 使用 - 阿里妈妈MUX</title>
+  <link href="../assets/application-65463c58d38dc99711b75f6b6bfb7216.css" media="all" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+  <link href="/kissy/editor/theme/cool/editor-pkg-sprite-min.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if gte IE 8]><!-->
+  <link href="../kissy/editor/theme/cool/editor-pkg-min-datauri.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" name="csrf-token" />
+  <link href="../feeds/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="../assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" type="image/x-icon" />
+  <meta name="application-name" content="UX 体验工作平台"/>
+  <meta name="msapplication-tooltip" content="UX 体验工作平台" />
+  <meta name="msapplication-task" content="name=文章;action-uri=http://mux.alimama.com/posts;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=工作;action-uri=http://mux.alimama.com/works;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=招聘;action-uri=http://mux.alimama.com/jobs;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=团队;action-uri=http://mux.alimama.com/team;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+</head>
+<body ><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac1dc00215368233396285231e20ef&asid=AQAAAAAtEJpbs7qxWQAAAAC5qdf5YvO1pA==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+  <div class="page-bg"></div>
+  <div id="J_page" class="page ">
+    <div id="header">
+  <h1 class="ux-logo">
+    <a href="../index.html" title="阿里妈妈MUX" class="dim">
+      <!-- <span class="iconfont ux-logo-at">&#481;</span>
+      <span class="iconfont">&#482;</span> -->
+      <span class="mux-iconfont">&#xf02ae;</span>
+      <span class="ux-name">
+        体验工作平台 <br/>
+        <span>mux.alimama.com</span>
+      </span>
+    </a>
+  </h1>
+  <div class="menu">
+    <div class="search-con">
+      <div class="search">
+        <div class="search-inner">
+          <form action="http://mux.alimama.com/search">
+            <button type="submit" class="search-submit iconfont">&#337;</button>
+            <button type="button" class="search-clear iconfont" id="J_sBtnClear">&#223;</button>
+            <div class="search-input-box">
+              <fieldset tabindex="0">
+                <label class="search-label" for="J_searchInput"></label>
+                <input id="J_searchInput" class="search-input" accesskey="s" autocomplete="off" type="text" name="q" value="" maxlength="100" data-autofocus="autofocus">
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <ul class="main-nav">
+      <li class="current "><a href="../posts.html">文章</a></li>
+      <li class="">
+        <a href="../works.html" class="J_dropdownTrigger" data-login="login">工作</a>
+        <div class="J_dropdown hidden user-dropdown">
+          <ul>
+            <li class="sprite arrow"></li>
+            <li><a href="../works/bricks.html">PC组件库</a></li>
+            <li><a href="../works/mobile-components.html">无线组件库</a></li>
+            <li><a href="../works/visual-identification.html">品牌</a></li>
+            <li><a href="../works/interaction-design.html">交互</a></li>
+            <li><a href="../works/user-research.html">用研</a></li>
+            <li><a href="../works/visual-design.html">视觉</a></li>
+            <li><a href="../works/guanli.html">管理</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="http://idesign.alibaba-inc.com/Freshmen" target="_blank" data-login="login">工作平台</a></li>
+      <li class=" "><a href="../jobs.html">招聘</a></li>
+      <li><a href="http://thx.github.io" target="_blank">THX</a></li>
+    </ul>
+    <div class="user-info">
+        <div id="J_loginBoxTrigger" class="user-ribbon sprite"><i class="iconfont">&#338</i></div>
+        <div id="J_loginBox" class="login-box hidden">
+  <div class="login-box-con" style="display:none">
+    <!--  已经不使用 -->
+    <form accept-charset="UTF-8" action="http://mux.alimama.com/user_sessions" class="new_user_session" id="J_loginForm" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" /></div>
+      <ul>
+        <li class="field"><input class="field-text" data-valid="{email:[true,&quot;邮箱格式有误&quot;]}" id="user_session_email" name="user_session[email]" placeholder="E-mail" size="30" type="text" /></li>
+        <li class="field"><input class="field-text" id="user_session_password" name="user_session[password]" placeholder="密码" size="30" type="password" /></li>
+        <li class="field clear login-field-last">
+          <input name="user_session[remember_me]" type="hidden" value="0" /><input class="field-check" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" />
+          <label for="user_session_remember_me">记住我</label> &nbsp;
+          <input class="login-btn" name="commit" type="submit" value="登录" />
+        </li>
+      </ul>
+</form>  </div>
+
+      <div class="login-methods">
+      选择登录方式:
+        <ul class="login-lists clear">
+
+          <li>
+            <a href="../auth/taobao.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#440;</i><i class="iconfont iconfont-tao">&#440;</i></span>
+              </span>
+            </a>
+            淘宝账号
+          </li>
+          <li>
+            <a href="../auth/weibo.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#468;</i><i class="iconfont iconfont-weibo">&#468;</i></span>
+              </span>
+            </a>
+            新浪账号
+          </li>
+          <li class="last">
+            <a href="../login_domain.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#232;</i><i class="iconfont iconfont-domain">&#232;</i></span>
+              </span>
+            </a>
+            域账号
+          </li>
+        </ul>
+
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div id="banner" style="position:relative;">
+  <h2 class="title-posts title"><span class="f">文</span><span class="l">章</span></h2>
+  <div class="bd"><div class="bd-content" data-editable="false" data-tkey="posts"><p><p>阿里妈妈MUX文章分享</p></p></div></div>
+</div>
+
+
+    <div id="wrapper">
+        <div id="aside">
+  <ul class="channels" id="J_channels">
+    <li class="current latest">
+      <a href="../posts.html" class="J_channel" ux-channel="archive">最新</a>
+    </li>
+      <li class="">
+        <a href="visual-design.html" class="J_channel" ux-channel="visual-design" ux-count="88">视觉</a>
+      </li>
+      <li class="">
+        <a href="user-research.html" class="J_channel" ux-channel="user-research" ux-count="7">用研</a>
+      </li>
+      <li class="">
+        <a href="interaction-design.html" class="J_channel" ux-channel="interaction-design" ux-count="64">交互</a>
+      </li>
+      <li class="">
+        <a href="front-end.html" class="J_channel" ux-channel="front-end" ux-count="18">前端</a>
+      </li>
+      <li class="">
+        <a href="team.html" class="J_channel" ux-channel="team" ux-count="61">团队</a>
+      </li>
+  </ul>
+  <div class="categories" id="J_categories">
+    <p class="title-bar">
+      <a class="J_all" href="index.html">所有<em>（<span class="J_count">232</span>）</em></a>
+      <a class="toggler J_toggler" href="613.html#">展开类目</a>
+    </p>
+    <ul ux-channel="archive" class="">
+        <li><span class="category-name">2018年</span>
+          <ul>
+            <li><a href="2018/01.html" class="sub-category J_subCategory">2018年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2017年</span>
+          <ul>
+            <li><a href="2017/03.html" class="sub-category J_subCategory">2017年03月（1）</a>
+            </li>
+            <li><a href="2017/02.html" class="sub-category J_subCategory">2017年02月（1）</a>
+            </li>
+            <li><a href="2017/01.html" class="sub-category J_subCategory">2017年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2016年</span>
+          <ul>
+            <li><a href="2016/12.html" class="sub-category J_subCategory">2016年12月（1）</a>
+            </li>
+            <li><a href="2016/10.html" class="sub-category J_subCategory">2016年10月（1）</a>
+            </li>
+            <li><a href="2016/09.html" class="sub-category J_subCategory">2016年09月（2）</a>
+            </li>
+            <li><a href="2016/08.html" class="sub-category J_subCategory">2016年08月（1）</a>
+            </li>
+            <li><a href="2016/06.html" class="sub-category J_subCategory">2016年06月（1）</a>
+            </li>
+            <li><a href="2016/04.html" class="sub-category J_subCategory">2016年04月（4）</a>
+            </li>
+            <li><a href="2016/03.html" class="sub-category J_subCategory">2016年03月（1）</a>
+            </li>
+            <li><a href="2016/02.html" class="sub-category J_subCategory">2016年02月（2）</a>
+            </li>
+            <li><a href="2016/01.html" class="sub-category J_subCategory">2016年01月（2）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2015年</span>
+          <ul>
+            <li><a href="2015/12.html" class="sub-category J_subCategory">2015年12月（1）</a>
+            </li>
+            <li><a href="2015/11.html" class="sub-category J_subCategory">2015年11月（1）</a>
+            </li>
+            <li><a href="2015/10.html" class="sub-category J_subCategory">2015年10月（1）</a>
+            </li>
+            <li><a href="2015/09.html" class="sub-category J_subCategory">2015年09月（3）</a>
+            </li>
+            <li><a href="2015/08.html" class="sub-category J_subCategory">2015年08月（3）</a>
+            </li>
+            <li><a href="2015/07.html" class="sub-category J_subCategory">2015年07月（4）</a>
+            </li>
+            <li><a href="2015/06.html" class="sub-category J_subCategory">2015年06月（4）</a>
+            </li>
+            <li><a href="2015/05.html" class="sub-category J_subCategory">2015年05月（2）</a>
+            </li>
+            <li><a href="2015/04.html" class="sub-category J_subCategory">2015年04月（3）</a>
+            </li>
+            <li><a href="2015/03.html" class="sub-category J_subCategory">2015年03月（1）</a>
+            </li>
+            <li><a href="2015/02.html" class="sub-category J_subCategory">2015年02月（3）</a>
+            </li>
+            <li><a href="2015/01.html" class="sub-category J_subCategory">2015年01月（3）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2014年</span>
+          <ul>
+            <li><a href="2014/12.html" class="sub-category J_subCategory">2014年12月（10）</a>
+            </li>
+            <li><a href="2014/11.html" class="sub-category J_subCategory">2014年11月（5）</a>
+            </li>
+            <li><a href="2014/10.html" class="sub-category J_subCategory">2014年10月（3）</a>
+            </li>
+            <li><a href="2014/09.html" class="sub-category J_subCategory">2014年09月（7）</a>
+            </li>
+            <li><a href="2014/08.html" class="sub-category J_subCategory">2014年08月（4）</a>
+            </li>
+            <li><a href="2014/07.html" class="sub-category J_subCategory">2014年07月（4）</a>
+            </li>
+            <li><a href="2014/06.html" class="sub-category J_subCategory">2014年06月（1）</a>
+            </li>
+            <li><a href="2014/05.html" class="sub-category J_subCategory">2014年05月（1）</a>
+            </li>
+            <li><a href="2014/04.html" class="sub-category J_subCategory">2014年04月（2）</a>
+            </li>
+            <li><a href="2014/03.html" class="sub-category J_subCategory">2014年03月（8）</a>
+            </li>
+            <li><a href="2014/01.html" class="sub-category J_subCategory">2014年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2013年</span>
+          <ul>
+            <li><a href="2013/12.html" class="sub-category J_subCategory">2013年12月（2）</a>
+            </li>
+            <li><a href="2013/11.html" class="sub-category J_subCategory">2013年11月（1）</a>
+            </li>
+            <li><a href="2013/09.html" class="sub-category J_subCategory">2013年09月（1）</a>
+            </li>
+            <li><a href="2013/08.html" class="sub-category J_subCategory">2013年08月（2）</a>
+            </li>
+            <li><a href="2013/07.html" class="sub-category J_subCategory">2013年07月（6）</a>
+            </li>
+            <li><a href="2013/06.html" class="sub-category J_subCategory">2013年06月（3）</a>
+            </li>
+            <li><a href="2013/05.html" class="sub-category J_subCategory">2013年05月（6）</a>
+            </li>
+            <li><a href="2013/04.html" class="sub-category J_subCategory">2013年04月（5）</a>
+            </li>
+            <li><a href="2013/03.html" class="sub-category J_subCategory">2013年03月（9）</a>
+            </li>
+            <li><a href="2013/02.html" class="sub-category J_subCategory">2013年02月（4）</a>
+            </li>
+            <li><a href="2013/01.html" class="sub-category J_subCategory">2013年01月（5）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2012年</span>
+          <ul>
+            <li><a href="2012/12.html" class="sub-category J_subCategory">2012年12月（28）</a>
+            </li>
+            <li><a href="2012/11.html" class="sub-category J_subCategory">2012年11月（13）</a>
+            </li>
+            <li><a href="2012/10.html" class="sub-category J_subCategory">2012年10月（8）</a>
+            </li>
+            <li><a href="2012/09.html" class="sub-category J_subCategory">2012年09月（17）</a>
+            </li>
+            <li><a href="2012/08.html" class="sub-category J_subCategory">2012年08月（3）</a>
+            </li>
+            <li><a href="2012/07.html" class="sub-category J_subCategory">2012年07月（22）</a>
+            </li>
+            <li><a href="2012/06.html" class="sub-category J_subCategory">2012年06月（2）</a>
+            </li>
+            <li><a href="2012/05.html" class="sub-category J_subCategory">2012年05月（1）</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+      <ul ux-channel="visual-design" class="hidden">
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/175-beijingzhishi.html" class="sub-category J_subCategory">背景知识</a>
+</li>                <li>
+                  <a href="visual-design/256-shishangshenghuo.html" class="sub-category J_subCategory">时尚生活</a>
+</li>                <li>
+                  <a href="visual-design/171-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="visual-design/289-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">产品展示</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/160-chuangxinchanpin.html" class="sub-category J_subCategory">创新产品</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="user-research" class="hidden">
+          <li><span class="category-name">研究方法</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/167-shejiyanjiufangfa.html" class="sub-category J_subCategory">设计研究方法</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">工作感想</span>
+            <ul class="sub-category-list">
+            </ul>
+          </li>
+          <li><span class="category-name">搜索研究</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/254-jueceyanjiu.html" class="sub-category J_subCategory">决策研究</a>
+</li>                <li>
+                  <a href="user-research/165-leimuyanjiu.html" class="sub-category J_subCategory">类目研究</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">合作</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/239-uxneibu.html" class="sub-category J_subCategory">UX内部</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="interaction-design" class="hidden">
+          <li><span class="category-name">交互设计</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/157-jiaohushejiyuanze.html" class="sub-category J_subCategory">交互设计原则</a>
+</li>                <li>
+                  <a href="interaction-design/158-shejifangfa.html" class="sub-category J_subCategory">设计方法</a>
+</li>                <li>
+                  <a href="interaction-design/255-shejifenxiang.html" class="sub-category J_subCategory">设计分享</a>
+</li>                <li>
+                  <a href="interaction-design/280-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/197-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="interaction-design/281-shenghuoganwu.html" class="sub-category J_subCategory">生活感悟</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="front-end" class="hidden">
+          <li><span class="category-name">pc</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/182-qianduanjizhu.html" class="sub-category J_subCategory">前端技术</a>
+</li>                <li>
+                  <a href="front-end/250-gongjujineng.html" class="sub-category J_subCategory">工具技能</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">平台</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/187-brix.html" class="sub-category J_subCategory">Brix</a>
+</li>                <li>
+                  <a href="front-end/208-chart.html" class="sub-category J_subCategory">Chart</a>
+</li>                <li>
+                  <a href="front-end/240-mix.html" class="sub-category J_subCategory">Mix</a>
+</li>                <li>
+                  <a href="front-end/285-rap.html" class="sub-category J_subCategory">RAP</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">mobile</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/191-shejifangan.html" class="sub-category J_subCategory">设计方案</a>
+</li>                <li>
+                  <a href="front-end/276-iconfont.html" class="sub-category J_subCategory">iconfont</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">淘宝H5</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/231-kongjian.html" class="sub-category J_subCategory">控件</a>
+</li>                <li>
+                  <a href="front-end/232-zujian.html" class="sub-category J_subCategory">组件</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/263-velocity.html" class="sub-category J_subCategory">Velocity</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="team" class="hidden">
+          <li><span class="category-name">团队活动</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/178-guanggao.html" class="sub-category J_subCategory">广告</a>
+</li>                <li>
+                  <a href="team/189-gongyi.html" class="sub-category J_subCategory">公益</a>
+</li>                <li>
+                  <a href="team/241-tuanjian.html" class="sub-category J_subCategory">团建</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">兴趣小组</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/180-tangmiaohui.html" class="sub-category J_subCategory">堂描绘</a>
+</li>                <li>
+                  <a href="team/181-shijuexingquxiaozu.html" class="sub-category J_subCategory">视觉兴趣小组</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">业界交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/253-upd.html" class="sub-category J_subCategory">UPA</a>
+</li>                <li>
+                  <a href="team/252-adc.html" class="sub-category J_subCategory">ADC</a>
+</li>                <li>
+                  <a href="team/283-hiued.html" class="sub-category J_subCategory">HIUED</a>
+</li>                <li>
+                  <a href="team/303-ucan.html" class="sub-category J_subCategory">UCAN</a>
+</li>                <li>
+                  <a href="team/301-ixdc.html" class="sub-category J_subCategory">IxDC</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">随笔</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/247-gongzuoxinde.html" class="sub-category J_subCategory">工作心德</a>
+</li>                <li>
+                  <a href="team/248-yuedubiji.html" class="sub-category J_subCategory">阅读笔记</a>
+</li>                <li>
+                  <a href="team/249-xinqinggushi.html" class="sub-category J_subCategory">心情故事</a>
+</li>            </ul>
+          </li>
+      </ul>
+  </div>
+</div>
+
+      <div id="main">
+        <div class="article">
+  <div class="article-nav">
+  <div class="alpha-bg"></div>
+  <div class="bar">
+    <a href="580.html#main" class="prev sprite">KISSY RichBase 使用</a>
+    <span class="current">1164/9</span>
+    <a href="686.html#main" class="next sprite">KISSY RichBase 使用</a>
+  </div>
+</div>
+
+    <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title">
+        <span>KISSY RichBase 使用</span>
+        <i class="iconfont toggle-toc">&#405;</i>
+      </h3>
+      <div class="publish-date">2012/12/28</div>
+      <div class="authors">
+           <a href="../users/21" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1s7YhXgloXXb1upjX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_613">
+  <a class="comments" href="613.html#!comments" title="评论"><i class="iconfont">&#343</i>0</a>
+  <a class="likes" href="613.html#!likes" title="喜欢"><i class="iconfont">&#362</i>0/6910</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=KISSY%2520RichBase%2520%25E4%25BD%25BF%25E7%2594%25A8%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F613" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/s/kissy/1.3.0/seed-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div><p>js代码：</p><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s1">'rich-base'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">S</span><span class="p">,</span><span class="nx">RichBase</span><span class="p">){</span>
+
+<span class="p">});</span>
+</pre></div><p>or</p><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"brix/core/chunk"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">S</span><span class="p">,</span> <span class="nx">RichBase</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">},</span> <span class="p">{</span>
+    <span class="nx">requires</span><span class="o">:</span> <span class="p">[</span><span class="s2">"rich-base"</span><span class="p">]</span>
+<span class="p">});</span>
+</pre><pre><span class="p"></span>
+</pre></div><h2>继承RichBase</h2><p>下面的代码定义完，Chunk就和RichBase有了同样的功能</p><div class="highlight"><pre><span class="nx">KISSY</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">"brix/core/chunk"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">S</span><span class="p">,</span> <span class="nx">RichBase</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">Chunk</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},{});</span>
+    <span class="k">return</span> <span class="nx">Chunk</span><span class="p">;</span>
+<span class="p">},</span> <span class="p">{</span>
+    <span class="nx">requires</span><span class="o">:</span> <span class="p">[</span><span class="s2">"rich-base"</span><span class="p">]</span>
+<span class="p">});</span>
+</pre></div><p>接下来会为大家介绍更多……</p><h3>构造函数</h3><p>我们上面定义的Chunk类并没有显示指定构造函数，RichBase内部会动态的构建一个function作为Chunk的构造函数，并且名字是"RichBaseDerived",要显示的指定名称，只需要在在继承的最后一个参数写上名称即可</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Chunk</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},{},</span><span class="s1">'Chunk'</span><span class="p">);</span>
+</pre></div><p>那如果我们需要显示的定义构造函数应该怎么办呢,看下面的代码？</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Chunk</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">constructor</span><span class="o">:</span> <span class="kd">function</span> <span class="nx">Chunk</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+        <span class="c1">//显示的调用父类的构造函数，这句很重要。</span>
+        <span class="nx">Chunk</span><span class="p">.</span><span class="nx">superclass</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">},{});</span>
+</pre></div><h3>初始化函数和析构函数</h3><p>RichBase在初始化时会自动调用各级类的initializer函数，在析构时会自动调用destructor函数，所以有初始或者析构处理只需定义相应的函数就可以了，不用显式调用父类的函数。</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Chunk</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">initializer</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">},</span>
+    <span class="nx">destructor</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">},{});</span>
+</pre></div><h3>ATTRS属性</h3><p>可以用关联矩阵(associative array)的方式定义类的属性和配置参数,具体请查看“<a href="http://docs.kissyui.com/docs/html/api/core/base/base.html">Base ATTRS</a>”</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Chunk</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+<span class="p">},{</span>
+    <span class="nx">ATTRS</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">attr</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">valule</span><span class="o">:</span><span class="nx">value</span><span class="p">,</span>
+            <span class="nx">valueFn</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="p">},</span>
+            <span class="nx">setter</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="p">},</span>
+            <span class="nx">getter</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">});</span>
+</pre></div><h4>ATTRS的bind和sync</h4><p>RichBase提供了对属性值初始化的同步以及变化的事件监听。先看一下代码</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Chunk</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">_onSetAttr</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="p">}</span>
+<span class="p">},{</span>
+    <span class="nx">ATTRS</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">attr</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">valule</span><span class="o">:</span><span class="nx">value</span><span class="p">,</span>
+            <span class="nx">valueFn</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="p">},</span>
+            <span class="nx">setter</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="p">},</span>
+            <span class="nx">getter</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">});</span>
+</pre></div><p>实例化Chunk类并设置attr属性值</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">chunk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Chunk</span><span class="p">({</span><span class="nx">attr</span><span class="o">:</span><span class="mi">1</span><span class="p">});</span>
+<span class="nx">chunk</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'attr'</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</pre></div><p>上面的实例化和设置属性值，都会同步调用到类中定义的_onSetAttr函数。具体的调用可查看RichBase源码中的bindInternal和syncInternal函数。</p><h2>Plugins</h2><p>Plugins机制可以用来在类的实例（而不是类本身）上动态添加特性。RichBase提供了一个配置（plugins）和三个函数（plug、unplug和getPlugin）用来管理插件。</p><h3>plugins</h3><p>plugins的类型是Array，在类实例化的时候实例化plugin，并调用plugin的pluginInitializer初始化函数。在销毁的时候调用pluginDestructor析构函数。</p><h3>plug(plugin)</h3><p>参数plugin可以是类，也可以是实例，如果是类则无参实例化plugin。<br /> 两者都会调用plugin的pluginInitializer初始化函数</p><p>直接传实例化的示例代码：</p><div class="highlight"><pre><span class="k">new</span> <span class="nx">Editor</span><span class="p">().</span><span class="nx">plug</span><span class="p">(</span><span class="k">new</span> <span class="nx">FontSize</span><span class="p">({</span>
+  <span class="k">default</span><span class="o">:</span> <span class="s1">'14px'</span>
+<span class="p">}))</span>
+</pre></div><h3>unplug(plugin)</h3><p>从plugins数组中移除plugin，并调用pluginDestructor析构函数。</p><h3>getPlugin(id)</h3><p>通过类plugin定义的的p.get('pluginId') || p.pluginId来拿到plugin的实例。</p><h2>扩展</h2><p>RichBase的extend还提供了扩展功能，把一个主类与多个扩充类合并为一个新类。KISSY内部的很多组件都是基于这个完成的。</p><p>给个Overlay示例代码吧,具体的Overlay的实现并不仅仅如此</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Overlay</span> <span class="o">=</span> <span class="nx">RichBase</span><span class="p">.</span><span class="nx">extend</span><span class="p">([</span>
+        <span class="nx">Extension</span><span class="p">.</span><span class="nx">ContentBox</span><span class="p">,</span>
+        <span class="nx">Extension</span><span class="p">.</span><span class="nx">Position</span><span class="p">,</span>
+        <span class="nx">Loading</span><span class="p">,</span>
+        <span class="nx">Extension</span><span class="p">.</span><span class="nx">Align</span><span class="p">,</span>
+        <span class="nx">Close</span><span class="p">,</span>
+        <span class="nx">Mask</span><span class="p">,</span>
+        <span class="nx">OverlayEffect</span>
+    <span class="p">],</span> <span class="p">{},</span> <span class="p">{</span>
+        <span class="nx">ATTRS</span><span class="o">:</span> <span class="p">{}</span>
+<span class="p">});</span>
+</pre></div><h2>listeners</h2><p>差点忘记了listeners，这个配置项是用来在实例化类的时候增加事件的监听,看一下代码你就明白了。</p><div class="highlight"><pre><span class="kd">var</span> <span class="nx">chunk</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Chunk</span><span class="p">({</span>
+        <span class="nx">attr</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
+        <span class="nx">listeners</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">myfire</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+
+            <span class="p">},</span>
+            <span class="nx">hefire</span> <span class="o">:</span><span class="p">{</span>
+                <span class="nx">fn</span><span class="o">:</span><span class="kd">function</span><span class="p">(){},</span>
+                <span class="c1">//上下文</span>
+                <span class="nx">context</span><span class="o">:</span><span class="p">{}</span>
+           <span class="p">}</span>
+        <span class="p">}});</span>
+<span class="nx">chunk</span><span class="p">.</span><span class="nx">fire</span><span class="p">(</span><span class="s1">'myfire'</span><span class="p">);</span>
+</pre></div><h2>总结</h2><p>RichBase为我们提供了如此多的特性，采用KISSY开发模块和组件的同学，果断的用RichBase吧。</p></div>
+      </div>
+      <div class="article-comment">
+  <div class="comment-hd">
+    <span class="comment-hd-title"><span class="count" id="J_comment_counts">0</span> 条评论 </span>
+    &nbsp; | &nbsp; 账号登录：
+
+    <a href="../login_domain.html"><i class="iconfont">&#232;</i>域账号</a> &nbsp;  &nbsp;
+    <a href="../auth/taobao.html"><i class="iconfont">&#440;</i>淘宝账号</a>  &nbsp;  &nbsp;
+    <a href="../auth/weibo.html"><i class="iconfont">&#468;</i>新浪微博</a>
+    <!-- <a href="#"><i class="iconfont">&#338;</i>小二账号</a>
+    <a href="#"><i class="iconfont">&#232;</i>域账号</a> -->
+
+  </div>
+  <div class="comment-lists" id="J_comment-lists">
+  </div>
+</div>
+
+    </div>
+    <div id="J_atAside_613" class="article-aside J_atAside" pid="613">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container" >
+        <div class="article-aside-container-sub">
+          <div class="attachment-bd hidden J_attachmentsBox">
+            <ul>
+            </ul>
+              <p>木有附件</p>
+          </div>
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      <div class="friendly-link">
+    <h2>友情链接</h2>
+    <div class="friendly-link-list">
+        <div class="banners_edit" data-editable="false" data-tkey="friendly_link_list"><ul>            <li><a href="http://ued.taobao.com/" target="_blank">淘宝UED</a> </li>            <li><a href="http://www.aliued.com/" target="_blank">Alibaba国际站UED</a> </li>            <li><a href="http://china.aliued.com/" target="_blank">Alibaba中文站UED</a> </li>            <li><a href="http://ued.alipay.com/" target="_blank"> 支付宝UED</a> </li>            <li><a href="http://ued.tmall.com/" target="_blank">天猫UED</a> </li></ul><ul> 	<li><a href="http://ur.alibaba-inc.com">阿里用户体验中心</a> </li>	 <li><a href="http://www.uisdc.com" target="_blank">优秀网页设计</a> </li><li><a href="http://www.bootcss.com" target="_blank">Bootstrap中文网</a> </li>            <li><a href="http://udc.weibo.com/" target="_blank">微博UDC</a> </li>            <li><a href="http://ued.sogou.com/" target="_blank">搜狗UED</a> </li>            <li><a href="http://mued.sohu.com/" target="_blank">搜狐UED</a> </li>            <li><a href="http://cdc.tencent.com/" target="_blank">腾讯CDC</a> </li></ul><ul>	    	<li><a href="http://ucdchina.com/" target="_blank">CDC大社区</a> </li>                        <li><a href="http://www.boxui.com/" target="_blank">UI盒子</a> </li>            <li><a href="http://www.trans4fun.com/" target="_blank">前端翻译小站 </a> </li>               </ul></div>
+    </div>
+    <div class="abouts">
+        <ul>
+            <li><a href="../feeds/posts.rss"><i class="iconfont">&#483</i>RSS订阅</a> </li>
+            <li><a href="http://weibo.com/alimamamux" target="_blank"><i class="iconfont">&#468</i>微博关注</a> </li>
+            <li><a href="../index.html"><i class="iconfont">&#349</i>联系我们</a> </li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+<p>&copy;阿里妈妈MUX, All rights reserved.</p>
+<p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：sangxing#taobao.com</p>
+</footer>
+
+    </div>
+  </div>
+    <script src="https://assets.alicdn.com/??s/kissy/1.2.0/kissy-min.js" type="text/javascript"></script>
+  <script src="../assets/site/work-3078ff5dba6752b818be2c96bebf33d4.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27817535-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

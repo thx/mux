@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>sublime插件开发 - 阿里妈妈MUX</title>
+  <link href="../assets/application-65463c58d38dc99711b75f6b6bfb7216.css" media="all" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+  <link href="/kissy/editor/theme/cool/editor-pkg-sprite-min.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if gte IE 8]><!-->
+  <link href="../kissy/editor/theme/cool/editor-pkg-min-datauri.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" name="csrf-token" />
+  <link href="../feeds/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="../assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" type="image/x-icon" />
+  <meta name="application-name" content="UX 体验工作平台"/>
+  <meta name="msapplication-tooltip" content="UX 体验工作平台" />
+  <meta name="msapplication-task" content="name=文章;action-uri=http://mux.alimama.com/posts;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=工作;action-uri=http://mux.alimama.com/works;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=招聘;action-uri=http://mux.alimama.com/jobs;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=团队;action-uri=http://mux.alimama.com/team;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+</head>
+<body ><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac1dc05e15368236052132742e241e&asid=AQAAAAA3EZpbiD0zHwAAAADqgvQYBbApXQ==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+  <div class="page-bg"></div>
+  <div id="J_page" class="page ">
+    <div id="header">
+  <h1 class="ux-logo">
+    <a href="../index.html" title="阿里妈妈MUX" class="dim">
+      <!-- <span class="iconfont ux-logo-at">&#481;</span>
+      <span class="iconfont">&#482;</span> -->
+      <span class="mux-iconfont">&#xf02ae;</span>
+      <span class="ux-name">
+        体验工作平台 <br/>
+        <span>mux.alimama.com</span>
+      </span>
+    </a>
+  </h1>
+  <div class="menu">
+    <div class="search-con">
+      <div class="search">
+        <div class="search-inner">
+          <form action="http://mux.alimama.com/search">
+            <button type="submit" class="search-submit iconfont">&#337;</button>
+            <button type="button" class="search-clear iconfont" id="J_sBtnClear">&#223;</button>
+            <div class="search-input-box">
+              <fieldset tabindex="0">
+                <label class="search-label" for="J_searchInput"></label>
+                <input id="J_searchInput" class="search-input" accesskey="s" autocomplete="off" type="text" name="q" value="" maxlength="100" data-autofocus="autofocus">
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <ul class="main-nav">
+      <li class="current "><a href="../posts.html">文章</a></li>
+      <li class="">
+        <a href="../works.html" class="J_dropdownTrigger" data-login="login">工作</a>
+        <div class="J_dropdown hidden user-dropdown">
+          <ul>
+            <li class="sprite arrow"></li>
+            <li><a href="../works/bricks.html">PC组件库</a></li>
+            <li><a href="../works/mobile-components.html">无线组件库</a></li>
+            <li><a href="../works/visual-identification.html">品牌</a></li>
+            <li><a href="../works/interaction-design.html">交互</a></li>
+            <li><a href="../works/user-research.html">用研</a></li>
+            <li><a href="../works/visual-design.html">视觉</a></li>
+            <li><a href="../works/guanli.html">管理</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="http://idesign.alibaba-inc.com/Freshmen" target="_blank" data-login="login">工作平台</a></li>
+      <li class=" "><a href="../jobs.html">招聘</a></li>
+      <li><a href="http://thx.github.io" target="_blank">THX</a></li>
+    </ul>
+    <div class="user-info">
+        <div id="J_loginBoxTrigger" class="user-ribbon sprite"><i class="iconfont">&#338</i></div>
+        <div id="J_loginBox" class="login-box hidden">
+  <div class="login-box-con" style="display:none">
+    <!--  已经不使用 -->
+    <form accept-charset="UTF-8" action="http://mux.alimama.com/user_sessions" class="new_user_session" id="J_loginForm" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" /></div>
+      <ul>
+        <li class="field"><input class="field-text" data-valid="{email:[true,&quot;邮箱格式有误&quot;]}" id="user_session_email" name="user_session[email]" placeholder="E-mail" size="30" type="text" /></li>
+        <li class="field"><input class="field-text" id="user_session_password" name="user_session[password]" placeholder="密码" size="30" type="password" /></li>
+        <li class="field clear login-field-last">
+          <input name="user_session[remember_me]" type="hidden" value="0" /><input class="field-check" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" />
+          <label for="user_session_remember_me">记住我</label> &nbsp;
+          <input class="login-btn" name="commit" type="submit" value="登录" />
+        </li>
+      </ul>
+</form>  </div>
+
+      <div class="login-methods">
+      选择登录方式:
+        <ul class="login-lists clear">
+
+          <li>
+            <a href="../auth/taobao.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#440;</i><i class="iconfont iconfont-tao">&#440;</i></span>
+              </span>
+            </a>
+            淘宝账号
+          </li>
+          <li>
+            <a href="../auth/weibo.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#468;</i><i class="iconfont iconfont-weibo">&#468;</i></span>
+              </span>
+            </a>
+            新浪账号
+          </li>
+          <li class="last">
+            <a href="../login_domain.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#232;</i><i class="iconfont iconfont-domain">&#232;</i></span>
+              </span>
+            </a>
+            域账号
+          </li>
+        </ul>
+
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div id="banner" style="position:relative;">
+  <h2 class="title-posts title"><span class="f">文</span><span class="l">章</span></h2>
+  <div class="bd"><div class="bd-content" data-editable="false" data-tkey="posts"><p><p>阿里妈妈MUX文章分享</p></p></div></div>
+</div>
+
+
+    <div id="wrapper">
+        <div id="aside">
+  <ul class="channels" id="J_channels">
+    <li class="current latest">
+      <a href="../posts.html" class="J_channel" ux-channel="archive">最新</a>
+    </li>
+      <li class="">
+        <a href="visual-design.html" class="J_channel" ux-channel="visual-design" ux-count="88">视觉</a>
+      </li>
+      <li class="">
+        <a href="user-research.html" class="J_channel" ux-channel="user-research" ux-count="7">用研</a>
+      </li>
+      <li class="">
+        <a href="interaction-design.html" class="J_channel" ux-channel="interaction-design" ux-count="64">交互</a>
+      </li>
+      <li class="">
+        <a href="front-end.html" class="J_channel" ux-channel="front-end" ux-count="18">前端</a>
+      </li>
+      <li class="">
+        <a href="team.html" class="J_channel" ux-channel="team" ux-count="61">团队</a>
+      </li>
+  </ul>
+  <div class="categories" id="J_categories">
+    <p class="title-bar">
+      <a class="J_all" href="index.html">所有<em>（<span class="J_count">232</span>）</em></a>
+      <a class="toggler J_toggler" href="541.html#">展开类目</a>
+    </p>
+    <ul ux-channel="archive" class="">
+        <li><span class="category-name">2018年</span>
+          <ul>
+            <li><a href="2018/01.html" class="sub-category J_subCategory">2018年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2017年</span>
+          <ul>
+            <li><a href="2017/03.html" class="sub-category J_subCategory">2017年03月（1）</a>
+            </li>
+            <li><a href="2017/02.html" class="sub-category J_subCategory">2017年02月（1）</a>
+            </li>
+            <li><a href="2017/01.html" class="sub-category J_subCategory">2017年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2016年</span>
+          <ul>
+            <li><a href="2016/12.html" class="sub-category J_subCategory">2016年12月（1）</a>
+            </li>
+            <li><a href="2016/10.html" class="sub-category J_subCategory">2016年10月（1）</a>
+            </li>
+            <li><a href="2016/09.html" class="sub-category J_subCategory">2016年09月（2）</a>
+            </li>
+            <li><a href="2016/08.html" class="sub-category J_subCategory">2016年08月（1）</a>
+            </li>
+            <li><a href="2016/06.html" class="sub-category J_subCategory">2016年06月（1）</a>
+            </li>
+            <li><a href="2016/04.html" class="sub-category J_subCategory">2016年04月（4）</a>
+            </li>
+            <li><a href="2016/03.html" class="sub-category J_subCategory">2016年03月（1）</a>
+            </li>
+            <li><a href="2016/02.html" class="sub-category J_subCategory">2016年02月（2）</a>
+            </li>
+            <li><a href="2016/01.html" class="sub-category J_subCategory">2016年01月（2）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2015年</span>
+          <ul>
+            <li><a href="2015/12.html" class="sub-category J_subCategory">2015年12月（1）</a>
+            </li>
+            <li><a href="2015/11.html" class="sub-category J_subCategory">2015年11月（1）</a>
+            </li>
+            <li><a href="2015/10.html" class="sub-category J_subCategory">2015年10月（1）</a>
+            </li>
+            <li><a href="2015/09.html" class="sub-category J_subCategory">2015年09月（3）</a>
+            </li>
+            <li><a href="2015/08.html" class="sub-category J_subCategory">2015年08月（3）</a>
+            </li>
+            <li><a href="2015/07.html" class="sub-category J_subCategory">2015年07月（4）</a>
+            </li>
+            <li><a href="2015/06.html" class="sub-category J_subCategory">2015年06月（4）</a>
+            </li>
+            <li><a href="2015/05.html" class="sub-category J_subCategory">2015年05月（2）</a>
+            </li>
+            <li><a href="2015/04.html" class="sub-category J_subCategory">2015年04月（3）</a>
+            </li>
+            <li><a href="2015/03.html" class="sub-category J_subCategory">2015年03月（1）</a>
+            </li>
+            <li><a href="2015/02.html" class="sub-category J_subCategory">2015年02月（3）</a>
+            </li>
+            <li><a href="2015/01.html" class="sub-category J_subCategory">2015年01月（3）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2014年</span>
+          <ul>
+            <li><a href="2014/12.html" class="sub-category J_subCategory">2014年12月（10）</a>
+            </li>
+            <li><a href="2014/11.html" class="sub-category J_subCategory">2014年11月（5）</a>
+            </li>
+            <li><a href="2014/10.html" class="sub-category J_subCategory">2014年10月（3）</a>
+            </li>
+            <li><a href="2014/09.html" class="sub-category J_subCategory">2014年09月（7）</a>
+            </li>
+            <li><a href="2014/08.html" class="sub-category J_subCategory">2014年08月（4）</a>
+            </li>
+            <li><a href="2014/07.html" class="sub-category J_subCategory">2014年07月（4）</a>
+            </li>
+            <li><a href="2014/06.html" class="sub-category J_subCategory">2014年06月（1）</a>
+            </li>
+            <li><a href="2014/05.html" class="sub-category J_subCategory">2014年05月（1）</a>
+            </li>
+            <li><a href="2014/04.html" class="sub-category J_subCategory">2014年04月（2）</a>
+            </li>
+            <li><a href="2014/03.html" class="sub-category J_subCategory">2014年03月（8）</a>
+            </li>
+            <li><a href="2014/01.html" class="sub-category J_subCategory">2014年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2013年</span>
+          <ul>
+            <li><a href="2013/12.html" class="sub-category J_subCategory">2013年12月（2）</a>
+            </li>
+            <li><a href="2013/11.html" class="sub-category J_subCategory">2013年11月（1）</a>
+            </li>
+            <li><a href="2013/09.html" class="sub-category J_subCategory">2013年09月（1）</a>
+            </li>
+            <li><a href="2013/08.html" class="sub-category J_subCategory">2013年08月（2）</a>
+            </li>
+            <li><a href="2013/07.html" class="sub-category J_subCategory">2013年07月（6）</a>
+            </li>
+            <li><a href="2013/06.html" class="sub-category J_subCategory">2013年06月（3）</a>
+            </li>
+            <li><a href="2013/05.html" class="sub-category J_subCategory">2013年05月（6）</a>
+            </li>
+            <li><a href="2013/04.html" class="sub-category J_subCategory">2013年04月（5）</a>
+            </li>
+            <li><a href="2013/03.html" class="sub-category J_subCategory">2013年03月（9）</a>
+            </li>
+            <li><a href="2013/02.html" class="sub-category J_subCategory">2013年02月（4）</a>
+            </li>
+            <li><a href="2013/01.html" class="sub-category J_subCategory">2013年01月（5）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2012年</span>
+          <ul>
+            <li><a href="2012/12.html" class="sub-category J_subCategory">2012年12月（28）</a>
+            </li>
+            <li><a href="2012/11.html" class="sub-category J_subCategory">2012年11月（13）</a>
+            </li>
+            <li><a href="2012/10.html" class="sub-category J_subCategory">2012年10月（8）</a>
+            </li>
+            <li><a href="2012/09.html" class="sub-category J_subCategory">2012年09月（17）</a>
+            </li>
+            <li><a href="2012/08.html" class="sub-category J_subCategory">2012年08月（3）</a>
+            </li>
+            <li><a href="2012/07.html" class="sub-category J_subCategory">2012年07月（22）</a>
+            </li>
+            <li><a href="2012/06.html" class="sub-category J_subCategory">2012年06月（2）</a>
+            </li>
+            <li><a href="2012/05.html" class="sub-category J_subCategory">2012年05月（1）</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+      <ul ux-channel="visual-design" class="hidden">
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/175-beijingzhishi.html" class="sub-category J_subCategory">背景知识</a>
+</li>                <li>
+                  <a href="visual-design/256-shishangshenghuo.html" class="sub-category J_subCategory">时尚生活</a>
+</li>                <li>
+                  <a href="visual-design/171-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="visual-design/289-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">产品展示</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/160-chuangxinchanpin.html" class="sub-category J_subCategory">创新产品</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="user-research" class="hidden">
+          <li><span class="category-name">研究方法</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/167-shejiyanjiufangfa.html" class="sub-category J_subCategory">设计研究方法</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">工作感想</span>
+            <ul class="sub-category-list">
+            </ul>
+          </li>
+          <li><span class="category-name">搜索研究</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/254-jueceyanjiu.html" class="sub-category J_subCategory">决策研究</a>
+</li>                <li>
+                  <a href="user-research/165-leimuyanjiu.html" class="sub-category J_subCategory">类目研究</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">合作</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/239-uxneibu.html" class="sub-category J_subCategory">UX内部</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="interaction-design" class="hidden">
+          <li><span class="category-name">交互设计</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/157-jiaohushejiyuanze.html" class="sub-category J_subCategory">交互设计原则</a>
+</li>                <li>
+                  <a href="interaction-design/158-shejifangfa.html" class="sub-category J_subCategory">设计方法</a>
+</li>                <li>
+                  <a href="interaction-design/255-shejifenxiang.html" class="sub-category J_subCategory">设计分享</a>
+</li>                <li>
+                  <a href="interaction-design/280-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/197-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="interaction-design/281-shenghuoganwu.html" class="sub-category J_subCategory">生活感悟</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="front-end" class="hidden">
+          <li><span class="category-name">pc</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/182-qianduanjizhu.html" class="sub-category J_subCategory">前端技术</a>
+</li>                <li>
+                  <a href="front-end/250-gongjujineng.html" class="sub-category J_subCategory">工具技能</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">平台</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/187-brix.html" class="sub-category J_subCategory">Brix</a>
+</li>                <li>
+                  <a href="front-end/208-chart.html" class="sub-category J_subCategory">Chart</a>
+</li>                <li>
+                  <a href="front-end/240-mix.html" class="sub-category J_subCategory">Mix</a>
+</li>                <li>
+                  <a href="front-end/285-rap.html" class="sub-category J_subCategory">RAP</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">mobile</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/191-shejifangan.html" class="sub-category J_subCategory">设计方案</a>
+</li>                <li>
+                  <a href="front-end/276-iconfont.html" class="sub-category J_subCategory">iconfont</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">淘宝H5</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/231-kongjian.html" class="sub-category J_subCategory">控件</a>
+</li>                <li>
+                  <a href="front-end/232-zujian.html" class="sub-category J_subCategory">组件</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/263-velocity.html" class="sub-category J_subCategory">Velocity</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="team" class="hidden">
+          <li><span class="category-name">团队活动</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/178-guanggao.html" class="sub-category J_subCategory">广告</a>
+</li>                <li>
+                  <a href="team/189-gongyi.html" class="sub-category J_subCategory">公益</a>
+</li>                <li>
+                  <a href="team/241-tuanjian.html" class="sub-category J_subCategory">团建</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">兴趣小组</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/180-tangmiaohui.html" class="sub-category J_subCategory">堂描绘</a>
+</li>                <li>
+                  <a href="team/181-shijuexingquxiaozu.html" class="sub-category J_subCategory">视觉兴趣小组</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">业界交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/253-upd.html" class="sub-category J_subCategory">UPA</a>
+</li>                <li>
+                  <a href="team/252-adc.html" class="sub-category J_subCategory">ADC</a>
+</li>                <li>
+                  <a href="team/283-hiued.html" class="sub-category J_subCategory">HIUED</a>
+</li>                <li>
+                  <a href="team/303-ucan.html" class="sub-category J_subCategory">UCAN</a>
+</li>                <li>
+                  <a href="team/301-ixdc.html" class="sub-category J_subCategory">IxDC</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">随笔</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/247-gongzuoxinde.html" class="sub-category J_subCategory">工作心德</a>
+</li>                <li>
+                  <a href="team/248-yuedubiji.html" class="sub-category J_subCategory">阅读笔记</a>
+</li>                <li>
+                  <a href="team/249-xinqinggushi.html" class="sub-category J_subCategory">心情故事</a>
+</li>            </ul>
+          </li>
+      </ul>
+  </div>
+</div>
+
+      <div id="main">
+        <div class="article">
+  <div class="article-nav">
+  <div class="alpha-bg"></div>
+  <div class="bar">
+    <a href="528.html#main" class="prev sprite">sublime插件开发</a>
+    <span class="current">1160/9</span>
+    <a href="543.html#main" class="next sprite">sublime插件开发</a>
+  </div>
+</div>
+
+    <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title">
+        <span>sublime插件开发</span>
+        <i class="iconfont toggle-toc">&#405;</i>
+      </h3>
+      <div class="publish-date">2012/11/23</div>
+      <div class="authors">
+           <a href="../users/9" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1ZFziXeJsXXb1upjX.jpg_30x30.jpg" /></a>
+           <a href="../users/594" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1KqL4XchlXXaCwpjX.png_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_541">
+  <a class="comments" href="541.html#!comments" title="评论"><i class="iconfont">&#343</i>2</a>
+  <a class="likes" href="541.html#!likes" title="喜欢"><i class="iconfont">&#362</i>0/18549</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=sublime%25E6%258F%2592%25E4%25BB%25B6%25E5%25BC%2580%25E5%258F%2591%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F541" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img alt="" style="float:none;margin:0px;" src="https://img.alicdn.com/tfscom/T1JRseXfXcXXaCwpjX.png" /></p><p>&nbsp;PS:感谢设寂湿同学的给力banner，感觉自己一下高端了很多&nbsp;</p><div>&nbsp; 在混入UX之前还真的从未用过sublime这等神器，那时我还是Aptana这等庞大IDE的铁杆粉丝。其实aptana做web开发还是很不错啦，因为是基于eclipse平台的，可以很容易集成其它语言开发的环境的插件，插件机制也很丰富，可以用java,python,ruby，甚至是js去写，当然也是要有插件的前提支持的。。不过太过于笨重，有的时候写着写着reflash,重建一次索引啥的都卡好几分钟。。。丫丫的，为了成为一名合格的前端攻城狮，所以还是厚脸无耻的学习下sublime更轻量，强悍的编辑模式的神器。</div><div>今天介绍下如何开发sublime插件，参考原文：<a title="" target="_self" href="http://net.tutsplus.com/tutorials/python-tutorials/how-to-create-a-sublime-text-2-plugin/">http://net.tutsplus.com/tutorials/python-tutorials/how-to-create-a-sublime-text-2-plugin/</a> 翻译来的。</div><div>这篇文章主要是基于实现Nettuts+ Prefixr 这个插件来讲述的。</div><div>本文例子的代码：<a title="" target="_self" href="https://github.com/NETTUTS/How-to-Write-a-Sublime-Text-Plugin">https://github.com/NETTUTS/How-to-Write-a-Sublime-Text-Plugin</a></div><div>&nbsp;</div><div><span class="read-more"><!--more-->阅读全文</span></div><div><span class="read-more"></span></div><h2>前言：术语和参考资料</h2><div>sublime text 2的扩展模式相当的丰富。有多种方法可以修改语法高亮模式以及所有的菜单等。它还可以创建一个新的build系统，自动补全，语言定义，代码片段，宏定义，快捷键绑定，鼠标事件绑定和插件。所有这些都是通过文件构成的包来实现。</div><div>一个包就是在'Packages'目录下的一个文件夹，可以通过Preferences &gt; Browse Packages…菜单访打开改目录。也可以把一个包大包成一个zip文件，然后把扩展名改成.sublime-package。后面会有更多关于打包的介绍。</div><div>Sublime默认就捆绑了很多包。大部分的包都是跟特定语言相关的。包里面包含了语言定义，自动补全和build系统。另外还有2个包：Default和User。Default包里包含了所有标准的键盘绑定，菜单定义，文件配置和一大堆用python写的插件。User包比较特殊，它总是在最后加载。通过在User包里的自定义文件，它允许用户重写所有默认行为。</div><div>要写好插件，好手册当然是必须的：Sublime Text 2 API reference</div><div>Default包里的东西也是个很好的参考，可以掘墓下前人是如何做的，哪些是可能实现的。</div><div>大部分的编辑器都提供命令功能，除了输入字符之外的所有操作都可以通过命令来完成。Preferences &gt; Key Bindings – Default 通过这个菜单可以看到所有内置的命令。</div><div>另外，sublime插件需要使用python开发，它内置了python环境，那个控制台其实也是个python控制台。</div><div>泪奔啊，貌似除了前端技术外我能懂的就是python了。。。</div><div>OK，了解了下插件和包机制，可以开始写个插件玩玩。</div><div>&nbsp;</div><h2>Step1-创建一个插件</h2><div>&nbsp;sublime要写一个简单的插件，首先要创建一个python骨架的代码。</div><div>通过Tools &gt; New Plugin…菜单就可以自动创建一个插件的样板。</div><div>&nbsp;</div><div>import sublime, sublime_plugin&nbsp;</div><div>class ExampleCommand(sublime_plugin.TextCommand):&nbsp;</div><div>&nbsp; &nbsp; def run(self, edit):&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; self.view.insert(edit, 0, "Hello, World!")</div><div>&nbsp;</div><div>import了2个模块，创建了一个command的类。我们先保存下并运行下试试。</div><div>保存的时候要创建一个包。保存弹出框默认是在Packages\User目录下，No，我们要创建一个自己的包保存。在Packages目录下创建一个Prefixr目录：</div><div>&nbsp;</div><div>Packages/&nbsp;</div><div>…&nbsp;</div><div>- OCaml/&nbsp;</div><div>- Perl/&nbsp;</div><div>- PHP/&nbsp;</div><div>- Prefixr/&nbsp;</div><div>- Python/&nbsp;</div><div>- R/&nbsp;</div><div>- Rails/&nbsp;</div><div>…</div><div>然后把文件包存在Prefixr目录下命名为Prefixr.py。（因为原文的这篇教程是基于创建Prefixr这个插件的，其实我们安装的sublime里已经有了这个插件包，所以自己试验的话可以随便取个别的名字，把它当成另外一个插件就好了。）Prefixr.py这个文件也可以是其它名字，但必须要.py文件后缀，最好跟插件目录的名称一致。</div><div>这样，插件就保存好了。打开sublime的控制台ctrl+`。这其实就是一个Python控制台，可以在里面运行python代码。在控制台输入：</div><div>&nbsp;</div><div>view.run_command('example')</div><div>就可以看到"Hello World"被插入在当前编辑器里激活的文件的开头。</div><div>记得撤销下，然后继续。。。&nbsp;</div><h2>Step2-Command类型和名称</h2><div>sublime给插件提供了3中类型的command.</div><ul><li>Text Commands提供了对当前View对象(就是正在编辑的文件)内容的访问。</li><li>Window Commands提供里对当前编辑器Window对象的引用。</li><li>Application Commands不提供对任何window或者文件的引用，而且也很少用到。</li></ul><div>&nbsp;</div><div>这么看来，我们要对CSS文件进行编辑就得用到sublime_plugin.TextCommand这个类。所以我们这个Prefixr command就继承了sublime_plugin.TextCommand。</div><div>&nbsp;</div><div>class ExampleCommand(sublime_plugin.TextCommand):</div><div>然后向运行这个插件的时候就在控制台执行</div><div>&nbsp;</div><div>view.run_command('example')</div><div>sublime会把所有继承自sublime_plugin（TextCommand,WindowCommand,ApplicationCommand）的类都去掉Command后缀，然后把驼峰格式转换成下划线格式，当做command的名称</div><div>所以，要创建一个prefixr的command，class名称就是PrefixrCommand.</div><div>&nbsp;</div><div>class PrefixrCommand(sublime_plugin.TextCommand):</div><div>（依次类推，类名为MyTestCommand的话，command的名称就是my_test，而用view.run_command('example')运行这个插件的时候，'example'就是command名称，所以类名为MyTestCommand的话，则用view.run_command('my_test')运行）。</div><div>&nbsp;</div><h2>Step3-选择文本</h2><div>很好，现在我们的插件终于有个名字了，虽然看起来还是有点屌丝的味道。我们开始从当前的buffer获取css然后传给Prefix API来做些事情了。Sublime一个很强悍的功能就是可以方面的进行多选择。我们现在写的这个插件呢，当然就需要处理所有选中的文本。</div><div>text command类下可以通过self.view来访问当前的view，view的sel()方法返回当前所有选择区段的一个iterable。首先，我们扫描下有没有花括号，如果没有就扩大到外围选区，来确定整个区域的前缀。不管有没有花括号，都可以帮助我们确定是否需要对Prefixr API返回的结果进行空格，格式化处理。</div><div>&nbsp;</div><div>braces = False</div><div>sels = self.view.sel()&nbsp;</div><div>for sel in sels:&nbsp;</div><div>&nbsp; &nbsp; if self.view.substr(sel).find('{') != -1:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; braces = True</div><div>这段代码替代了run()方法的内容，直接执行。</div><div>如果我们没有找到花括号，就在查找每个选择最近的闭合的花括号，然后用内置的expand_selection命令，to参数设置为brackets 每个css规则区域内容就可以选中了。</div><div>&nbsp;</div><div>if not braces:&nbsp;</div><div>&nbsp; &nbsp; new_sels = []&nbsp;</div><div>&nbsp; &nbsp; for sel in sels:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; new_sels.append(self.view.find('\}', sel.end()))&nbsp;</div><div>&nbsp; &nbsp; sels.clear()&nbsp;</div><div>&nbsp; &nbsp; for sel in new_sels:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; sels.add(sel)&nbsp;</div><div>&nbsp; &nbsp; self.view.run_command("expand_selection", {"to": "brackets"})</div><div>可以参考代码库里的Prefixr-1.py</div><div>&nbsp;</div><h2>Step4-线程</h2><div>现在，选取已经扩展到了每个css代码块。就要把它发送给Prefixr API了。不用仰望，这只是一个小小的HTTP请求而已，用用urlib,urllib2这等模块就好了。但是我们先想想看，一个缓慢的web请求会对编辑器的性能造成什么影响。如果Prefixr API的响应太慢，各位大师应该会很焦躁的。。。</div><div>所以应该把把这个请求处理放在后台悄悄地进行。这就要用到线程了。</div><div>其实呢，线程这玩意是Python本身的能力，跟这个啥sublime是没太大关系的，是吧。</div><div>&nbsp;</div><h2>Step5-创建线程</h2><div>这里就要用到threading模块，创建一个PrefixrApiCall继承自threading.gThread，需要实现run方法，里面包含了需要运行的代码。</div><div>class PrefixrApiCall(threading.Thread):&nbsp;</div><div>&nbsp; &nbsp; def __init__(self, sel, string, timeout):&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; self.sel = sel&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; self.original = string&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; self.timeout = timeout&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; self.result = None</div><div>&nbsp; &nbsp; &nbsp; &nbsp; threading.Thread.__init__(self)&nbsp;</div><div>&nbsp; &nbsp; def run(self):&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; try:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data = urllib.urlencode({'css': self.original})&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; request = urllib2.Request('http://prefixr.com/api/index.php', data,&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; headers={"User-Agent": "Sublime Prefixr"})&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; http_file = urllib2.urlopen(request, timeout=self.timeout)&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; self.result = http_file.read()&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return</div><div>&nbsp; &nbsp; &nbsp; &nbsp; except (urllib2.HTTPError) as (e):&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; err = '%s: HTTP error %s contacting API' % (__name__, str(e.code))&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; except (urllib2.URLError) as (e):&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; err = '%s: URL error %s contacting API' % (__name__, str(e.reason))&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; sublime.error_message(err)&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; self.result = False</div><div>__init__()方法里设置了做web请求时需要的一些值。run()方法里包含了创建http，请求Prefixr API的代码。因为线程是跟其它代码同时运行的，所以不能直接返回值。所以用self.result来保存调用的结果。</div><div>因为我们这里引入了很多其它模块了，所以要在头部加入import申明：</div><div>&nbsp;</div><div>import urllib&nbsp;</div><div>import urllib2&nbsp;</div><div>import threading</div><div>【吐槽一下，这是python本身的东西，python是写插件的基础，这里就不用过多讲了。。】</div><div>现在我们有了线程类来做http请求了，我们要给每段选区的css创建一个线程。回到PrefixrCommand类的run()方法，用下面的代码：</div><div>&nbsp;</div><div>threads = []&nbsp;</div><div>for sel in sels:&nbsp;</div><div>&nbsp; &nbsp; string = self.view.substr(sel)&nbsp;</div><div>&nbsp; &nbsp; thread = PrefixrApiCall(sel, string, 5)&nbsp;</div><div>&nbsp; &nbsp; threads.append(thread)&nbsp;</div><div>&nbsp; &nbsp; thread.start()</div><div>记录下每个创建的线程，然后调用线程的start()方法来启动它。</div><div>可以参考代码库里的Prefixr-2.py</div><div>&nbsp;</div><h2>Step6-为结果做准备</h2><div>在处理Prefixr API请求的响应结果前我们还需要做点处理。</div><div>首先，清除掉所有的选区，因为我们之前做了修改。</div><div>&nbsp;</div><div>self.view.sel().clear()</div><div>另外创建一个Edit对象。指定一组prefixr操作，组操作就可以方便重做和撤销。</div><div>&nbsp;</div><div>edit = self.view.begin_edit('prefixr')</div><div>最后，调用一个我们后面会写的方法来处理API请求的响应。</div><div>&nbsp;</div><div>self.handle_threads(edit, threads, braces)</div><div>&nbsp;</div><h2>Step7-处理线程</h2><div>现在我们的线程们应该已经在高调的运行了，或者有些才飞了一会就结束了。现在就要实现前面用到的handle_threads()方法。这个方法遍历线程list检测显示是否还在运行。</div><div>&nbsp;</div><div>def handle_threads(self, edit, threads, braces, offset=0, i=0, dir=1):&nbsp;</div><div>&nbsp; &nbsp; next_threads = []&nbsp;</div><div>&nbsp; &nbsp; for thread in threads:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; if thread.is_alive():&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; next_threads.append(thread)&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue</div><div>&nbsp; &nbsp; &nbsp; &nbsp; if thread.result == False:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue</div><div>&nbsp; &nbsp; &nbsp; &nbsp; offset = self.replace(edit, thread, braces, offset)&nbsp;</div><div>&nbsp; &nbsp; threads = next_threads</div><div>如果线程还在运行，把它添加到一个线程列表中，留校继续查看。如果查看失败就忽略，不过为了有更好的效果，后面会写一个replace()方法。</div><div>另外，作为一个前端工程师，当然要懂点用户体验。我们可以在状态栏告诉用户我们的插件是在努力工作的，没有偷懒哦。</div><div>&nbsp;</div><div>if len(threads):&nbsp;</div><div>&nbsp; &nbsp; # This animates a little activity indicator in the status area&nbsp;</div><div>&nbsp; &nbsp; before = i % 8</div><div>&nbsp; &nbsp; after = (7) - before&nbsp;</div><div>&nbsp; &nbsp; if not after:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; dir = -1</div><div>&nbsp; &nbsp; if not before:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; dir = 1</div><div>&nbsp; &nbsp; i += dir</div><div>&nbsp; &nbsp; self.view.set_status('prefixr', 'Prefixr [%s=%s]' % \&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; (' ' * before, ' ' * after))&nbsp;</div><div>&nbsp; &nbsp; sublime.set_timeout(lambda: self.handle_threads(edit, threads,&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; braces, offset, i, dir), 100)&nbsp;</div><div>&nbsp; &nbsp; return</div><div>（还是需要不少python的知识。。。）</div><div>&nbsp;</div><div>当所有线程都完成之后，就可以结束撤销的组标记了，然后通知下用户。</div><div>&nbsp;</div><div>self.view.end_edit(edit)&nbsp;</div><div>self.view.erase_status('prefixr')&nbsp;</div><div>selections = len(self.view.sel())&nbsp;</div><div>sublime.status_message('Prefixr successfully run on %s selection%s' %</div><div>&nbsp; &nbsp; (selections, '' if selections == 1 else 's'))</div><div>可以参考Prefixr-3.py文件代码</div><div>&nbsp;</div><h2>Step8-执行替换</h2><div>正如前面提到的replace()方法，我们需要用Prefixr API返回的结果替换掉原来的css代码。</div><div>这个方法接受几个参数，撤销用的Edit对象，Prefixr API返回的结果，选区的偏移量</div><div>&nbsp;</div><div>def replace(self, edit, thread, braces, offset):&nbsp;</div><div>&nbsp; &nbsp; sel = thread.sel&nbsp;</div><div>&nbsp; &nbsp; original = thread.original&nbsp;</div><div>&nbsp; &nbsp; result = thread.result&nbsp;</div><div>&nbsp; &nbsp; # Here we adjust each selection for any text we have already inserted&nbsp;</div><div>&nbsp; &nbsp; if offset:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; sel = sublime.Region(sel.begin() + offset,&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sel.end() + offset)</div><div>替换前对结果进行格式化一下，处理下空格，结束符等。</div><div>&nbsp;</div><div>result = self.normalize_line_endings(result)&nbsp;</div><div>(prefix, main, suffix) = self.fix_whitespace(original, result, sel,&nbsp;</div><div>&nbsp; &nbsp; braces)&nbsp;</div><div>self.view.replace(edit, sel, prefix + main + suffix)</div><div>&nbsp;</div><div>然后把选区扩展到新插入的CSS代码最后一个行的末尾，并返回便宜位置。</div><div>&nbsp;</div><div>end_point = sel.begin() + len(prefix) + len(main)&nbsp;</div><div>self.view.sel().add(sublime.Region(end_point, end_point))&nbsp;</div><div>return offset + len(prefix + main + suffix) - len(original)</div><div>可以参考代码库里的Prefixr-4.py文件</div><div>&nbsp;</div><h2>Step9-处理空白</h2><div>前面替换的时候用到了一个normalize_line_endings()方法，将换行符转换成当前文档的换行符。</div><div>&nbsp;</div><div>def normalize_line_endings(self, string):&nbsp;</div><div>&nbsp; &nbsp; string = string.replace('\r\n', '\n').replace('\r', '\n')&nbsp;</div><div>&nbsp; &nbsp; line_endings = self.view.settings().get('default_line_ending')&nbsp;</div><div>&nbsp; &nbsp; if line_endings == 'windows':&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; string = string.replace('\n', '\r\n')&nbsp;</div><div>&nbsp; &nbsp; elif line_endings == 'mac':&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; string = string.replace('\n', '\r')&nbsp;</div><div>&nbsp; &nbsp; return string</div><div>fix_whitespace()方法处理css块的缩进，空格，只能对单个css块做处理。</div><div>&nbsp;</div><div>def fix_whitespace(self, original, prefixed, sel, braces):&nbsp;</div><div>&nbsp; &nbsp; # If braces are present we can do all of the whitespace magic&nbsp;</div><div>&nbsp; &nbsp; if braces:&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; return ('', prefixed, '')</div><div>&nbsp;</div><div>另外，判断下原始css中的缩进。</div><div>&nbsp;</div><div>(row, col) = self.view.rowcol(sel.begin())&nbsp;</div><div>indent_region = self.view.find('^\s+', self.view.text_point(row, 0))&nbsp;</div><div>if self.view.rowcol(indent_region.begin())[0] == row:&nbsp;</div><div>&nbsp; &nbsp; indent = self.view.substr(indent_region)&nbsp;</div><div>else:&nbsp;</div><div>&nbsp; &nbsp; indent = ''</div><div>&nbsp;</div><div>用当前文件的缩进设置来格式化prefixed的css</div><div>&nbsp;</div><div>prefixed = prefixed.strip()&nbsp;</div><div>prefixed = re.sub(re.compile('^\s+', re.M), '', prefixed)&nbsp;</div><div>settings = self.view.settings()&nbsp;</div><div>use_spaces = settings.get('translate_tabs_to_spaces')&nbsp;</div><div>tab_size = int(settings.get('tab_size', 8))&nbsp;</div><div>indent_characters = '\t'</div><div>if use_spaces:&nbsp;</div><div>&nbsp; &nbsp; indent_characters = ' ' * tab_size&nbsp;</div><div>prefixed = prefixed.replace('\n', '\n' + indent + indent_characters)</div><div>&nbsp;</div><div>用开头的空白来判断下新插入的CSS代码位置是否正确。</div><div>match = re.search('^(\s*)', original)&nbsp;</div><div>prefix = match.groups()[0]&nbsp;</div><div>match = re.search('(\s*)\Z', original)&nbsp;</div><div>suffix = match.groups()[0]&nbsp;</div><div>return (prefix, prefixed, suffix)</div><div>&nbsp;fix_whitespace()方法中用到了正则，所以要import re模块。</div><div>&nbsp;</div><div>prefixr command就完成了，后面就是要做些快捷键绑定和菜单绑定了。</div><div>&nbsp;</div><h2>Step-10 键盘绑定</h2><div>sublime大部分的配置都可以通过json文件来完成，键盘绑定也一样。不过它的键盘绑定是区分系统的，所以基本上要建立3个文件，而且命名为Default (Windows).sublime-keymap, Default (Linux).sublime-keymap and Default (OSX).sublime-keymap</div><div>Prefixr/&nbsp;</div><div>...&nbsp;</div><div>- Default (Linux).sublime-keymap&nbsp;</div><div>- Default (OSX).sublime-keymap&nbsp;</div><div>- Default (Windows).sublime-keymap&nbsp;</div><div>- Prefixr.py</div><div>&nbsp;</div><div>这个json文件里包含的是一个对象数组，每个对象需要包含keys,command,如果这个command需要参数的话还会有args。不过windows和linux的配置基本上差不多。</div><div>Preferences &gt; Key Bindings – Default 可以通过这个菜单先查看下你想指定的快捷键是否已经被使用了。</div><div>&nbsp;</div><div>[&nbsp;</div><div>&nbsp; &nbsp; {&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; "keys": ["ctrl+alt+x"], "command": "prefixr"</div><div>&nbsp; &nbsp; }&nbsp;</div><div>]</div><div>&nbsp;</div><h2>Step-11 修改菜单</h2><div>sublime有个很爽的事就是通过创建.sublime-menu文件就可以修改菜单。配置文件需要更具要修改的菜单类型来命名：</div><div>Main.sublime-menu 控制了程序的主菜单</div><div>Side Bar.sublime-menu 控制侧边栏文件或者目录的右键菜单</div><div>Context.sublime-menu 控制处于编辑状态的文件右键菜单</div><div>通过这种接口，通过一个菜单配置文件就可能会影响到其它的各个菜单。可以看看Default包下的已有的菜单配置。</div><div>我们想给我们的Prefixr插件在Edit菜单下添加一个菜单项，然后在Preferences里添加配置菜单。下面是Edit里的菜单配置，Preferences里的配置有点长就省略了。</div><div>[&nbsp;</div><div>{&nbsp;</div><div>&nbsp; &nbsp; "id": "edit",&nbsp;</div><div>&nbsp; &nbsp; "children":&nbsp;</div><div>&nbsp; &nbsp; [&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; {"id": "wrap"},&nbsp;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; { "command": "prefixr" }&nbsp;</div><div>&nbsp; &nbsp; ]&nbsp;</div><div>}&nbsp;</div><div>]</div><div>&nbsp;</div><div>注意这里的id的就一个已经存在的菜单结构。</div><div>可以参考代码库里的文件 https://github.com/wbond/sublime_prefixr</div><div>&nbsp;</div><h2>step-12 发布你的插件包</h2><div>现在写了一个非常有用的插件了，当然要分享给别人用用。</div><div>“Sublime支持zip文件或者一个包目录来分享插件包。把包目录打包成一个zip文件，然后把后缀改成.sublime-package,别人把这个文件放到插件包目录下重启sublime就安装完成了。“</div><div>另外一种方式就是通过Package Control的插件，专门来管理插件安装的，相信你已经安装了。可以通过下面的步骤进行：</div><div>1).你需要有个github帐号，并fork https://github.com/wbond/package_control_channel</div><div>2).通过git clone命令下载你fork完的地址，如: git@github.com:welefen/package_control_channel.git</div><div>3).修改repositories.json这个文件，把你的插件名称和对应的github项目地址添加进去</div><div>4).ci并push到你的package ctrol里，然后通过pull 5).request推到官方的github里，如果他们审批通过了，那么你的插件就会放到package control里，别人就可以通过install直接安装了</div><div>（上面这段引用网络已有文章：<a title="" target="_self" href="http://www.welefen.com/how-to-develop-sublime-text-plugin.html">http://www.welefen.com/how-to-develop-sublime-text-plugin.html</a>，简短的插件开发入门也可以参考此文章。）</div>
+      </div>
+      <div class="article-comment">
+  <div class="comment-hd">
+    <span class="comment-hd-title"><span class="count" id="J_comment_counts">2</span> 条评论 </span>
+    &nbsp; | &nbsp; 账号登录：
+
+    <a href="../login_domain.html"><i class="iconfont">&#232;</i>域账号</a> &nbsp;  &nbsp;
+    <a href="../auth/taobao.html"><i class="iconfont">&#440;</i>淘宝账号</a>  &nbsp;  &nbsp;
+    <a href="../auth/weibo.html"><i class="iconfont">&#468;</i>新浪微博</a>
+    <!-- <a href="#"><i class="iconfont">&#338;</i>小二账号</a>
+    <a href="#"><i class="iconfont">&#232;</i>域账号</a> -->
+
+  </div>
+  <div class="comment-lists" id="J_comment-lists">
+      <div class="comment-ls">
+  <a href="../users/32" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1G_npXedfXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-11-28 09:12:31</span>
+      </div>
+      <div class="msg-body">
+        你在哪里都占广告位。。。
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/146" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1QFnjXiNcXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-11-26 17:57:32</span>
+      </div>
+      <div class="msg-body">
+        果然给力，抢占一楼沙发，此处广告位出租
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+  </div>
+</div>
+
+    </div>
+    <div id="J_atAside_541" class="article-aside J_atAside" pid="541">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container" >
+        <div class="article-aside-container-sub">
+          <div class="attachment-bd hidden J_attachmentsBox">
+            <ul>
+            </ul>
+              <p>木有附件</p>
+          </div>
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      <div class="friendly-link">
+    <h2>友情链接</h2>
+    <div class="friendly-link-list">
+        <div class="banners_edit" data-editable="false" data-tkey="friendly_link_list"><ul>            <li><a href="http://ued.taobao.com/" target="_blank">淘宝UED</a> </li>            <li><a href="http://www.aliued.com/" target="_blank">Alibaba国际站UED</a> </li>            <li><a href="http://china.aliued.com/" target="_blank">Alibaba中文站UED</a> </li>            <li><a href="http://ued.alipay.com/" target="_blank"> 支付宝UED</a> </li>            <li><a href="http://ued.tmall.com/" target="_blank">天猫UED</a> </li></ul><ul> 	<li><a href="http://ur.alibaba-inc.com">阿里用户体验中心</a> </li>	 <li><a href="http://www.uisdc.com" target="_blank">优秀网页设计</a> </li><li><a href="http://www.bootcss.com" target="_blank">Bootstrap中文网</a> </li>            <li><a href="http://udc.weibo.com/" target="_blank">微博UDC</a> </li>            <li><a href="http://ued.sogou.com/" target="_blank">搜狗UED</a> </li>            <li><a href="http://mued.sohu.com/" target="_blank">搜狐UED</a> </li>            <li><a href="http://cdc.tencent.com/" target="_blank">腾讯CDC</a> </li></ul><ul>	    	<li><a href="http://ucdchina.com/" target="_blank">CDC大社区</a> </li>                        <li><a href="http://www.boxui.com/" target="_blank">UI盒子</a> </li>            <li><a href="http://www.trans4fun.com/" target="_blank">前端翻译小站 </a> </li>               </ul></div>
+    </div>
+    <div class="abouts">
+        <ul>
+            <li><a href="../feeds/posts.rss"><i class="iconfont">&#483</i>RSS订阅</a> </li>
+            <li><a href="http://weibo.com/alimamamux" target="_blank"><i class="iconfont">&#468</i>微博关注</a> </li>
+            <li><a href="../index.html"><i class="iconfont">&#349</i>联系我们</a> </li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+<p>&copy;阿里妈妈MUX, All rights reserved.</p>
+<p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：sangxing#taobao.com</p>
+</footer>
+
+    </div>
+  </div>
+    <script src="https://assets.alicdn.com/??s/kissy/1.2.0/kissy-min.js" type="text/javascript"></script>
+  <script src="../assets/site/work-3078ff5dba6752b818be2c96bebf33d4.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27817535-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

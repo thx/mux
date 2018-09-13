@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>文章 - 阿里妈妈MUX</title>
+  <link href="assets/application-65463c58d38dc99711b75f6b6bfb7216.css" media="all" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+  <link href="/kissy/editor/theme/cool/editor-pkg-sprite-min.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if gte IE 8]><!-->
+  <link href="kissy/editor/theme/cool/editor-pkg-min-datauri.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" name="csrf-token" />
+  <link href="feeds/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" type="image/x-icon" />
+  <meta name="application-name" content="UX 体验工作平台"/>
+  <meta name="msapplication-tooltip" content="UX 体验工作平台" />
+  <meta name="msapplication-task" content="name=文章;action-uri=http://mux.alimama.com/posts;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=工作;action-uri=http://mux.alimama.com/works;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=招聘;action-uri=http://mux.alimama.com/jobs;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=团队;action-uri=http://mux.alimama.com/team;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+</head>
+<body ><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac1dc06715368232437813971e6bcb&asid=AQAAAADND5pbKBdBGQAAAAD+vf7Hx9qNGQ==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+  <div class="page-bg"></div>
+  <div id="J_page" class="page ">
+    <div id="header">
+  <h1 class="ux-logo">
+    <a href="index.html" title="阿里妈妈MUX" class="dim">
+      <!-- <span class="iconfont ux-logo-at">&#481;</span>
+      <span class="iconfont">&#482;</span> -->
+      <span class="mux-iconfont">&#xf02ae;</span>
+      <span class="ux-name">
+        体验工作平台 <br/>
+        <span>mux.alimama.com</span>
+      </span>
+    </a>
+  </h1>
+  <div class="menu">
+    <div class="search-con">
+      <div class="search">
+        <div class="search-inner">
+          <form action="http://mux.alimama.com/search">
+            <button type="submit" class="search-submit iconfont">&#337;</button>
+            <button type="button" class="search-clear iconfont" id="J_sBtnClear">&#223;</button>
+            <div class="search-input-box">
+              <fieldset tabindex="0">
+                <label class="search-label" for="J_searchInput"></label>
+                <input id="J_searchInput" class="search-input" accesskey="s" autocomplete="off" type="text" name="q" value="" maxlength="100" data-autofocus="autofocus">
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <ul class="main-nav">
+      <li class=" "><a href="posts.html">文章</a></li>
+      <li class="">
+        <a href="works.html" class="J_dropdownTrigger" data-login="login">工作</a>
+        <div class="J_dropdown hidden user-dropdown">
+          <ul>
+            <li class="sprite arrow"></li>
+            <li><a href="works/bricks.html">PC组件库</a></li>
+            <li><a href="works/mobile-components.html">无线组件库</a></li>
+            <li><a href="works/visual-identification.html">品牌</a></li>
+            <li><a href="works/interaction-design.html">交互</a></li>
+            <li><a href="works/user-research.html">用研</a></li>
+            <li><a href="works/visual-design.html">视觉</a></li>
+            <li><a href="works/guanli.html">管理</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="http://idesign.alibaba-inc.com/Freshmen" target="_blank" data-login="login">工作平台</a></li>
+      <li class=" "><a href="jobs.html">招聘</a></li>
+      <li><a href="http://thx.github.io" target="_blank">THX</a></li>
+    </ul>
+    <div class="user-info">
+        <div id="J_loginBoxTrigger" class="user-ribbon sprite"><i class="iconfont">&#338</i></div>
+        <div id="J_loginBox" class="login-box hidden">
+  <div class="login-box-con" style="display:none">
+    <!--  已经不使用 -->
+    <form accept-charset="UTF-8" action="http://mux.alimama.com/user_sessions" class="new_user_session" id="J_loginForm" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" /></div>
+      <ul>
+        <li class="field"><input class="field-text" data-valid="{email:[true,&quot;邮箱格式有误&quot;]}" id="user_session_email" name="user_session[email]" placeholder="E-mail" size="30" type="text" /></li>
+        <li class="field"><input class="field-text" id="user_session_password" name="user_session[password]" placeholder="密码" size="30" type="password" /></li>
+        <li class="field clear login-field-last">
+          <input name="user_session[remember_me]" type="hidden" value="0" /><input class="field-check" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" />
+          <label for="user_session_remember_me">记住我</label> &nbsp;
+          <input class="login-btn" name="commit" type="submit" value="登录" />
+        </li>
+      </ul>
+</form>  </div>
+
+      <div class="login-methods">
+      选择登录方式:
+        <ul class="login-lists clear">
+
+          <li>
+            <a href="auth/taobao.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#440;</i><i class="iconfont iconfont-tao">&#440;</i></span>
+              </span>
+            </a>
+            淘宝账号
+          </li>
+          <li>
+            <a href="auth/weibo.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#468;</i><i class="iconfont iconfont-weibo">&#468;</i></span>
+              </span>
+            </a>
+            新浪账号
+          </li>
+          <li class="last">
+            <a href="login_domain.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#232;</i><i class="iconfont iconfont-domain">&#232;</i></span>
+              </span>
+            </a>
+            域账号
+          </li>
+        </ul>
+
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div id="banner" style="position:relative;">
+  <h2 class="title-posts title"><span class="f">文</span><span class="l">章</span></h2>
+  <div class="bd"><div class="bd-content" data-editable="false" data-tkey="posts"><p><p>阿里妈妈MUX文章分享</p></p></div></div>
+</div>
+
+
+
+    <div id="wrapper">
+        <div id="aside">
+  <ul class="channels" id="J_channels">
+    <li class="current latest">
+      <a href="posts.html" class="J_channel" ux-channel="archive">最新</a>
+    </li>
+      <li class="">
+        <a href="posts/visual-design.html" class="J_channel" ux-channel="visual-design" ux-count="88">视觉</a>
+      </li>
+      <li class="">
+        <a href="posts/user-research.html" class="J_channel" ux-channel="user-research" ux-count="7">用研</a>
+      </li>
+      <li class="">
+        <a href="posts/interaction-design.html" class="J_channel" ux-channel="interaction-design" ux-count="64">交互</a>
+      </li>
+      <li class="">
+        <a href="posts/front-end.html" class="J_channel" ux-channel="front-end" ux-count="18">前端</a>
+      </li>
+      <li class="">
+        <a href="posts/team.html" class="J_channel" ux-channel="team" ux-count="61">团队</a>
+      </li>
+  </ul>
+  <div class="categories" id="J_categories">
+    <p class="title-bar">
+      <a class="J_all" href="posts/index.html">所有<em>（<span class="J_count">232</span>）</em></a>
+      <a class="toggler J_toggler" href="index.html%3Fpage=6.html#">展开类目</a>
+    </p>
+    <ul ux-channel="archive" class="">
+        <li><span class="category-name">2018年</span>
+          <ul>
+            <li><a href="posts/2018/01.html" class="sub-category J_subCategory">2018年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2017年</span>
+          <ul>
+            <li><a href="posts/2017/03.html" class="sub-category J_subCategory">2017年03月（1）</a>
+            </li>
+            <li><a href="posts/2017/02.html" class="sub-category J_subCategory">2017年02月（1）</a>
+            </li>
+            <li><a href="posts/2017/01.html" class="sub-category J_subCategory">2017年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2016年</span>
+          <ul>
+            <li><a href="posts/2016/12.html" class="sub-category J_subCategory">2016年12月（1）</a>
+            </li>
+            <li><a href="posts/2016/10.html" class="sub-category J_subCategory">2016年10月（1）</a>
+            </li>
+            <li><a href="posts/2016/09.html" class="sub-category J_subCategory">2016年09月（2）</a>
+            </li>
+            <li><a href="posts/2016/08.html" class="sub-category J_subCategory">2016年08月（1）</a>
+            </li>
+            <li><a href="posts/2016/06.html" class="sub-category J_subCategory">2016年06月（1）</a>
+            </li>
+            <li><a href="posts/2016/04.html" class="sub-category J_subCategory">2016年04月（4）</a>
+            </li>
+            <li><a href="posts/2016/03.html" class="sub-category J_subCategory">2016年03月（1）</a>
+            </li>
+            <li><a href="posts/2016/02.html" class="sub-category J_subCategory">2016年02月（2）</a>
+            </li>
+            <li><a href="posts/2016/01.html" class="sub-category J_subCategory">2016年01月（2）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2015年</span>
+          <ul>
+            <li><a href="posts/2015/12.html" class="sub-category J_subCategory">2015年12月（1）</a>
+            </li>
+            <li><a href="posts/2015/11.html" class="sub-category J_subCategory">2015年11月（1）</a>
+            </li>
+            <li><a href="posts/2015/10.html" class="sub-category J_subCategory">2015年10月（1）</a>
+            </li>
+            <li><a href="posts/2015/09.html" class="sub-category J_subCategory">2015年09月（3）</a>
+            </li>
+            <li><a href="posts/2015/08.html" class="sub-category J_subCategory">2015年08月（3）</a>
+            </li>
+            <li><a href="posts/2015/07.html" class="sub-category J_subCategory">2015年07月（4）</a>
+            </li>
+            <li><a href="posts/2015/06.html" class="sub-category J_subCategory">2015年06月（4）</a>
+            </li>
+            <li><a href="posts/2015/05.html" class="sub-category J_subCategory">2015年05月（2）</a>
+            </li>
+            <li><a href="posts/2015/04.html" class="sub-category J_subCategory">2015年04月（3）</a>
+            </li>
+            <li><a href="posts/2015/03.html" class="sub-category J_subCategory">2015年03月（1）</a>
+            </li>
+            <li><a href="posts/2015/02.html" class="sub-category J_subCategory">2015年02月（3）</a>
+            </li>
+            <li><a href="posts/2015/01.html" class="sub-category J_subCategory">2015年01月（3）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2014年</span>
+          <ul>
+            <li><a href="posts/2014/12.html" class="sub-category J_subCategory">2014年12月（10）</a>
+            </li>
+            <li><a href="posts/2014/11.html" class="sub-category J_subCategory">2014年11月（5）</a>
+            </li>
+            <li><a href="posts/2014/10.html" class="sub-category J_subCategory">2014年10月（3）</a>
+            </li>
+            <li><a href="posts/2014/09.html" class="sub-category J_subCategory">2014年09月（7）</a>
+            </li>
+            <li><a href="posts/2014/08.html" class="sub-category J_subCategory">2014年08月（4）</a>
+            </li>
+            <li><a href="posts/2014/07.html" class="sub-category J_subCategory">2014年07月（4）</a>
+            </li>
+            <li><a href="posts/2014/06.html" class="sub-category J_subCategory">2014年06月（1）</a>
+            </li>
+            <li><a href="posts/2014/05.html" class="sub-category J_subCategory">2014年05月（1）</a>
+            </li>
+            <li><a href="posts/2014/04.html" class="sub-category J_subCategory">2014年04月（2）</a>
+            </li>
+            <li><a href="posts/2014/03.html" class="sub-category J_subCategory">2014年03月（8）</a>
+            </li>
+            <li><a href="posts/2014/01.html" class="sub-category J_subCategory">2014年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2013年</span>
+          <ul>
+            <li><a href="posts/2013/12.html" class="sub-category J_subCategory">2013年12月（2）</a>
+            </li>
+            <li><a href="posts/2013/11.html" class="sub-category J_subCategory">2013年11月（1）</a>
+            </li>
+            <li><a href="posts/2013/09.html" class="sub-category J_subCategory">2013年09月（1）</a>
+            </li>
+            <li><a href="posts/2013/08.html" class="sub-category J_subCategory">2013年08月（2）</a>
+            </li>
+            <li><a href="posts/2013/07.html" class="sub-category J_subCategory">2013年07月（6）</a>
+            </li>
+            <li><a href="posts/2013/06.html" class="sub-category J_subCategory">2013年06月（3）</a>
+            </li>
+            <li><a href="posts/2013/05.html" class="sub-category J_subCategory">2013年05月（6）</a>
+            </li>
+            <li><a href="posts/2013/04.html" class="sub-category J_subCategory">2013年04月（5）</a>
+            </li>
+            <li><a href="posts/2013/03.html" class="sub-category J_subCategory">2013年03月（9）</a>
+            </li>
+            <li><a href="posts/2013/02.html" class="sub-category J_subCategory">2013年02月（4）</a>
+            </li>
+            <li><a href="posts/2013/01.html" class="sub-category J_subCategory">2013年01月（5）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2012年</span>
+          <ul>
+            <li><a href="posts/2012/12.html" class="sub-category J_subCategory">2012年12月（28）</a>
+            </li>
+            <li><a href="posts/2012/11.html" class="sub-category J_subCategory">2012年11月（13）</a>
+            </li>
+            <li><a href="posts/2012/10.html" class="sub-category J_subCategory">2012年10月（8）</a>
+            </li>
+            <li><a href="posts/2012/09.html" class="sub-category J_subCategory">2012年09月（17）</a>
+            </li>
+            <li><a href="posts/2012/08.html" class="sub-category J_subCategory">2012年08月（3）</a>
+            </li>
+            <li><a href="posts/2012/07.html" class="sub-category J_subCategory">2012年07月（22）</a>
+            </li>
+            <li><a href="posts/2012/06.html" class="sub-category J_subCategory">2012年06月（2）</a>
+            </li>
+            <li><a href="posts/2012/05.html" class="sub-category J_subCategory">2012年05月（1）</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+      <ul ux-channel="visual-design" class="hidden">
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/visual-design/175-beijingzhishi.html" class="sub-category J_subCategory">背景知识</a>
+</li>                <li>
+                  <a href="posts/visual-design/256-shishangshenghuo.html" class="sub-category J_subCategory">时尚生活</a>
+</li>                <li>
+                  <a href="posts/visual-design/171-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="posts/visual-design/289-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">产品展示</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/visual-design/160-chuangxinchanpin.html" class="sub-category J_subCategory">创新产品</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="user-research" class="hidden">
+          <li><span class="category-name">研究方法</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/user-research/167-shejiyanjiufangfa.html" class="sub-category J_subCategory">设计研究方法</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">工作感想</span>
+            <ul class="sub-category-list">
+            </ul>
+          </li>
+          <li><span class="category-name">搜索研究</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/user-research/254-jueceyanjiu.html" class="sub-category J_subCategory">决策研究</a>
+</li>                <li>
+                  <a href="posts/user-research/165-leimuyanjiu.html" class="sub-category J_subCategory">类目研究</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">合作</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/user-research/239-uxneibu.html" class="sub-category J_subCategory">UX内部</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="interaction-design" class="hidden">
+          <li><span class="category-name">交互设计</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/interaction-design/157-jiaohushejiyuanze.html" class="sub-category J_subCategory">交互设计原则</a>
+</li>                <li>
+                  <a href="posts/interaction-design/158-shejifangfa.html" class="sub-category J_subCategory">设计方法</a>
+</li>                <li>
+                  <a href="posts/interaction-design/255-shejifenxiang.html" class="sub-category J_subCategory">设计分享</a>
+</li>                <li>
+                  <a href="posts/interaction-design/280-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/interaction-design/197-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="posts/interaction-design/281-shenghuoganwu.html" class="sub-category J_subCategory">生活感悟</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="front-end" class="hidden">
+          <li><span class="category-name">pc</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/front-end/182-qianduanjizhu.html" class="sub-category J_subCategory">前端技术</a>
+</li>                <li>
+                  <a href="posts/front-end/250-gongjujineng.html" class="sub-category J_subCategory">工具技能</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">平台</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/front-end/187-brix.html" class="sub-category J_subCategory">Brix</a>
+</li>                <li>
+                  <a href="posts/front-end/208-chart.html" class="sub-category J_subCategory">Chart</a>
+</li>                <li>
+                  <a href="posts/front-end/240-mix.html" class="sub-category J_subCategory">Mix</a>
+</li>                <li>
+                  <a href="posts/front-end/285-rap.html" class="sub-category J_subCategory">RAP</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">mobile</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/front-end/191-shejifangan.html" class="sub-category J_subCategory">设计方案</a>
+</li>                <li>
+                  <a href="posts/front-end/276-iconfont.html" class="sub-category J_subCategory">iconfont</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">淘宝H5</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/front-end/231-kongjian.html" class="sub-category J_subCategory">控件</a>
+</li>                <li>
+                  <a href="posts/front-end/232-zujian.html" class="sub-category J_subCategory">组件</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/front-end/263-velocity.html" class="sub-category J_subCategory">Velocity</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="team" class="hidden">
+          <li><span class="category-name">团队活动</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/team/178-guanggao.html" class="sub-category J_subCategory">广告</a>
+</li>                <li>
+                  <a href="posts/team/189-gongyi.html" class="sub-category J_subCategory">公益</a>
+</li>                <li>
+                  <a href="posts/team/241-tuanjian.html" class="sub-category J_subCategory">团建</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">兴趣小组</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/team/180-tangmiaohui.html" class="sub-category J_subCategory">堂描绘</a>
+</li>                <li>
+                  <a href="posts/team/181-shijuexingquxiaozu.html" class="sub-category J_subCategory">视觉兴趣小组</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">业界交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/team/253-upd.html" class="sub-category J_subCategory">UPA</a>
+</li>                <li>
+                  <a href="posts/team/252-adc.html" class="sub-category J_subCategory">ADC</a>
+</li>                <li>
+                  <a href="posts/team/283-hiued.html" class="sub-category J_subCategory">HIUED</a>
+</li>                <li>
+                  <a href="posts/team/303-ucan.html" class="sub-category J_subCategory">UCAN</a>
+</li>                <li>
+                  <a href="posts/team/301-ixdc.html" class="sub-category J_subCategory">IxDC</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">随笔</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="posts/team/247-gongzuoxinde.html" class="sub-category J_subCategory">工作心德</a>
+</li>                <li>
+                  <a href="posts/team/248-yuedubiji.html" class="sub-category J_subCategory">阅读笔记</a>
+</li>                <li>
+                  <a href="posts/team/249-xinqinggushi.html" class="sub-category J_subCategory">心情故事</a>
+</li>            </ul>
+          </li>
+      </ul>
+  </div>
+</div>
+
+      <div id="main">
+
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1406.html">爱淘宝新版首页项目总结</a></h3>
+      <div class="publish-date">2014/12/24</div>
+      <div class="authors">
+          <a href="users/11" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1IDywFVXXXXalaXXXSutbFXXX.jpg_30x30.jpg" /></a>
+          <a href="users/158" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1v3T2GpXXXXcIXVXXErRbFXXX.PNG_30x30.jpg" /></a>
+          <a href="users/5568" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1_ZozGVXXXXa.aXXXSutbFXXX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1406">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>6</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>5/8908</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E7%2588%25B1%25E6%25B7%2598%25E5%25AE%259D%25E6%2596%25B0%25E7%2589%2588%25E9%25A6%2596%25E9%25A1%25B5%25E9%25A1%25B9%25E7%259B%25AE%25E6%2580%25BB%25E7%25BB%2593%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1406" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1uo3BGVXXXXaIXVXXSutbFXXX.jpg" /></p><p><span class="read-more"></span>
+          <p><a href="posts/1406.html">查看《爱淘宝新版首页项目总结》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1406" class="article-aside J_atAside" pid="1406">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1405.html">无线直通车视觉之路</a></h3>
+      <div class="publish-date">2014/12/24</div>
+      <div class="authors">
+          <a href="users/11" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1IDywFVXXXXalaXXXSutbFXXX.jpg_30x30.jpg" /></a>
+          <a href="users/25" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1saTjXfXcXXb1upjX.jpg_30x30.jpg" /></a>
+          <a href="users/3454" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1U0zpFpBgXXb1upjX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1405">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>5</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>1/6050</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E6%2597%25A0%25E7%25BA%25BF%25E7%259B%25B4%25E9%2580%259A%25E8%25BD%25A6%25E8%25A7%2586%25E8%25A7%2589%25E4%25B9%258B%25E8%25B7%25AF%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1405" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB13RIDGVXXXXcYXpXXwu0bFXXX.png" /><span class="read-more"></span>
+          <p><a href="posts/1405.html">查看《无线直通车视觉之路》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1405" class="article-aside J_atAside" pid="1405">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1403.html">体验经济新时代：UXPA中国年度大会</a></h3>
+      <div class="publish-date">2014/12/21</div>
+      <div class="authors">
+          <a href="users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1403">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>2</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>2/5654</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E4%25BD%2593%25E9%25AA%258C%25E7%25BB%258F%25E6%25B5%258E%25E6%2596%25B0%25E6%2597%25B6%25E4%25BB%25A3%25EF%25BC%259AUXPA%25E4%25B8%25AD%25E5%259B%25BD%25E5%25B9%25B4%25E5%25BA%25A6%25E5%25A4%25A7%25E4%25BC%259A%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1403" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB10xsqGVXXXXcVXpXXwu0bFXXX.png" /></p><p class="p1"><span class="s1">UXPA中国年度大会（<a title="" target="_self" href="http://www.userfriendly.org.cn/cn/index/">http://www.userfriendly.org.cn</a>）于11月中旬在无锡举行，主题为“体验经济新时代”。大会共进行四整天，包括主题演讲、专家论坛、工作坊、文集分享、free talk，以及用户体验大赛答辩和颁奖。很荣幸今年有第二个机会参加UXPA的盛会，本次大会内容非常丰富，恨不得有分身术，可以同时去几个会场参加就好啦！</span></p><p class="p1">这里我把大会的主题演讲、专家论坛，和我参加的工作坊、比赛答辩、free talk等整理分享给大家~</p><p class="p1">内容很浓缩但也很长，请耐心阅读哦&nbsp;<span style="color:rgb(84, 84, 84);font-family:arial, sans-serif;font-size:small;line-height:18.2000007629395px;">&lt;(￣︶￣)&gt;</span></p><p class="p1"><span class="read-more"></span>
+          <p><a href="posts/1403.html">查看《体验经济新时代：UXPA中国年度大会》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1403" class="article-aside J_atAside" pid="1403">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1402.html">CMS新版本发布总结</a></h3>
+      <div class="publish-date">2014/12/16</div>
+      <div class="authors">
+          <a href="users/4134" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1tW4CFrppXXaCwpjX.png_30x30.jpg" /></a>
+          <a href="users/5218" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1u13KKFXXXXXYXpXXSutbFXXX.jpg_30x30.jpg" /></a>
+          <a href="users/5757" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB15Uz0GVXXXXaCXVXX1rlbFXXX.JPG_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1402">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>3</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>1/7974</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=CMS%25E6%2596%25B0%25E7%2589%2588%25E6%259C%25AC%25E5%258F%2591%25E5%25B8%2583%25E6%2580%25BB%25E7%25BB%2593%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1402" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1_QPZGVXXXXaWXVXXSutbFXXX.jpg" /></p><p><span class="read-more"></span>
+          <p><a href="posts/1402.html">查看《CMS新版本发布总结》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1402" class="article-aside J_atAside" pid="1402">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1401.html">让购物互动起来—融合墙项目小结</a></h3>
+      <div class="publish-date">2014/12/15</div>
+      <div class="authors">
+          <a href="users/3548" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1WA41FVXXXXX3XXXXSutbFXXX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1401">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>0</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>1/4473</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E8%25AE%25A9%25E8%25B4%25AD%25E7%2589%25A9%25E4%25BA%2592%25E5%258A%25A8%25E8%25B5%25B7%25E6%259D%25A5%25E2%2580%2594%25E8%259E%258D%25E5%2590%2588%25E5%25A2%2599%25E9%25A1%25B9%25E7%259B%25AE%25E5%25B0%258F%25E7%25BB%2593%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1401" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1FdDVGVXXXXc2XFXXSutbFXXX.jpg" /><span class="read-more"></span>
+          <p><a href="posts/1401.html">查看《让购物互动起来—融合墙项目小结》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1401" class="article-aside J_atAside" pid="1401">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1400.html">知行合一：移动直通车项目回顾</a></h3>
+      <div class="publish-date">2014/12/14</div>
+      <div class="authors">
+          <a href="users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1400">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>2</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>2/4920</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E7%259F%25A5%25E8%25A1%258C%25E5%2590%2588%25E4%25B8%2580%25EF%25BC%259A%25E7%25A7%25BB%25E5%258A%25A8%25E7%259B%25B4%25E9%2580%259A%25E8%25BD%25A6%25E9%25A1%25B9%25E7%259B%25AE%25E5%259B%259E%25E9%25A1%25BE%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1400" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1ns_OGVXXXXb3XVXXwu0bFXXX.png" /></p><p>手机版直通车已经正式上线几个月了，用户数量和带来的收益在稳步增长中，目前二期刚刚启动，主要是针对移动设备和千牛平台做功能完善和体验优化。作为该项目最早的发起人和产品的设计者，有幸从不同角度体会到整个项目从最初的想法到最终的产品的全部过程，也又一次感受到，设计，是整个链路中的一环，是多个重要环节中的一个重要环节。设计究竟重不重要呢？当然重要，但如果要做接地气的产品设计，就一定要概念与实际紧密结合、理论与实践相辅相成，即“知行合一”。</p><p>这篇项目总结其实在产品上线前就已经写好，其中很多内容在过去的分享中也有提及，这里整体分享出来，意在给出项目总结的另一种可能（深沉深刻型可以参考我之前<a title="《设计之道》" target="_self" href="http://uone.alibaba-inc.com/forum.php?mod=viewthread&amp;tid=846">PC直通车的总结</a>），希望能给人一些启发。</p><p><span class="read-more"></span>
+          <p><a href="posts/1400.html">查看《知行合一：移动直通车项目回顾》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1400" class="article-aside J_atAside" pid="1400">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1394.html">2014.11.11物价变回十年前主会场设计小结</a></h3>
+      <div class="publish-date">2014/12/04</div>
+      <div class="authors">
+          <a href="users/11" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1IDywFVXXXXalaXXXSutbFXXX.jpg_30x30.jpg" /></a>
+          <a href="users/14" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1fwLpXklgXXb1upjX.jpg_30x30.jpg" /></a>
+          <a href="users/5349" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB17WxpXpXXXXb5bpXXSutbFXXX.jpg_30x30.jpg" /></a>
+          <a href="users/6148" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tps/i3/T1CDaDXlNuXXXXXXXX-100-100.png_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1394">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>2</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>3/6380</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=2014.11.11%25E7%2589%25A9%25E4%25BB%25B7%25E5%258F%2598%25E5%259B%259E%25E5%258D%2581%25E5%25B9%25B4%25E5%2589%258D%25E4%25B8%25BB%25E4%25BC%259A%25E5%259C%25BA%25E8%25AE%25BE%25E8%25AE%25A1%25E5%25B0%258F%25E7%25BB%2593%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1394" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><a title="" target="_self" href="posts/1394.html"><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1ZleRGVXXXXaEaXXXSutbFXXX.jpg" /></a></p><p><span style="color:rgb(68, 68, 68);">虽然1111结束有一些时间了，眼看1212也来了，不过这会可能还有些疯狂的小伙伴在等待双11的包裹吧！</span></p><p><span style="color:rgb(68, 68, 68);">从2009年开始，双11不仅仅是光棍节，更是一次全民脱光的购物狂欢节，大家都为了参与这一年一度的狂欢摩拳擦掌， 为了迎接双11的到来，阿里妈妈也准备了一次相关的活动来回馈广大的商家与消费者。<span class="read-more"></span>
+          <p><a href="posts/1394.html">查看《2014.11.11物价变回十年前主会场设计小结》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1394" class="article-aside J_atAside" pid="1394">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1392.html">色彩设计方法</a></h3>
+      <div class="publish-date">2014/12/01</div>
+      <div class="authors">
+          <a href="users/5319" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1HsvlFVXXXXXvXpXXwu0bFXXX.png_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1392">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>10</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>24/43222</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E8%2589%25B2%25E5%25BD%25A9%25E8%25AE%25BE%25E8%25AE%25A1%25E6%2596%25B9%25E6%25B3%2595%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1392" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p>​</p><p><span style="font-family:Arial;font-size:24px;letter-spacing:0px;line-height:normal;color:rgb(68, 68, 68);"><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1LD1KGVXXXXXbXFXXwu0bFXXX.png" /></span></p><p><span style="font-family:Arial;font-size:24px;letter-spacing:0px;line-height:normal;color:rgb(68, 68, 68);"></span></p><p><span style="font-family:Arial;font-size:24px;letter-spacing:0px;line-height:normal;color:rgb(68, 68, 68);"> 为什么要整理设计色彩方法？</span></p><p><span style="color:rgb(0, 0, 0);"><span style="color:rgb(68, 68, 68);"><span style="font-stretch:normal;font-size:24px;line-height:normal;font-family:Arial;letter-spacing:0px;"></span></span></span><span style="font-family:Arial;font-size:16px;letter-spacing:0px;line-height:normal;color:rgb(68, 68, 68);">在色彩设计应用中，我们对颜色不同程度的理解，影响到设计页面的表现，熟练地运用色彩搭</span><span style="font-family:Arial;font-size:16px;letter-spacing:0px;line-height:normal;color:rgb(68, 68, 68);">配，设计时岂不事半功倍。一张优秀的设计作品，它的色彩搭配必定和谐得体，令人赏心悦目，</span><span style="font-family:Arial;font-size:16px;letter-spacing:0px;line-height:normal;color:rgb(68, 68, 68);">反思我们在设计过程中，怎样的色彩搭配更容易达到设计目的，又是什么影响了我们的配色思维</span><span style="color:rgb(68, 68, 68);font-family:Arial;font-size:16px;letter-spacing:0px;line-height:normal;">呢？</span></p><p><span style="color:rgb(0, 0, 0);"> <span style="font-stretch:normal;font-size:16px;line-height:normal;font-family:Arial;"></span><span class="read-more"></span>
+          <p><a href="posts/1392.html">查看《色彩设计方法》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1392" class="article-aside J_atAside" pid="1392">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1391.html">2015年春夏流行色</a></h3>
+      <div class="publish-date">2014/11/27</div>
+      <div class="authors">
+          <a href="users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1391">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>6</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>5/20975</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=2015%25E5%25B9%25B4%25E6%2598%25A5%25E5%25A4%258F%25E6%25B5%2581%25E8%25A1%258C%25E8%2589%25B2%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1391" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB1g8ddGFXXXXXIapXXwu0bFXXX.png" /></p><div>寒冷的冬天提醒我又要关注一下来年春夏的颜色了，因为春夏的颜色往往清新明快，赏心悦目的颜色会让我感觉冬天不那么难熬...&nbsp;</div><div>&nbsp;</div><div>除了一系列和谐又多变的色彩之外，时尚大师们对于色彩的热情诠释同样让我备受启发。色彩如此直观的牵动人的情绪和思想，想营造庄严的寂静？还是宁静的优雅？是空气感的轻盈？还是现代感的速度？是想给人薰衣草庄园一样的梦幻感？美酒和宝石的奢华感？还是水果和甜品的愉悦感？</div><div><span class="read-more"></span></div>
+          <p><a href="posts/1391.html">查看《2015年春夏流行色》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1391" class="article-aside J_atAside" pid="1391">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="article">
+  <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title"><a href="posts/1390.html">智能card项目小结</a></h3>
+      <div class="publish-date">2014/11/21</div>
+      <div class="authors">
+          <a href="users/3548" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1WA41FVXXXXX3XXXXSutbFXXX.jpg_30x30.jpg" /></a>
+          <a href="users/5889" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB12mzlGpXXXXaaaXXXSutbFXXX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_1390">
+  <a class="comments" href="index.html%3Fpage=6.html#!comments" title="评论"><i class="iconfont">&#343</i>3</a>
+  <a class="likes" href="index.html%3Fpage=6.html#!likes" title="喜欢"><i class="iconfont">&#362</i>2/5142</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E6%2599%25BA%25E8%2583%25BDcard%25E9%25A1%25B9%25E7%259B%25AE%25E5%25B0%258F%25E7%25BB%2593%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F1390" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+
+    </div>
+  </div>
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/TB12jbwGpXXXXaMaXXXwu0bFXXX.png" /></p><p><span class="read-more"></span>
+          <p><a href="posts/1390.html">查看《智能card项目小结》的全文</a></p>
+      </div>
+    </div>
+    <div id="J_atAside_1390" class="article-aside J_atAside" pid="1390">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container">
+        <div class="article-aside-container-sub">
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination-box">
+  <div class="pagination"><a class="previous_page" rel="prev" href="index.html%3Fpage=5.html">&laquo;上一页</a> <a rel="start" href="index.html%3Fpage=1.html">1</a> <a href="index.html%3Fpage=2.html">2</a> <a href="index.html%3Fpage=3.html">3</a> <a href="index.html%3Fpage=4.html">4</a> <a rel="prev" href="index.html%3Fpage=5.html">5</a> <em class="current">6</em> <a rel="next" href="index.html%3Fpage=7.html">7</a> <a href="index.html%3Fpage=8.html">8</a> <a href="index.html%3Fpage=9.html">9</a> <a href="index.html%3Fpage=10.html">10</a> <span class="gap">&hellip;</span> <a href="index.html%3Fpage=23.html">23</a> <a href="index.html%3Fpage=24.html">24</a> <a class="next_page" rel="next" href="index.html%3Fpage=7.html">下一页&raquo;</a></div>
+</div>
+
+
+      </div>
+      <div class="friendly-link">
+    <h2>友情链接</h2>
+    <div class="friendly-link-list">
+        <div class="banners_edit" data-editable="false" data-tkey="friendly_link_list"><ul>            <li><a href="http://ued.taobao.com/" target="_blank">淘宝UED</a> </li>            <li><a href="http://www.aliued.com/" target="_blank">Alibaba国际站UED</a> </li>            <li><a href="http://china.aliued.com/" target="_blank">Alibaba中文站UED</a> </li>            <li><a href="http://ued.alipay.com/" target="_blank"> 支付宝UED</a> </li>            <li><a href="http://ued.tmall.com/" target="_blank">天猫UED</a> </li></ul><ul> 	<li><a href="http://ur.alibaba-inc.com">阿里用户体验中心</a> </li>	 <li><a href="http://www.uisdc.com" target="_blank">优秀网页设计</a> </li><li><a href="http://www.bootcss.com" target="_blank">Bootstrap中文网</a> </li>            <li><a href="http://udc.weibo.com/" target="_blank">微博UDC</a> </li>            <li><a href="http://ued.sogou.com/" target="_blank">搜狗UED</a> </li>            <li><a href="http://mued.sohu.com/" target="_blank">搜狐UED</a> </li>            <li><a href="http://cdc.tencent.com/" target="_blank">腾讯CDC</a> </li></ul><ul>	    	<li><a href="http://ucdchina.com/" target="_blank">CDC大社区</a> </li>                        <li><a href="http://www.boxui.com/" target="_blank">UI盒子</a> </li>            <li><a href="http://www.trans4fun.com/" target="_blank">前端翻译小站 </a> </li>               </ul></div>
+    </div>
+    <div class="abouts">
+        <ul>
+            <li><a href="feeds/posts.rss"><i class="iconfont">&#483</i>RSS订阅</a> </li>
+            <li><a href="http://weibo.com/alimamamux" target="_blank"><i class="iconfont">&#468</i>微博关注</a> </li>
+            <li><a href="index.html"><i class="iconfont">&#349</i>联系我们</a> </li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+<p>&copy;阿里妈妈MUX, All rights reserved.</p>
+<p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：sangxing#taobao.com</p>
+</footer>
+
+    </div>
+  </div>
+    <script src="https://assets.alicdn.com/??s/kissy/1.2.0/kissy-min.js,s/kissy/1.2.0/suggest-min.js,s/kissy/1.2.0/template-min.js,s/kissy/1.2.0/sizzle-min.js" type="text/javascript"></script>
+  <script src="assets/site/posts-b3179a7a05a824da49b599348f8a3e3d.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27817535-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

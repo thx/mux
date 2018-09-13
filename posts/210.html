@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>启发式评估表 - 阿里妈妈MUX</title>
+  <link href="../assets/application-65463c58d38dc99711b75f6b6bfb7216.css" media="all" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+  <link href="/kissy/editor/theme/cool/editor-pkg-sprite-min.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if gte IE 8]><!-->
+  <link href="../kissy/editor/theme/cool/editor-pkg-min-datauri.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" name="csrf-token" />
+  <link href="../feeds/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="../assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" type="image/x-icon" />
+  <meta name="application-name" content="UX 体验工作平台"/>
+  <meta name="msapplication-tooltip" content="UX 体验工作平台" />
+  <meta name="msapplication-task" content="name=文章;action-uri=http://mux.alimama.com/posts;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=工作;action-uri=http://mux.alimama.com/works;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=招聘;action-uri=http://mux.alimama.com/jobs;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=团队;action-uri=http://mux.alimama.com/team;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+</head>
+<body ><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac1dc04415368238825041041e36f1&asid=AQAAAABMEppb7pTRGAAAAACLIACm/o8y0A==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+  <div class="page-bg"></div>
+  <div id="J_page" class="page ">
+    <div id="header">
+  <h1 class="ux-logo">
+    <a href="../index.html" title="阿里妈妈MUX" class="dim">
+      <!-- <span class="iconfont ux-logo-at">&#481;</span>
+      <span class="iconfont">&#482;</span> -->
+      <span class="mux-iconfont">&#xf02ae;</span>
+      <span class="ux-name">
+        体验工作平台 <br/>
+        <span>mux.alimama.com</span>
+      </span>
+    </a>
+  </h1>
+  <div class="menu">
+    <div class="search-con">
+      <div class="search">
+        <div class="search-inner">
+          <form action="http://mux.alimama.com/search">
+            <button type="submit" class="search-submit iconfont">&#337;</button>
+            <button type="button" class="search-clear iconfont" id="J_sBtnClear">&#223;</button>
+            <div class="search-input-box">
+              <fieldset tabindex="0">
+                <label class="search-label" for="J_searchInput"></label>
+                <input id="J_searchInput" class="search-input" accesskey="s" autocomplete="off" type="text" name="q" value="" maxlength="100" data-autofocus="autofocus">
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <ul class="main-nav">
+      <li class="current "><a href="../posts.html">文章</a></li>
+      <li class="">
+        <a href="../works.html" class="J_dropdownTrigger" data-login="login">工作</a>
+        <div class="J_dropdown hidden user-dropdown">
+          <ul>
+            <li class="sprite arrow"></li>
+            <li><a href="../works/bricks.html">PC组件库</a></li>
+            <li><a href="../works/mobile-components.html">无线组件库</a></li>
+            <li><a href="../works/visual-identification.html">品牌</a></li>
+            <li><a href="../works/interaction-design.html">交互</a></li>
+            <li><a href="../works/user-research.html">用研</a></li>
+            <li><a href="../works/visual-design.html">视觉</a></li>
+            <li><a href="../works/guanli.html">管理</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="http://idesign.alibaba-inc.com/Freshmen" target="_blank" data-login="login">工作平台</a></li>
+      <li class=" "><a href="../jobs.html">招聘</a></li>
+      <li><a href="http://thx.github.io" target="_blank">THX</a></li>
+    </ul>
+    <div class="user-info">
+        <div id="J_loginBoxTrigger" class="user-ribbon sprite"><i class="iconfont">&#338</i></div>
+        <div id="J_loginBox" class="login-box hidden">
+  <div class="login-box-con" style="display:none">
+    <!--  已经不使用 -->
+    <form accept-charset="UTF-8" action="http://mux.alimama.com/user_sessions" class="new_user_session" id="J_loginForm" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" /></div>
+      <ul>
+        <li class="field"><input class="field-text" data-valid="{email:[true,&quot;邮箱格式有误&quot;]}" id="user_session_email" name="user_session[email]" placeholder="E-mail" size="30" type="text" /></li>
+        <li class="field"><input class="field-text" id="user_session_password" name="user_session[password]" placeholder="密码" size="30" type="password" /></li>
+        <li class="field clear login-field-last">
+          <input name="user_session[remember_me]" type="hidden" value="0" /><input class="field-check" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" />
+          <label for="user_session_remember_me">记住我</label> &nbsp;
+          <input class="login-btn" name="commit" type="submit" value="登录" />
+        </li>
+      </ul>
+</form>  </div>
+
+      <div class="login-methods">
+      选择登录方式:
+        <ul class="login-lists clear">
+
+          <li>
+            <a href="../auth/taobao.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#440;</i><i class="iconfont iconfont-tao">&#440;</i></span>
+              </span>
+            </a>
+            淘宝账号
+          </li>
+          <li>
+            <a href="../auth/weibo.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#468;</i><i class="iconfont iconfont-weibo">&#468;</i></span>
+              </span>
+            </a>
+            新浪账号
+          </li>
+          <li class="last">
+            <a href="../login_domain.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#232;</i><i class="iconfont iconfont-domain">&#232;</i></span>
+              </span>
+            </a>
+            域账号
+          </li>
+        </ul>
+
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div id="banner" style="position:relative;">
+  <h2 class="title-posts title"><span class="f">文</span><span class="l">章</span></h2>
+  <div class="bd"><div class="bd-content" data-editable="false" data-tkey="posts"><p><p>阿里妈妈MUX文章分享</p></p></div></div>
+</div>
+
+
+    <div id="wrapper">
+        <div id="aside">
+  <ul class="channels" id="J_channels">
+    <li class="current latest">
+      <a href="../posts.html" class="J_channel" ux-channel="archive">最新</a>
+    </li>
+      <li class="">
+        <a href="visual-design.html" class="J_channel" ux-channel="visual-design" ux-count="88">视觉</a>
+      </li>
+      <li class="">
+        <a href="user-research.html" class="J_channel" ux-channel="user-research" ux-count="7">用研</a>
+      </li>
+      <li class="">
+        <a href="interaction-design.html" class="J_channel" ux-channel="interaction-design" ux-count="64">交互</a>
+      </li>
+      <li class="">
+        <a href="front-end.html" class="J_channel" ux-channel="front-end" ux-count="18">前端</a>
+      </li>
+      <li class="">
+        <a href="team.html" class="J_channel" ux-channel="team" ux-count="61">团队</a>
+      </li>
+  </ul>
+  <div class="categories" id="J_categories">
+    <p class="title-bar">
+      <a class="J_all" href="index.html">所有<em>（<span class="J_count">232</span>）</em></a>
+      <a class="toggler J_toggler" href="210.html#">展开类目</a>
+    </p>
+    <ul ux-channel="archive" class="">
+        <li><span class="category-name">2018年</span>
+          <ul>
+            <li><a href="2018/01.html" class="sub-category J_subCategory">2018年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2017年</span>
+          <ul>
+            <li><a href="2017/03.html" class="sub-category J_subCategory">2017年03月（1）</a>
+            </li>
+            <li><a href="2017/02.html" class="sub-category J_subCategory">2017年02月（1）</a>
+            </li>
+            <li><a href="2017/01.html" class="sub-category J_subCategory">2017年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2016年</span>
+          <ul>
+            <li><a href="2016/12.html" class="sub-category J_subCategory">2016年12月（1）</a>
+            </li>
+            <li><a href="2016/10.html" class="sub-category J_subCategory">2016年10月（1）</a>
+            </li>
+            <li><a href="2016/09.html" class="sub-category J_subCategory">2016年09月（2）</a>
+            </li>
+            <li><a href="2016/08.html" class="sub-category J_subCategory">2016年08月（1）</a>
+            </li>
+            <li><a href="2016/06.html" class="sub-category J_subCategory">2016年06月（1）</a>
+            </li>
+            <li><a href="2016/04.html" class="sub-category J_subCategory">2016年04月（4）</a>
+            </li>
+            <li><a href="2016/03.html" class="sub-category J_subCategory">2016年03月（1）</a>
+            </li>
+            <li><a href="2016/02.html" class="sub-category J_subCategory">2016年02月（2）</a>
+            </li>
+            <li><a href="2016/01.html" class="sub-category J_subCategory">2016年01月（2）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2015年</span>
+          <ul>
+            <li><a href="2015/12.html" class="sub-category J_subCategory">2015年12月（1）</a>
+            </li>
+            <li><a href="2015/11.html" class="sub-category J_subCategory">2015年11月（1）</a>
+            </li>
+            <li><a href="2015/10.html" class="sub-category J_subCategory">2015年10月（1）</a>
+            </li>
+            <li><a href="2015/09.html" class="sub-category J_subCategory">2015年09月（3）</a>
+            </li>
+            <li><a href="2015/08.html" class="sub-category J_subCategory">2015年08月（3）</a>
+            </li>
+            <li><a href="2015/07.html" class="sub-category J_subCategory">2015年07月（4）</a>
+            </li>
+            <li><a href="2015/06.html" class="sub-category J_subCategory">2015年06月（4）</a>
+            </li>
+            <li><a href="2015/05.html" class="sub-category J_subCategory">2015年05月（2）</a>
+            </li>
+            <li><a href="2015/04.html" class="sub-category J_subCategory">2015年04月（3）</a>
+            </li>
+            <li><a href="2015/03.html" class="sub-category J_subCategory">2015年03月（1）</a>
+            </li>
+            <li><a href="2015/02.html" class="sub-category J_subCategory">2015年02月（3）</a>
+            </li>
+            <li><a href="2015/01.html" class="sub-category J_subCategory">2015年01月（3）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2014年</span>
+          <ul>
+            <li><a href="2014/12.html" class="sub-category J_subCategory">2014年12月（10）</a>
+            </li>
+            <li><a href="2014/11.html" class="sub-category J_subCategory">2014年11月（5）</a>
+            </li>
+            <li><a href="2014/10.html" class="sub-category J_subCategory">2014年10月（3）</a>
+            </li>
+            <li><a href="2014/09.html" class="sub-category J_subCategory">2014年09月（7）</a>
+            </li>
+            <li><a href="2014/08.html" class="sub-category J_subCategory">2014年08月（4）</a>
+            </li>
+            <li><a href="2014/07.html" class="sub-category J_subCategory">2014年07月（4）</a>
+            </li>
+            <li><a href="2014/06.html" class="sub-category J_subCategory">2014年06月（1）</a>
+            </li>
+            <li><a href="2014/05.html" class="sub-category J_subCategory">2014年05月（1）</a>
+            </li>
+            <li><a href="2014/04.html" class="sub-category J_subCategory">2014年04月（2）</a>
+            </li>
+            <li><a href="2014/03.html" class="sub-category J_subCategory">2014年03月（8）</a>
+            </li>
+            <li><a href="2014/01.html" class="sub-category J_subCategory">2014年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2013年</span>
+          <ul>
+            <li><a href="2013/12.html" class="sub-category J_subCategory">2013年12月（2）</a>
+            </li>
+            <li><a href="2013/11.html" class="sub-category J_subCategory">2013年11月（1）</a>
+            </li>
+            <li><a href="2013/09.html" class="sub-category J_subCategory">2013年09月（1）</a>
+            </li>
+            <li><a href="2013/08.html" class="sub-category J_subCategory">2013年08月（2）</a>
+            </li>
+            <li><a href="2013/07.html" class="sub-category J_subCategory">2013年07月（6）</a>
+            </li>
+            <li><a href="2013/06.html" class="sub-category J_subCategory">2013年06月（3）</a>
+            </li>
+            <li><a href="2013/05.html" class="sub-category J_subCategory">2013年05月（6）</a>
+            </li>
+            <li><a href="2013/04.html" class="sub-category J_subCategory">2013年04月（5）</a>
+            </li>
+            <li><a href="2013/03.html" class="sub-category J_subCategory">2013年03月（9）</a>
+            </li>
+            <li><a href="2013/02.html" class="sub-category J_subCategory">2013年02月（4）</a>
+            </li>
+            <li><a href="2013/01.html" class="sub-category J_subCategory">2013年01月（5）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2012年</span>
+          <ul>
+            <li><a href="2012/12.html" class="sub-category J_subCategory">2012年12月（28）</a>
+            </li>
+            <li><a href="2012/11.html" class="sub-category J_subCategory">2012年11月（13）</a>
+            </li>
+            <li><a href="2012/10.html" class="sub-category J_subCategory">2012年10月（8）</a>
+            </li>
+            <li><a href="2012/09.html" class="sub-category J_subCategory">2012年09月（17）</a>
+            </li>
+            <li><a href="2012/08.html" class="sub-category J_subCategory">2012年08月（3）</a>
+            </li>
+            <li><a href="2012/07.html" class="sub-category J_subCategory">2012年07月（22）</a>
+            </li>
+            <li><a href="2012/06.html" class="sub-category J_subCategory">2012年06月（2）</a>
+            </li>
+            <li><a href="2012/05.html" class="sub-category J_subCategory">2012年05月（1）</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+      <ul ux-channel="visual-design" class="hidden">
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/175-beijingzhishi.html" class="sub-category J_subCategory">背景知识</a>
+</li>                <li>
+                  <a href="visual-design/256-shishangshenghuo.html" class="sub-category J_subCategory">时尚生活</a>
+</li>                <li>
+                  <a href="visual-design/171-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="visual-design/289-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">产品展示</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/160-chuangxinchanpin.html" class="sub-category J_subCategory">创新产品</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="user-research" class="hidden">
+          <li><span class="category-name">研究方法</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/167-shejiyanjiufangfa.html" class="sub-category J_subCategory">设计研究方法</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">工作感想</span>
+            <ul class="sub-category-list">
+            </ul>
+          </li>
+          <li><span class="category-name">搜索研究</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/254-jueceyanjiu.html" class="sub-category J_subCategory">决策研究</a>
+</li>                <li>
+                  <a href="user-research/165-leimuyanjiu.html" class="sub-category J_subCategory">类目研究</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">合作</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/239-uxneibu.html" class="sub-category J_subCategory">UX内部</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="interaction-design" class="hidden">
+          <li><span class="category-name">交互设计</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/157-jiaohushejiyuanze.html" class="sub-category J_subCategory">交互设计原则</a>
+</li>                <li>
+                  <a href="interaction-design/158-shejifangfa.html" class="sub-category J_subCategory">设计方法</a>
+</li>                <li>
+                  <a href="interaction-design/255-shejifenxiang.html" class="sub-category J_subCategory">设计分享</a>
+</li>                <li>
+                  <a href="interaction-design/280-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/197-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="interaction-design/281-shenghuoganwu.html" class="sub-category J_subCategory">生活感悟</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="front-end" class="hidden">
+          <li><span class="category-name">pc</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/182-qianduanjizhu.html" class="sub-category J_subCategory">前端技术</a>
+</li>                <li>
+                  <a href="front-end/250-gongjujineng.html" class="sub-category J_subCategory">工具技能</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">平台</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/187-brix.html" class="sub-category J_subCategory">Brix</a>
+</li>                <li>
+                  <a href="front-end/208-chart.html" class="sub-category J_subCategory">Chart</a>
+</li>                <li>
+                  <a href="front-end/240-mix.html" class="sub-category J_subCategory">Mix</a>
+</li>                <li>
+                  <a href="front-end/285-rap.html" class="sub-category J_subCategory">RAP</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">mobile</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/191-shejifangan.html" class="sub-category J_subCategory">设计方案</a>
+</li>                <li>
+                  <a href="front-end/276-iconfont.html" class="sub-category J_subCategory">iconfont</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">淘宝H5</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/231-kongjian.html" class="sub-category J_subCategory">控件</a>
+</li>                <li>
+                  <a href="front-end/232-zujian.html" class="sub-category J_subCategory">组件</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/263-velocity.html" class="sub-category J_subCategory">Velocity</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="team" class="hidden">
+          <li><span class="category-name">团队活动</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/178-guanggao.html" class="sub-category J_subCategory">广告</a>
+</li>                <li>
+                  <a href="team/189-gongyi.html" class="sub-category J_subCategory">公益</a>
+</li>                <li>
+                  <a href="team/241-tuanjian.html" class="sub-category J_subCategory">团建</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">兴趣小组</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/180-tangmiaohui.html" class="sub-category J_subCategory">堂描绘</a>
+</li>                <li>
+                  <a href="team/181-shijuexingquxiaozu.html" class="sub-category J_subCategory">视觉兴趣小组</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">业界交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/253-upd.html" class="sub-category J_subCategory">UPA</a>
+</li>                <li>
+                  <a href="team/252-adc.html" class="sub-category J_subCategory">ADC</a>
+</li>                <li>
+                  <a href="team/283-hiued.html" class="sub-category J_subCategory">HIUED</a>
+</li>                <li>
+                  <a href="team/303-ucan.html" class="sub-category J_subCategory">UCAN</a>
+</li>                <li>
+                  <a href="team/301-ixdc.html" class="sub-category J_subCategory">IxDC</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">随笔</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/247-gongzuoxinde.html" class="sub-category J_subCategory">工作心德</a>
+</li>                <li>
+                  <a href="team/248-yuedubiji.html" class="sub-category J_subCategory">阅读笔记</a>
+</li>                <li>
+                  <a href="team/249-xinqinggushi.html" class="sub-category J_subCategory">心情故事</a>
+</li>            </ul>
+          </li>
+      </ul>
+  </div>
+</div>
+
+      <div id="main">
+        <div class="article">
+  <div class="article-nav">
+  <div class="alpha-bg"></div>
+  <div class="bar">
+    <span class="prev sprite disable"></span>
+    <span class="current">963/5</span>
+    <a href="334.html#main" class="next sprite">启发式评估表</a>
+  </div>
+</div>
+
+    <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title">
+        <span>启发式评估表</span>
+        <i class="iconfont toggle-toc">&#405;</i>
+      </h3>
+      <div class="publish-date">2012/07/06</div>
+      <div class="authors">
+           <a href="../users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_210">
+  <a class="attachments" href="210.html#!attachments" title="附件"><i class="iconfont">&#384</i>附件</a>
+  <a class="comments" href="210.html#!comments" title="评论"><i class="iconfont">&#343</i>7</a>
+  <a class="likes" href="210.html#!likes" title="喜欢"><i class="iconfont">&#362</i>4/15538</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E5%2590%25AF%25E5%258F%2591%25E5%25BC%258F%25E8%25AF%2584%25E4%25BC%25B0%25E8%25A1%25A8%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F210" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><span style="font-size:12px;"></span><img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/T1ytDJXkpqXXaCwpjX.png" /></p><p><span style="font-size:12px;">众所周知，Heuristic Evaluation作为Usability Evaluation方式的一种，在usability test等其它测试方式的研究条件不具备的情况下经常被使用，同时也可作为设计师self review和peer review的一个有效方式。最初由Jakob Nielson提出的10条heuristics已经被扩展成了更多。</span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;">为了做到全面、客观，在review的过程中使用一个系统的checklist是一个方便有效的方式。基于目前没有足够完整的中文版checklist的情况，根据普遍使用的heuristics以及本部门具体产品特点，整理编辑了一套“启发式评估表”，希望对设计师和用研们有所启发。</span></p><p><span class="read-more"><!--more-->阅读全文</span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;"></span></p><p><span style="font-size:12px;"></span></p><p><span style="color:rgb(11, 83, 148);"><strong><span style="font-size:12px;">1.&nbsp;系统状态可视化：通过适时的反馈使用户能随时了解系统当前的状态。</span></strong></span></p><p>&nbsp;</p><div><span style="font-size:12px;">1.1 是否每一个窗口／对话框都有标题？标题是否准确描述了该窗口／对话框的内容？</span></div><div><span style="font-size:12px;">1.2 是否产品的所有图标风格保持一致？</span></div><div><span style="font-size:12px;">1.3 被选中的图标和未选中的图标是否有明显差异？</span></div><div><span style="font-size:12px;">1.4 是否菜单、弹窗、出错提示每次都出现在同一个位置？</span></div><div><span style="font-size:12px;">1.5 有关联的多个窗口是否有标识其关系的标签（如“第1步”“第2步”“第3步”）？</span></div><div><span style="font-size:12px;">1.6 如果产品支持多个用户同时操作，是否有明显的标识显示当前的操作用户？</span></div><div><span style="font-size:12px;">1.7 如果使用弹窗显示出错提示，是否该弹窗没有遮住出错部分？</span></div><div><span style="font-size:12px;">1.8 是否用户的每一个操作都有适当形式的反馈？</span></div><div><span style="font-size:12px;">1.9 当用户完成了（一系列）操作，是否有反馈告知用户接下来的一系列操作可以使用了？</span></div><div><span style="font-size:12px;">1.10 菜单和对话框中是否显示出有哪些项目可选哪些不可选？</span></div><div><span style="font-size:12px;">1.11 菜单和对话框中是否显示出光标停留在哪些项目上？</span></div><div><span style="font-size:12px;">1.12 如果菜单和对话框中有多个项目可同时选中，是否显示出当前哪些已被选中？</span></div><div><span style="font-size:12px;">1.13 当某个对象被选中或者删除，系统是否有视觉上的反馈？</span></div><div><span style="font-size:12px;">1.14 当前图标的状态是否明确显示？</span></div><div><span style="font-size:12px;">1.15 按钮被按下时是否有视觉反馈？</span></div><div><span style="font-size:12px;">1.16 如果系统的响应时间较长，有明显的滞后（超过15秒），在这段时间内，是否一直向用户显示系统的运行进程（例如进度条）？</span></div><div><span style="font-size:12px;">1.17 响应的时间是否符合相应的操作？</span></div><div><span style="font-size:12px;">1.18 输入、光标移动、鼠标选中的相应时间：50－150毫秒？</span></div><div><span style="font-size:12px;">1.19 简单、常用的操作的相应时间是否小于1秒？</span></div><div><span style="font-size:12px;">1.20 普通操作的相应时间是否小于4秒?</span></div><div><span style="font-size:12px;">1.21 复杂操作的相应时间是否小于12秒?</span></div><div><span style="font-size:12px;">1.22 从视觉上用户是否可以分辨系统搜出的状态和可选的操作？</span></div><div><span style="font-size:12px;">1.23 如果用户需要在多个窗口间轮流操作，产品界面是否提供标签、菜单地图、书签等辅助导航的元素？</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;">2.&nbsp;不脱离现实：使用用户熟悉的语言和概念；遵循现实生活中的流程，信息的显示自然而有逻辑。</span></strong></div><div><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></strong></div><p>&nbsp;</p><div><span style="font-size:12px;">2.1<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否能理解图标的含义？</span></div><div><span style="font-size:12px;">2.2<span class="Apple-tab-span" style="white-space:pre;"> </span>菜单项的组织和排序是否符合用户常规操作的逻辑？</span></div><div><span style="font-size:12px;">2.3<span class="Apple-tab-span" style="white-space:pre;"> </span>相关联的内容是否放在一起显示？</span></div><div><span style="font-size:12px;">2.4<span class="Apple-tab-span" style="white-space:pre;"> </span>如果使用图表，该图表是否易于用户理解？</span></div><div><span style="font-size:12px;">2.5<span class="Apple-tab-span" style="white-space:pre;"> </span>字体和背景颜色的使用是否符合常规？</span></div><div><span style="font-size:12px;">2.6<span class="Apple-tab-span" style="white-space:pre;"> </span>操作提示中提到的操作名称是否和系统中的操作名称一致？</span></div><div><span style="font-size:12px;">2.7<span class="Apple-tab-span" style="white-space:pre;"> </span>数据输入窗口中的输入项名称是否易于用户理解？</span></div><div><span style="font-size:12px;">2.8<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的语言是否简洁、清晰、准确（不含歧义和语法错误）？</span></div><div><span style="font-size:12px;">2.9<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的术语是否是用户使用的术语，而不是计算机术语？</span></div><div><span style="font-size:12px;">2.10<span class="Apple-tab-span" style="white-space:pre;"> </span>当用户输入大于9999的数字时，系统是否自动给每三位加入逗号（如888，888，888，888）？</span></div><div><span style="font-size:12px;">2.11<span class="Apple-tab-span" style="white-space:pre;"> </span>如可使用热键，其设置是否符合用户的操作习惯？</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><div><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;">3.&nbsp;</span></strong><strong><span style="color:rgb(11, 83, 148);"><span style="font-size:12px;">用户有自由控制权：在合理的范围内用户可以自由的选择操作任务；出错时用户可以方便的回退；系统需支持“前进”和“回退”操作</span></span></strong><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;">。</span></strong></div><div><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></strong></div><div><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></strong></div><div><strong style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></strong></div></div><div><span style="font-size:12px;"><strong style="color:rgb(11, 83, 148);"></strong></span></div><div><span style="font-size:12px;"><strong style="color:rgb(11, 83, 148);"></strong></span><div><span style="font-size:12px;">3.1<span class="Apple-tab-span" style="white-space:pre;"> </span>如果用户通常不会经常使用系统设置界面，此界面是否容易操作和记忆？</span></div><div><span style="font-size:12px;">3.2<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品可同时打开多个窗口，用户是否可以自由组织排列这些窗口？</span></div><div><span style="font-size:12px;">3.3<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品可同时打开多个窗口，用户是否可以自由地在这些窗口之间切换？</span></div><div><span style="font-size:12px;">3.4<span class="Apple-tab-span" style="white-space:pre;"> </span>当用户完成一项操作，系统在用户下达表示“继续”地指令之后再继续运行之后的操作？</span></div><div><span style="font-size:12px;">3.5<span class="Apple-tab-span" style="white-space:pre;"> </span>在用户将要执行具有破坏性的操作（如删除、格式化）时，是否弹出确认窗口？</span></div><div><span style="font-size:12px;">3.6<span class="Apple-tab-span" style="white-space:pre;"> </span>是否支持“撤销”操作？</span></div><div><span style="font-size:12px;">3.7<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否可以取消正在执行的操作？</span></div><div><span style="font-size:12px;">3.8<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否可改变界面的字体大小？</span></div><div><span style="font-size:12px;">3.9<span class="Apple-tab-span" style="white-space:pre;"> </span>在输入数据时，用户是否可以使用“复制”和“粘贴”以节省输入时间？</span></div><div><span style="font-size:12px;">3.10<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否可以编辑输入框中的内容？</span></div><div><span style="font-size:12px;">3.11<span class="Apple-tab-span" style="white-space:pre;"> </span>如果菜单项目较多，其设置是否采用较“宽”方式（多个菜单项）而不是复杂的多层菜单？</span></div><div><span style="font-size:12px;">3.12<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否方便返回上一级菜单？</span></div><div><span style="font-size:12px;">3.13<span class="Apple-tab-span" style="white-space:pre;"> </span>如果有多页的数据输入界面，用户是否可以在所有页面之间前后切换？</span></div><div><span style="font-size:12px;">3.14<span class="Apple-tab-span" style="white-space:pre;"> </span>在多个输入项的数据输入界面，用户是否可以回到之前的输入项，或者跳到之后的输入项？</span></div><div><span style="font-size:12px;">3.15<span class="Apple-tab-span" style="white-space:pre;"> </span>取消操作是否轻而易举？</span></div><div><span style="font-size:12px;">3.16<span class="Apple-tab-span" style="white-space:pre;"> </span>如果支持取消操作，是否支持连续取消多个操作？</span></div><div><span style="font-size:12px;">3.17<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否可以设置自己的系统、文件、和默认界面？</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;line-height:18px;"></span></div><div><span style="font-size:12px;line-height:18px;"></span><span style="color:rgb(11, 83, 148);"><span style="font-size:12px;"><strong>4.<span class="Apple-tab-span" style="white-space:pre;"> </span>一致性：用语、状态显示、操作方式要保持一致；开发平台有设计规范时要遵循该规范。</strong></span></span></div><div><span style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></span></div><div><span style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></span></div><div><span style="color:rgb(11, 83, 148);"><span style="font-size:12px;"></span></span></div><div><div><span style="font-size:12px;">4.1<span class="Apple-tab-span" style="white-space:pre;"> </span>行业规范和公司规范（如果有的话）是否在产品中被贯彻始终？</span></div><div><span style="font-size:12px;">4.2<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中（包括弹窗）的数字表示形式是否一致？</span></div><div><span style="font-size:12px;">4.3<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的图标的使用是否一致？</span></div><div><span style="font-size:12px;">4.4<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的字体是否一致？</span></div><div><span style="font-size:12px;">4.5<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的文字对齐方式是否一致？</span></div><div><span style="font-size:12px;">4.6<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的颜色使用方式（字体颜色、背景颜色、图表颜色等）是否一致？</span></div><div><span style="font-size:12px;">4.7<span class="Apple-tab-span" style="white-space:pre;"> </span>提示音的使用是否一致？</span></div><div><span style="font-size:12px;">4.8<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的操作名称是否一致？</span></div><div><span style="font-size:12px;">4.9<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的操作对象是否一致？</span></div><div><span style="font-size:12px;">4.10<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的菜单项是否统一（除名称外还包括语言风格和术语使用）？</span></div><div><span style="font-size:12px;">4.11<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的缩写使用是否统一？</span></div><div><span style="font-size:12px;">4.12<span class="Apple-tab-span" style="white-space:pre;"> </span>是否有明显的视觉提示表明当前的活动窗口？</span></div><div><span style="font-size:12px;">4.13<span class="Apple-tab-span" style="white-space:pre;"> </span>是否每一个窗口都有标题？</span></div><div><span style="font-size:12px;">4.14<span class="Apple-tab-span" style="white-space:pre;"> </span>菜单的结构是否与实际使用操作的结构一致？</span></div><div><span style="font-size:12px;">4.15<span class="Apple-tab-span" style="white-space:pre;"> </span>如果有“退出”选项，是否一直在菜单的底部？</span></div><div><span style="font-size:12px;">4.16<span class="Apple-tab-span" style="white-space:pre;"> </span>在线帮助弹窗弹出的位置是否一致？</span></div><div><span style="font-size:12px;">4.17<span class="Apple-tab-span" style="white-space:pre;"> </span>如果使用标签页，不同标签之间视觉上是否容易区分？</span></div><div><span style="font-size:12px;">4.18<span class="Apple-tab-span" style="white-space:pre;"> </span>如果使用标签页，标签的名称是否一致？</span></div><div><span style="font-size:12px;">4.19<span class="Apple-tab-span" style="white-space:pre;"> </span>层级菜单层数不超过两层？</span></div><div><span style="font-size:12px;">4.20<span class="Apple-tab-span" style="white-space:pre;"> </span>每个界面的字体大小不超过4种？</span></div><div><span style="font-size:12px;">4.21<span class="Apple-tab-span" style="white-space:pre;"> </span>每个界面的字体种类不超过3种？</span></div><div><span style="font-size:12px;">4.22<span class="Apple-tab-span" style="white-space:pre;"> </span>除特殊情况，每个界面的颜色种类不超过4种？</span></div><div><div><span style="font-size:12px;">4.23<span class="Apple-tab-span" style="white-space:pre;"> </span>如果使用提示音，通常的反馈使用柔和的提示音，只有在少数情况严重时才使用尖锐的音调。</span></div><div><span style="font-size:12px;">4.24<span class="Apple-tab-span" style="white-space:pre;"> </span>如果某些颜色的使用有不明显的特殊含义，是否有相关提示？</span></div><div><span style="font-size:12px;">4.25<span class="Apple-tab-span" style="white-space:pre;"> </span>是否指令的语言统一、自然、容易理解和记忆？</span></div><div><span style="font-size:12px;">4.26<span class="Apple-tab-span" style="white-space:pre;"> </span>多个数据输入界面的结构是否统一？</span></div><div><span style="font-size:12px;">4.27<span class="Apple-tab-span" style="white-space:pre;"> </span>如果有多个页面的数据输入界面，它们的页面名称是否统一？</span></div><div><span style="font-size:12px;">4.28<span class="Apple-tab-span" style="white-space:pre;"> </span>功能键的设置是否符合行业内或公司内部的规范？</span></div><div>&nbsp;</div><div><span style="color:rgb(11, 83, 148);"><strong><span style="font-size:12px;">5.<span class="Apple-tab-span" style="white-space:pre;"> </span>帮助用户发现、诊断和纠正错误：出错提示需用简洁明了的语言，不得保函技术性词语。</span></strong></span></div><div><span style="color:rgb(11, 83, 148);"><strong><span style="font-size:12px;"></span></strong></span></div><div><span style="color:rgb(11, 83, 148);"><strong><span style="font-size:12px;"></span></strong></span></div><div><span style="color:rgb(11, 83, 148);"><strong><span style="font-size:12px;"></span></strong></span></div><div><div><span style="font-size:12px;">5.1<span class="Apple-tab-span" style="white-space:pre;"> </span>出错提示的语言是否积极，没有对用户表示任何明显或者暗示性的批评？</span></div><div><span style="font-size:12px;">5.2<span class="Apple-tab-span" style="white-space:pre;"> </span>提示信息的语言是否简洁无歧义？</span></div><div><span style="font-size:12px;">5.3<span class="Apple-tab-span" style="white-space:pre;"> </span>出错提示是否表明是系统出错，而不是用户的问题？</span></div><div><span style="font-size:12px;">5.4<span class="Apple-tab-span" style="white-space:pre;"> </span>如果在提示信息中使用幽默，是否保证词语使用得当（对产品用户群来说意思明确并且无冒犯之意）？</span></div><div><span style="font-size:12px;">5.5<span class="Apple-tab-span" style="white-space:pre;"> </span>出错提示的语言是否无语病？</span></div><div><span style="font-size:12px;">5.6<span class="Apple-tab-span" style="white-space:pre;"> </span>出错提示是否避免使用感叹号？</span></div><div><span style="font-size:12px;">5.7<span class="Apple-tab-span" style="white-space:pre;"> </span>提示信息的语言风格、格式、句势、用语是否保持一致？</span></div><div><span style="font-size:12px;">5.8<span class="Apple-tab-span" style="white-space:pre;"> </span>提示信息是否让用户处于掌控地位？</span></div><div><span style="font-size:12px;">5.9<span class="Apple-tab-span" style="white-space:pre;"> </span>如果出错提示出现在数据输入界面，是否将光标置于出错位置或将出错位置标识出来？</span></div><div><span style="font-size:12px;">5.10<span class="Apple-tab-span" style="white-space:pre;"> </span>出错信息中是否指明用户应该如何纠正错误？</span></div><div><span style="font-size:12px;">&nbsp;</span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"><strong>6.<span class="Apple-tab-span" style="white-space:pre;"> </span>预防用户出错：通过合理的设计实现预防用户出错，这比好的出错提示更有效。</strong></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"></span></div><div><div><span style="font-size:12px;">6.1<span class="Apple-tab-span" style="white-space:pre;"> </span>菜单选项是否不易混淆？</span></div><div><span style="font-size:12px;">6.2<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品可以同时打开多个窗口，各窗口之间的导航是否简单清晰？</span></div><div><span style="font-size:12px;">6.3<span class="Apple-tab-span" style="white-space:pre;"> </span>当用户可能会犯重大错误时，是否给予提示？</span></div><div><span style="font-size:12px;">6.4<span class="Apple-tab-span" style="white-space:pre;"> </span>当输入框有字数或其它限制时，是否给予提示？</span></div><div><span style="font-size:12px;">6.5<span class="Apple-tab-span" style="white-space:pre;"> </span>当输入框可以有默认输入时是否自动输入默认值？</span></div><div><span style="font-size:12px;">6.6<span class="Apple-tab-span" style="white-space:pre;"> </span>可以导致严重后果的功能键是否处于键盘周边，而不是用户容易点击到的位置？</span></div><div><span style="font-size:12px;">6.7<span class="Apple-tab-span" style="white-space:pre;"> </span>可以导致严重后果的功能键是否和常用功能键有一定距离而不是相邻？</span></div><div><span style="font-size:12px;">6.8<span class="Apple-tab-span" style="white-space:pre;"> </span>菜单是否有名称易混淆的选项？</span></div><div><span style="font-size:12px;">&nbsp;</span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"><strong>7.<span class="Apple-tab-span" style="white-space:pre;"> </span>帮助用户识别而非回忆：减少用户记忆负担，操作对象和选项明确可见；用户无需记住具体内容便可以流畅的重复之前的操作；帮助信息容易获取。</strong></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"></span></div><div><div><span style="font-size:12px;">7.1<span class="Apple-tab-span" style="white-space:pre;"> </span>是否弹窗、提示和消息出现在当时用户通常会注视的屏幕位置？</span></div><div><span style="font-size:12px;">7.2<span class="Apple-tab-span" style="white-space:pre;"> </span>是否弹窗的排版合理的利用留白等视觉元素，使得其内容清晰易懂？</span></div><div><span style="font-size:12px;">7.3<span class="Apple-tab-span" style="white-space:pre;"> </span>在信息输入界面中，是否合理的利用留白等视觉元素，使得输入项、输入框、提示、帮助信息之间清晰明了不易混淆？</span></div><div><span style="font-size:12px;">7.4<span class="Apple-tab-span" style="white-space:pre;"> </span>数据是否按照左对其方式显示？</span></div><div><span style="font-size:12px;">7.5<span class="Apple-tab-span" style="white-space:pre;"> </span>文字显示窗口中是否有合理的边距、段间距和行间距？</span></div><div><span style="font-size:12px;">7.6<span class="Apple-tab-span" style="white-space:pre;"> </span>菜单中，“单选”和“多选”菜单是否容易区分？</span></div><div><span style="font-size:12px;">7.7<span class="Apple-tab-span" style="white-space:pre;"> </span>是否产品的快捷方式和系统的快捷方式无冲突？</span></div><div><span style="font-size:12px;">7.8<span class="Apple-tab-span" style="white-space:pre;"> </span>当前不可用的功能键是否被置灰或隐去？</span></div><div><span style="font-size:12px;">7.9<span class="Apple-tab-span" style="white-space:pre;"> </span>留白的设计是否协调，并正确的引导用户的目光注视正确的方位？</span></div><div><span style="font-size:12px;">7.10<span class="Apple-tab-span" style="white-space:pre;"> </span>逻辑相关的选项是否被成组划分到同一区域中，并且使用合适的标题标识每个选项组？</span></div><div><span style="font-size:12px;">7.11<span class="Apple-tab-span" style="white-space:pre;"> </span>是否项目组区域宽度不超过12到14个字符，高度不超过六到七行？</span></div><div><span style="font-size:12px;">7.12<span class="Apple-tab-span" style="white-space:pre;"> </span>项目组是否用留白、线、颜色、字符、标题或其它方式加以区分？</span></div><div><span style="font-size:12px;">7.13<span class="Apple-tab-span" style="white-space:pre;"> </span>标题是否和所标识的内容设有适当的间隔（能让用户区分标题所标识的区域，但又不过分靠近影响美观）？</span></div><div><span style="font-size:12px;">7.14<span class="Apple-tab-span" style="white-space:pre;"> </span>信息输入界面中，可选填项和必填项是否容易区分？</span></div><div><span style="font-size:12px;">7.15<span class="Apple-tab-span" style="white-space:pre;"> </span>重要的选项和信息是否使用不同字符、黑体字、下划线、颜色、阴影、或者特殊排版加以凸显？</span></div><div><span style="font-size:12px;">7.16<span class="Apple-tab-span" style="white-space:pre;"> </span>相关的元素是否使用统一的颜色显示？</span></div><div><span style="font-size:12px;">7.17<span class="Apple-tab-span" style="white-space:pre;"> </span>产品中所有界面中的颜色使用是否保持统一？</span></div><div><span style="font-size:12px;">7.18<span class="Apple-tab-span" style="white-space:pre;"> </span>图像和背景之间的色彩、明度和对比度是否协调？</span></div><div><span style="font-size:12px;">7.19<span class="Apple-tab-span" style="white-space:pre;"> </span>须强调的数据是否使用较明亮、较高饱和度和较高对比度的颜色显示，而次要的数据是否使用较暗、饱和度低、对比度低的颜色显示？</span></div><div><span style="font-size:12px;">7.20<span class="Apple-tab-span" style="white-space:pre;"> </span>用户操作和用户操作触发的系统操作之间的关系是否明显？</span></div><div><span style="font-size:12px;">7.21<span class="Apple-tab-span" style="white-space:pre;"> </span>容易混淆的数据是否避免放在一起？</span></div><div><span style="font-size:12px;">7.22<span class="Apple-tab-span" style="white-space:pre;"> </span>长的字符串和数字是否被分成若干段（如序列号分段输入，数字每三位加一个逗号等）？</span></div><div><span style="font-size:12px;">7.23<span class="Apple-tab-span" style="white-space:pre;"> </span>当前不能操作的选项是否被置灰或隐去？</span></div><div><span style="font-size:12px;">7.24<span class="Apple-tab-span" style="white-space:pre;"> </span>菜单项中是否有默认选项？</span></div><div><span style="font-size:12px;">7.25<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品的菜单等级较多或较复杂，是否有相关的菜单说明或帮助信息？</span></div><div><span style="font-size:12px;">7.26<span class="Apple-tab-span" style="white-space:pre;"> </span>当前的活动窗口是否突出显示？</span></div><div><span style="font-size:12px;">7.27<span class="Apple-tab-span" style="white-space:pre;"> </span>功能键是否按逻辑分组？</span></div><div><span style="font-size:12px;">7.28<span class="Apple-tab-span" style="white-space:pre;"> </span>在数据输入界面和对话框中，附加信息是否只有在需要时才显示？</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"><strong>8.<span class="Apple-tab-span" style="white-space:pre;"> </span>灵活性：为新手和专家设计定制化的操作方式；常用操作可自行调整；为不同用户群提供不同入口和操作方式（如不同语言、文化、残障人士等）。</strong></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"></span></div><div><div><span style="font-size:12px;">8.1<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品同时供新手和专家级用户使用，是否设有不同级别的错误提示？</span></div><div><span style="font-size:12px;">8.2<span class="Apple-tab-span" style="white-space:pre;"> </span>用户是否可以自定义快捷方式和指令？</span></div><div><span style="font-size:12px;">8.3<span class="Apple-tab-span" style="white-space:pre;"> </span>是否新手用户输入的指令可以是最简单、最普通的各式，而专家级用户可以自行添加参数？</span></div><div><span style="font-size:12px;">8.4<span class="Apple-tab-span" style="white-space:pre;"> </span>常用指令是否提供功能键？</span></div><div><span style="font-size:12px;">8.5<span class="Apple-tab-span" style="white-space:pre;"> </span>数据输入界面中，如果有很多输入项，用户是否可以保存没有全部输入完的数据？</span></div><div><span style="font-size:12px;">8.6<span class="Apple-tab-span" style="white-space:pre;"> </span>如果菜单项较少（不超过7个），用户是否可以通过键盘移动光标选择菜单项？</span></div><div><span style="font-size:12px;">8.7<span class="Apple-tab-span" style="white-space:pre;"> </span>在数据输入界面中，是否用户既可以使用鼠标直接点击又可以使用键盘快捷方式操作？</span></div><div><span style="font-size:12px;">8.8<span class="Apple-tab-span" style="white-space:pre;"> </span>在菜单中，是否用户既可以使用鼠标直接点击又可以使用键盘快捷方式操作？</span></div><div><span style="font-size:12px;">8.9<span class="Apple-tab-span" style="white-space:pre;"> </span>在对话框中，是否用户既可以使用鼠标直接点击又可以使用键盘快捷方式操作？</span></div><div><span style="font-size:12px;">&nbsp;</span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"><strong>9.<span class="Apple-tab-span" style="white-space:pre;"> </span>美观而和极简的设计：不相关和不必要的信息不显示；互相关联的信息要组合在一起。</strong></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"></span></div><div><div><span style="font-size:12px;">9.1<span class="Apple-tab-span" style="white-space:pre;"> </span>是否只有（并且全部）必要信息显示在界面中？</span></div><div><span style="font-size:12px;">9.2<span class="Apple-tab-span" style="white-space:pre;"> </span>是否所有的图表视觉风格一致，并且互不混淆？</span></div><div><span style="font-size:12px;">9.3<span class="Apple-tab-span" style="white-space:pre;"> </span>是否每一个图标都和其背景能清晰区分开？</span></div><div><span style="font-size:12px;">9.4<span class="Apple-tab-span" style="white-space:pre;"> </span>产品是否遵循统一的GUI规范？</span></div><div><span style="font-size:12px;">9.5<span class="Apple-tab-span" style="white-space:pre;"> </span>选项组之间是否在视觉上有所区分？</span></div><div><span style="font-size:12px;">9.6<span class="Apple-tab-span" style="white-space:pre;"> </span>是否每一个界面都有一个简短、清晰、易于理解、不易混淆的标题？</span></div><div><span style="font-size:12px;">9.7<span class="Apple-tab-span" style="white-space:pre;"> </span>标签名称是否简洁、容易理解、并且准确描述了标签页的内容？</span></div><div><span style="font-size:12px;">9.8<span class="Apple-tab-span" style="white-space:pre;"> </span>是否提示信息的语言态度积、语气肯定？</span></div><div><span style="font-size:12px;">9.9<span class="Apple-tab-span" style="white-space:pre;"> </span>是否每一个下级菜单项都只与一个上级菜单项对应？</span></div><div><span style="font-size:12px;">9.10<span class="Apple-tab-span" style="white-space:pre;"> </span>是否菜单的表态简洁，但准确地概括了所属菜单项的内容？</span></div><div><span style="font-size:12px;">9.11<span class="Apple-tab-span" style="white-space:pre;"> </span>在带有很多个数据输入项的弹窗和下拉菜单中，是否各输入项的排布和设计美观合理？</span></div><div><span style="font-size:12px;">&nbsp;</span></div></div></div></div></div></div></div></div></div><p><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"><strong>10.<span class="Apple-tab-span" style="white-space:pre;"> </span>帮助和说明文档：无需文档就能流畅应用当然更好，但通常系统的帮助文档是必要的，而且要提供便利的检索功能，内容需面向用户任务描述，列出具体实现步骤，并且不要太冗长。</strong></span></span></p><p><span style="font-size:12px;"></span></p><p>&nbsp;</p><div><span style="font-size:12px;">10.1<span class="Apple-tab-span" style="white-space:pre;"> </span>如果界面内容有对应的纸质文档，是否在界面对应的位置注明？</span></div><div><span style="font-size:12px;">10.2<span class="Apple-tab-span" style="white-space:pre;"> </span>在线帮助的选项在界面中是否容易被发现？</span></div><div><span style="font-size:12px;">10.3<span class="Apple-tab-span" style="white-space:pre;"> </span>在线帮助的选项在界面中的视觉设计是否独特？</span></div><div><span style="font-size:12px;">10.4<span class="Apple-tab-span" style="white-space:pre;"> </span>帮助的内容规划是否和用户使用的操作流程对应？</span></div><div><span style="font-size:12px;">10.5<span class="Apple-tab-span" style="white-space:pre;"> </span>如果有模棱两可的菜单项，在该项被选中时，产品是否提供附加说明？</span></div><div><span style="font-size:12px;">10.6<span class="Apple-tab-span" style="white-space:pre;"> </span>各个数据输入界面和对话框是否有导航串联？</span></div><div><span style="font-size:12px;">10.7<span class="Apple-tab-span" style="white-space:pre;"> </span>是否提供方便的操作说明（快捷的在线参考、或者弹窗、或气泡等）？</span></div><div><span style="font-size:12px;">10.8<span class="Apple-tab-span" style="white-space:pre;"> </span>帮助系统的界面是否和对应产品的界面保持统一（包括导航、展现、交互方式等）？</span></div><div><span style="font-size:12px;">10.9<span class="Apple-tab-span" style="white-space:pre;"> </span>导航：是否相关信息容易找到？</span></div><div><span style="font-size:12px;">10.10<span class="Apple-tab-span" style="white-space:pre;"> </span>展现：视觉排版是否经过精心设计？</span></div><div><span style="font-size:12px;">10.11<span class="Apple-tab-span" style="white-space:pre;"> </span>交互方式：信息是否准确、完整、易于理解？</span></div><div><span style="font-size:12px;">10.12<span class="Apple-tab-span" style="white-space:pre;"> </span>目标导向是否明确：“我能用这个产品做什么？”</span></div><div><span style="font-size:12px;">10.13<span class="Apple-tab-span" style="white-space:pre;"> </span>描述性：“这个是用来做什么的？”</span></div><div><span style="font-size:12px;">10.14<span class="Apple-tab-span" style="white-space:pre;"> </span>流程清楚：“如何完成这个任务？”</span></div><div><span style="font-size:12px;">10.15<span class="Apple-tab-span" style="white-space:pre;"> </span>易于理解：“为什么会这样？”</span></div><div><span style="font-size:12px;">10.16<span class="Apple-tab-span" style="white-space:pre;"> </span>导航清晰：“我现在在哪里？”</span></div><div><span style="font-size:12px;">10.17<span class="Apple-tab-span" style="white-space:pre;"> </span>界面帮助是否贴合相应的操作或内容？</span></div><div><span style="font-size:12px;">10.18<span class="Apple-tab-span" style="white-space:pre;"> </span>用户在产品界面和帮助界面之间切换是否方便自如？</span></div><div><span style="font-size:12px;">10.19<span class="Apple-tab-span" style="white-space:pre;"> </span>进入和返回帮助系统是否简便？</span></div><div><span style="font-size:12px;">10.20<span class="Apple-tab-span" style="white-space:pre;"> </span>在进入帮助界面之后，用户是否可以顺利返回之前的操作界面？</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;line-height:18px;"></span></div><div><span style="font-size:12px;"><span style="line-height:18px;"></span><span style="color:rgb(11, 83, 148);"><strong>11.<span class="Apple-tab-span" style="white-space:pre;"> </span>帮助用户提升技能：可以支持、拓展、补充、或者提高用户的操作技巧、背景知识和专业技能，而不是取代他们的技能。</strong></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"></span></div><div><div><span style="font-size:12px;">11.1<span class="Apple-tab-span" style="white-space:pre;"> </span>是否易于学习和使用？</span></div><div><span style="font-size:12px;">11.2<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品的用户为专家级，对于某些经常使用的操作，或系统的响应较慢，界面数量是否设计成较少（每一屏显示更多的信息）？</span></div><div><span style="font-size:12px;">11.3<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品的用户为新手，对于某些不经常使用的操作，或系统的响应较快，界面数量是否设计成较多（每一屏显示更少的信息）？</span></div><div><span style="font-size:12px;">11.4<span class="Apple-tab-span" style="white-space:pre;"> </span>如果产品的用户包括新手和专家级用户，是否在细节设计上针对不同级别的用户有所区分？</span></div><div><span style="font-size:12px;">11.5<span class="Apple-tab-span" style="white-space:pre;"> </span>相比操作的被动响应者，是否用户更多的扮演操作的主动发起者的角色？</span></div><div><span style="font-size:12px;">11.6<span class="Apple-tab-span" style="white-space:pre;"> </span>当用户打开一个新的界面，光标是否停留在用户最可能需要的位置？</span></div><div><span style="font-size:12px;">11.7<span class="Apple-tab-span" style="white-space:pre;"> </span>界面中的重要按钮是否比其它的更大？</span></div><div><span style="font-size:12px;">11.8<span class="Apple-tab-span" style="white-space:pre;"> </span>如果设有功能键，是否是为通用的、常用的和重要的操作设置？</span></div><div><span style="font-size:12px;">11.9<span class="Apple-tab-span" style="white-space:pre;"> </span>不同界面、子系统和相关的产品的功能键是否一致？</span></div><div><span style="font-size:12px;">11.10<span class="Apple-tab-span" style="white-space:pre;"> </span>产品是否能准确预估用户的操作，并做出适当的反应？</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;line-height:18px;"></span></div><div><span style="font-size:12px;"><span style="line-height:18px;"></span><span style="color:rgb(11, 83, 148);"><strong>12.<span class="Apple-tab-span" style="white-space:pre;"> </span>令人愉悦的交互设计：能够提升用户的工作质量，并给予用户足够的尊重；设计要在美学和功能上保持平衡。</strong></span></span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"></span></span></div><div><span style="font-size:12px;"></span></div><div><div><span style="font-size:12px;">12.1<span class="Apple-tab-span" style="white-space:pre;"> </span>是否每一个图标都与其图标系列保持和谐和统一？</span></div><div><span style="font-size:12px;">12.2<span class="Apple-tab-span" style="white-space:pre;"> </span>颜色的运用是否严谨？</span></div><div><span style="font-size:12px;">12.3<span class="Apple-tab-span" style="white-space:pre;"> </span>新打开窗口的数量是否被控制在最少？</span></div><div><span style="font-size:12px;">12.4<span class="Apple-tab-span" style="white-space:pre;"> </span>如果界面内容有对应的纸质文档，双方的内容和布局是否对应？</span></div><div><span style="font-size:12px;">12.5<span class="Apple-tab-span" style="white-space:pre;"> </span>在引起注意、传递信息、以及显示状态变化和关系时，颜色是否被正确的运用？</span></div><div><span style="font-size:12px;">12.6<span class="Apple-tab-span" style="white-space:pre;"> </span>在输入界面中，打字输入的需求是否被减到最少？</span></div><div><span style="font-size:12px;">12.7<span class="Apple-tab-span" style="white-space:pre;"> </span>产品选择的输入设备是否与周边的操作环境匹配？</span></div><div><span style="font-size:12px;">12.8<span class="Apple-tab-span" style="white-space:pre;"> </span>如果需要多个输入设备，手和眼在不同设备间的移动次数是否减到最少？</span></div><div><span style="font-size:12px;">12.9<span class="Apple-tab-span" style="white-space:pre;"> </span>产品是否支持模糊输入（如输入法中的模糊输入）？</span></div><div><span style="font-size:12px;">&nbsp;</span></div><div><span style="font-size:12px;"><span style="color:rgb(11, 83, 148);"><strong>13.<span class="Apple-tab-span" style="white-space:pre;"> </span>隐私保护：帮助用户保护他们或者其客户的隐私信息。</strong></span></span></div><div>&nbsp;</div><div><span style="font-size:12px;">（注：每条可按“是”、“否”、“其它”来做结论。）</span></div><div><span style="font-size:12px;"></span></div><div><span style="font-size:12px;">另外，也可按照产品的不同区块分别check，根据客观情况灵活的安排不同的工作方式，也是体现创造力的重要方面。下图是网站的heuristics：</span></div><div style="text-align:center;"><span style="font-size:12px;"></span><img style="float:none;margin:0px;" alt="" data-pinit="registered" src="https://img.alicdn.com/tfscom/T1HJLrXllrXXaCwpjX.png" /></div></div></div>
+      </div>
+      <div class="article-comment">
+  <div class="comment-hd">
+    <span class="comment-hd-title"><span class="count" id="J_comment_counts">7</span> 条评论 </span>
+    &nbsp; | &nbsp; 账号登录：
+
+    <a href="../login_domain.html"><i class="iconfont">&#232;</i>域账号</a> &nbsp;  &nbsp;
+    <a href="../auth/taobao.html"><i class="iconfont">&#440;</i>淘宝账号</a>  &nbsp;  &nbsp;
+    <a href="../auth/weibo.html"><i class="iconfont">&#468;</i>新浪微博</a>
+    <!-- <a href="#"><i class="iconfont">&#338;</i>小二账号</a>
+    <a href="#"><i class="iconfont">&#232;</i>域账号</a> -->
+
+  </div>
+  <div class="comment-lists" id="J_comment-lists">
+      <div class="comment-ls">
+  <a href="../users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-13 11:57:51</span>
+      </div>
+      <div class="msg-body">
+        我找过他了
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/11" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1IDywFVXXXXalaXXXSutbFXXX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-11 13:31:47</span>
+      </div>
+      <div class="msg-body">
+        有需求可以直接跟逸才反应
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-09 17:59:43</span>
+      </div>
+      <div class="msg-body">
+        为啥我键入的换行不好使呢。。。看起来有点乱。。。呼唤直接编辑源代码的功能~~
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-09 15:52:38</span>
+      </div>
+      <div class="msg-body">
+        从word里面直接贴表格过来发布之后就被腰斩了
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/11" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/TB1IDywFVXXXXalaXXXSutbFXXX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-09 15:10:44</span>
+      </div>
+      <div class="msg-body">
+        是图片啊，是不是不支持表格的原因？
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/151" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1yIUvXoNXXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-09 11:38:25</span>
+      </div>
+      <div class="msg-body">
+        文章上最好不要署名哦。另外对外发表的文章排版和字体的选用，要美点哦
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/20" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T17.nqXe4mXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-07-06 17:23:27</span>
+      </div>
+      <div class="msg-body">
+        尝试了一下发文功能，发现只能做成图片上传才行。。。囧
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+  </div>
+</div>
+
+    </div>
+    <div id="J_atAside_210" class="article-aside J_atAside" pid="210">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container" >
+        <div class="article-aside-container-sub">
+          <div class="attachment-bd hidden J_attachmentsBox">
+            <ul>
+                <li>
+                  <a href="https://img.alicdn.com/tfscom/T1yAbqXmVpXXczhabX.docx" download="启发式评估验收表.docx" target="_blank">
+                    <i class="iconfont">&#384</i>启发式评估验收表.docx
+</a>                  <span>70.5 KB</span>
+                </li>
+            </ul>
+          </div>
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      <div class="friendly-link">
+    <h2>友情链接</h2>
+    <div class="friendly-link-list">
+        <div class="banners_edit" data-editable="false" data-tkey="friendly_link_list"><ul>            <li><a href="http://ued.taobao.com/" target="_blank">淘宝UED</a> </li>            <li><a href="http://www.aliued.com/" target="_blank">Alibaba国际站UED</a> </li>            <li><a href="http://china.aliued.com/" target="_blank">Alibaba中文站UED</a> </li>            <li><a href="http://ued.alipay.com/" target="_blank"> 支付宝UED</a> </li>            <li><a href="http://ued.tmall.com/" target="_blank">天猫UED</a> </li></ul><ul> 	<li><a href="http://ur.alibaba-inc.com">阿里用户体验中心</a> </li>	 <li><a href="http://www.uisdc.com" target="_blank">优秀网页设计</a> </li><li><a href="http://www.bootcss.com" target="_blank">Bootstrap中文网</a> </li>            <li><a href="http://udc.weibo.com/" target="_blank">微博UDC</a> </li>            <li><a href="http://ued.sogou.com/" target="_blank">搜狗UED</a> </li>            <li><a href="http://mued.sohu.com/" target="_blank">搜狐UED</a> </li>            <li><a href="http://cdc.tencent.com/" target="_blank">腾讯CDC</a> </li></ul><ul>	    	<li><a href="http://ucdchina.com/" target="_blank">CDC大社区</a> </li>                        <li><a href="http://www.boxui.com/" target="_blank">UI盒子</a> </li>            <li><a href="http://www.trans4fun.com/" target="_blank">前端翻译小站 </a> </li>               </ul></div>
+    </div>
+    <div class="abouts">
+        <ul>
+            <li><a href="../feeds/posts.rss"><i class="iconfont">&#483</i>RSS订阅</a> </li>
+            <li><a href="http://weibo.com/alimamamux" target="_blank"><i class="iconfont">&#468</i>微博关注</a> </li>
+            <li><a href="../index.html"><i class="iconfont">&#349</i>联系我们</a> </li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+<p>&copy;阿里妈妈MUX, All rights reserved.</p>
+<p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：sangxing#taobao.com</p>
+</footer>
+
+    </div>
+  </div>
+    <script src="https://assets.alicdn.com/??s/kissy/1.2.0/kissy-min.js" type="text/javascript"></script>
+  <script src="../assets/site/work-3078ff5dba6752b818be2c96bebf33d4.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27817535-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

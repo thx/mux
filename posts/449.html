@@ -1,0 +1,638 @@
+
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="utf-8"/>
+  <title>无线前端资源管理方案 - 阿里妈妈MUX</title>
+  <link href="../assets/application-65463c58d38dc99711b75f6b6bfb7216.css" media="all" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]>
+  <link href="/kissy/editor/theme/cool/editor-pkg-sprite-min.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if gte IE 8]><!-->
+  <link href="../kissy/editor/theme/cool/editor-pkg-min-datauri.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" name="csrf-token" />
+  <link href="../feeds/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
+  <link rel="shortcut icon" href="../assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" type="image/x-icon" />
+  <meta name="application-name" content="UX 体验工作平台"/>
+  <meta name="msapplication-tooltip" content="UX 体验工作平台" />
+  <meta name="msapplication-task" content="name=文章;action-uri=http://mux.alimama.com/posts;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=工作;action-uri=http://mux.alimama.com/works;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=招聘;action-uri=http://mux.alimama.com/jobs;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+  <meta name="msapplication-task" content="name=团队;action-uri=http://mux.alimama.com/team;icon-uri=/assets/favicon-5bff337a733e36a7bcfcdedd44f454a2.ico" />
+</head>
+<body ><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=ac1dc02615368236932945149e2a21&asid=AQAAAADVEZpbhOCXZwAAAADEalH7ahDx3w==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+  <div class="page-bg"></div>
+  <div id="J_page" class="page ">
+    <div id="header">
+  <h1 class="ux-logo">
+    <a href="../index.html" title="阿里妈妈MUX" class="dim">
+      <!-- <span class="iconfont ux-logo-at">&#481;</span>
+      <span class="iconfont">&#482;</span> -->
+      <span class="mux-iconfont">&#xf02ae;</span>
+      <span class="ux-name">
+        体验工作平台 <br/>
+        <span>mux.alimama.com</span>
+      </span>
+    </a>
+  </h1>
+  <div class="menu">
+    <div class="search-con">
+      <div class="search">
+        <div class="search-inner">
+          <form action="http://mux.alimama.com/search">
+            <button type="submit" class="search-submit iconfont">&#337;</button>
+            <button type="button" class="search-clear iconfont" id="J_sBtnClear">&#223;</button>
+            <div class="search-input-box">
+              <fieldset tabindex="0">
+                <label class="search-label" for="J_searchInput"></label>
+                <input id="J_searchInput" class="search-input" accesskey="s" autocomplete="off" type="text" name="q" value="" maxlength="100" data-autofocus="autofocus">
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <ul class="main-nav">
+      <li class="current "><a href="../posts.html">文章</a></li>
+      <li class="">
+        <a href="../works.html" class="J_dropdownTrigger" data-login="login">工作</a>
+        <div class="J_dropdown hidden user-dropdown">
+          <ul>
+            <li class="sprite arrow"></li>
+            <li><a href="../works/bricks.html">PC组件库</a></li>
+            <li><a href="../works/mobile-components.html">无线组件库</a></li>
+            <li><a href="../works/visual-identification.html">品牌</a></li>
+            <li><a href="../works/interaction-design.html">交互</a></li>
+            <li><a href="../works/user-research.html">用研</a></li>
+            <li><a href="../works/visual-design.html">视觉</a></li>
+            <li><a href="../works/guanli.html">管理</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="http://idesign.alibaba-inc.com/Freshmen" target="_blank" data-login="login">工作平台</a></li>
+      <li class=" "><a href="../jobs.html">招聘</a></li>
+      <li><a href="http://thx.github.io" target="_blank">THX</a></li>
+    </ul>
+    <div class="user-info">
+        <div id="J_loginBoxTrigger" class="user-ribbon sprite"><i class="iconfont">&#338</i></div>
+        <div id="J_loginBox" class="login-box hidden">
+  <div class="login-box-con" style="display:none">
+    <!--  已经不使用 -->
+    <form accept-charset="UTF-8" action="http://mux.alimama.com/user_sessions" class="new_user_session" id="J_loginForm" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="youeWzhGu3nD5YC8sb+SaRUL5/h1OuanbkcixRVffFs=" /></div>
+      <ul>
+        <li class="field"><input class="field-text" data-valid="{email:[true,&quot;邮箱格式有误&quot;]}" id="user_session_email" name="user_session[email]" placeholder="E-mail" size="30" type="text" /></li>
+        <li class="field"><input class="field-text" id="user_session_password" name="user_session[password]" placeholder="密码" size="30" type="password" /></li>
+        <li class="field clear login-field-last">
+          <input name="user_session[remember_me]" type="hidden" value="0" /><input class="field-check" id="user_session_remember_me" name="user_session[remember_me]" type="checkbox" value="1" />
+          <label for="user_session_remember_me">记住我</label> &nbsp;
+          <input class="login-btn" name="commit" type="submit" value="登录" />
+        </li>
+      </ul>
+</form>  </div>
+
+      <div class="login-methods">
+      选择登录方式:
+        <ul class="login-lists clear">
+
+          <li>
+            <a href="../auth/taobao.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#440;</i><i class="iconfont iconfont-tao">&#440;</i></span>
+              </span>
+            </a>
+            淘宝账号
+          </li>
+          <li>
+            <a href="../auth/weibo.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#468;</i><i class="iconfont iconfont-weibo">&#468;</i></span>
+              </span>
+            </a>
+            新浪账号
+          </li>
+          <li class="last">
+            <a href="../login_domain.html" class="avatar avatar-60">
+              <span class="avatar-mask"></span>
+              <span class="login-icons">
+                <span class="login-icon"><i class="iconfont">&#232;</i><i class="iconfont iconfont-domain">&#232;</i></span>
+              </span>
+            </a>
+            域账号
+          </li>
+        </ul>
+
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div id="banner" style="position:relative;">
+  <h2 class="title-posts title"><span class="f">文</span><span class="l">章</span></h2>
+  <div class="bd"><div class="bd-content" data-editable="false" data-tkey="posts"><p><p>阿里妈妈MUX文章分享</p></p></div></div>
+</div>
+
+
+    <div id="wrapper">
+        <div id="aside">
+  <ul class="channels" id="J_channels">
+    <li class="current latest">
+      <a href="../posts.html" class="J_channel" ux-channel="archive">最新</a>
+    </li>
+      <li class="">
+        <a href="visual-design.html" class="J_channel" ux-channel="visual-design" ux-count="88">视觉</a>
+      </li>
+      <li class="">
+        <a href="user-research.html" class="J_channel" ux-channel="user-research" ux-count="7">用研</a>
+      </li>
+      <li class="">
+        <a href="interaction-design.html" class="J_channel" ux-channel="interaction-design" ux-count="64">交互</a>
+      </li>
+      <li class="">
+        <a href="front-end.html" class="J_channel" ux-channel="front-end" ux-count="18">前端</a>
+      </li>
+      <li class="">
+        <a href="team.html" class="J_channel" ux-channel="team" ux-count="61">团队</a>
+      </li>
+  </ul>
+  <div class="categories" id="J_categories">
+    <p class="title-bar">
+      <a class="J_all" href="index.html">所有<em>（<span class="J_count">232</span>）</em></a>
+      <a class="toggler J_toggler" href="449.html#">展开类目</a>
+    </p>
+    <ul ux-channel="archive" class="">
+        <li><span class="category-name">2018年</span>
+          <ul>
+            <li><a href="2018/01.html" class="sub-category J_subCategory">2018年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2017年</span>
+          <ul>
+            <li><a href="2017/03.html" class="sub-category J_subCategory">2017年03月（1）</a>
+            </li>
+            <li><a href="2017/02.html" class="sub-category J_subCategory">2017年02月（1）</a>
+            </li>
+            <li><a href="2017/01.html" class="sub-category J_subCategory">2017年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2016年</span>
+          <ul>
+            <li><a href="2016/12.html" class="sub-category J_subCategory">2016年12月（1）</a>
+            </li>
+            <li><a href="2016/10.html" class="sub-category J_subCategory">2016年10月（1）</a>
+            </li>
+            <li><a href="2016/09.html" class="sub-category J_subCategory">2016年09月（2）</a>
+            </li>
+            <li><a href="2016/08.html" class="sub-category J_subCategory">2016年08月（1）</a>
+            </li>
+            <li><a href="2016/06.html" class="sub-category J_subCategory">2016年06月（1）</a>
+            </li>
+            <li><a href="2016/04.html" class="sub-category J_subCategory">2016年04月（4）</a>
+            </li>
+            <li><a href="2016/03.html" class="sub-category J_subCategory">2016年03月（1）</a>
+            </li>
+            <li><a href="2016/02.html" class="sub-category J_subCategory">2016年02月（2）</a>
+            </li>
+            <li><a href="2016/01.html" class="sub-category J_subCategory">2016年01月（2）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2015年</span>
+          <ul>
+            <li><a href="2015/12.html" class="sub-category J_subCategory">2015年12月（1）</a>
+            </li>
+            <li><a href="2015/11.html" class="sub-category J_subCategory">2015年11月（1）</a>
+            </li>
+            <li><a href="2015/10.html" class="sub-category J_subCategory">2015年10月（1）</a>
+            </li>
+            <li><a href="2015/09.html" class="sub-category J_subCategory">2015年09月（3）</a>
+            </li>
+            <li><a href="2015/08.html" class="sub-category J_subCategory">2015年08月（3）</a>
+            </li>
+            <li><a href="2015/07.html" class="sub-category J_subCategory">2015年07月（4）</a>
+            </li>
+            <li><a href="2015/06.html" class="sub-category J_subCategory">2015年06月（4）</a>
+            </li>
+            <li><a href="2015/05.html" class="sub-category J_subCategory">2015年05月（2）</a>
+            </li>
+            <li><a href="2015/04.html" class="sub-category J_subCategory">2015年04月（3）</a>
+            </li>
+            <li><a href="2015/03.html" class="sub-category J_subCategory">2015年03月（1）</a>
+            </li>
+            <li><a href="2015/02.html" class="sub-category J_subCategory">2015年02月（3）</a>
+            </li>
+            <li><a href="2015/01.html" class="sub-category J_subCategory">2015年01月（3）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2014年</span>
+          <ul>
+            <li><a href="2014/12.html" class="sub-category J_subCategory">2014年12月（10）</a>
+            </li>
+            <li><a href="2014/11.html" class="sub-category J_subCategory">2014年11月（5）</a>
+            </li>
+            <li><a href="2014/10.html" class="sub-category J_subCategory">2014年10月（3）</a>
+            </li>
+            <li><a href="2014/09.html" class="sub-category J_subCategory">2014年09月（7）</a>
+            </li>
+            <li><a href="2014/08.html" class="sub-category J_subCategory">2014年08月（4）</a>
+            </li>
+            <li><a href="2014/07.html" class="sub-category J_subCategory">2014年07月（4）</a>
+            </li>
+            <li><a href="2014/06.html" class="sub-category J_subCategory">2014年06月（1）</a>
+            </li>
+            <li><a href="2014/05.html" class="sub-category J_subCategory">2014年05月（1）</a>
+            </li>
+            <li><a href="2014/04.html" class="sub-category J_subCategory">2014年04月（2）</a>
+            </li>
+            <li><a href="2014/03.html" class="sub-category J_subCategory">2014年03月（8）</a>
+            </li>
+            <li><a href="2014/01.html" class="sub-category J_subCategory">2014年01月（1）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2013年</span>
+          <ul>
+            <li><a href="2013/12.html" class="sub-category J_subCategory">2013年12月（2）</a>
+            </li>
+            <li><a href="2013/11.html" class="sub-category J_subCategory">2013年11月（1）</a>
+            </li>
+            <li><a href="2013/09.html" class="sub-category J_subCategory">2013年09月（1）</a>
+            </li>
+            <li><a href="2013/08.html" class="sub-category J_subCategory">2013年08月（2）</a>
+            </li>
+            <li><a href="2013/07.html" class="sub-category J_subCategory">2013年07月（6）</a>
+            </li>
+            <li><a href="2013/06.html" class="sub-category J_subCategory">2013年06月（3）</a>
+            </li>
+            <li><a href="2013/05.html" class="sub-category J_subCategory">2013年05月（6）</a>
+            </li>
+            <li><a href="2013/04.html" class="sub-category J_subCategory">2013年04月（5）</a>
+            </li>
+            <li><a href="2013/03.html" class="sub-category J_subCategory">2013年03月（9）</a>
+            </li>
+            <li><a href="2013/02.html" class="sub-category J_subCategory">2013年02月（4）</a>
+            </li>
+            <li><a href="2013/01.html" class="sub-category J_subCategory">2013年01月（5）</a>
+            </li>
+          </ul>
+        </li>
+        <li><span class="category-name">2012年</span>
+          <ul>
+            <li><a href="2012/12.html" class="sub-category J_subCategory">2012年12月（28）</a>
+            </li>
+            <li><a href="2012/11.html" class="sub-category J_subCategory">2012年11月（13）</a>
+            </li>
+            <li><a href="2012/10.html" class="sub-category J_subCategory">2012年10月（8）</a>
+            </li>
+            <li><a href="2012/09.html" class="sub-category J_subCategory">2012年09月（17）</a>
+            </li>
+            <li><a href="2012/08.html" class="sub-category J_subCategory">2012年08月（3）</a>
+            </li>
+            <li><a href="2012/07.html" class="sub-category J_subCategory">2012年07月（22）</a>
+            </li>
+            <li><a href="2012/06.html" class="sub-category J_subCategory">2012年06月（2）</a>
+            </li>
+            <li><a href="2012/05.html" class="sub-category J_subCategory">2012年05月（1）</a>
+            </li>
+          </ul>
+        </li>
+    </ul>
+      <ul ux-channel="visual-design" class="hidden">
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/175-beijingzhishi.html" class="sub-category J_subCategory">背景知识</a>
+</li>                <li>
+                  <a href="visual-design/256-shishangshenghuo.html" class="sub-category J_subCategory">时尚生活</a>
+</li>                <li>
+                  <a href="visual-design/171-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="visual-design/289-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">产品展示</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="visual-design/160-chuangxinchanpin.html" class="sub-category J_subCategory">创新产品</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="user-research" class="hidden">
+          <li><span class="category-name">研究方法</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/167-shejiyanjiufangfa.html" class="sub-category J_subCategory">设计研究方法</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">工作感想</span>
+            <ul class="sub-category-list">
+            </ul>
+          </li>
+          <li><span class="category-name">搜索研究</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/254-jueceyanjiu.html" class="sub-category J_subCategory">决策研究</a>
+</li>                <li>
+                  <a href="user-research/165-leimuyanjiu.html" class="sub-category J_subCategory">类目研究</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">合作</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="user-research/239-uxneibu.html" class="sub-category J_subCategory">UX内部</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="interaction-design" class="hidden">
+          <li><span class="category-name">交互设计</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/157-jiaohushejiyuanze.html" class="sub-category J_subCategory">交互设计原则</a>
+</li>                <li>
+                  <a href="interaction-design/158-shejifangfa.html" class="sub-category J_subCategory">设计方法</a>
+</li>                <li>
+                  <a href="interaction-design/255-shejifenxiang.html" class="sub-category J_subCategory">设计分享</a>
+</li>                <li>
+                  <a href="interaction-design/280-ziliaofenxiang.html" class="sub-category J_subCategory">资料分享</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">经验分享</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="interaction-design/197-gongzuoganxiang.html" class="sub-category J_subCategory">工作感想</a>
+</li>                <li>
+                  <a href="interaction-design/281-shenghuoganwu.html" class="sub-category J_subCategory">生活感悟</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="front-end" class="hidden">
+          <li><span class="category-name">pc</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/182-qianduanjizhu.html" class="sub-category J_subCategory">前端技术</a>
+</li>                <li>
+                  <a href="front-end/250-gongjujineng.html" class="sub-category J_subCategory">工具技能</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">平台</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/187-brix.html" class="sub-category J_subCategory">Brix</a>
+</li>                <li>
+                  <a href="front-end/208-chart.html" class="sub-category J_subCategory">Chart</a>
+</li>                <li>
+                  <a href="front-end/240-mix.html" class="sub-category J_subCategory">Mix</a>
+</li>                <li>
+                  <a href="front-end/285-rap.html" class="sub-category J_subCategory">RAP</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">mobile</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/191-shejifangan.html" class="sub-category J_subCategory">设计方案</a>
+</li>                <li>
+                  <a href="front-end/276-iconfont.html" class="sub-category J_subCategory">iconfont</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">淘宝H5</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/231-kongjian.html" class="sub-category J_subCategory">控件</a>
+</li>                <li>
+                  <a href="front-end/232-zujian.html" class="sub-category J_subCategory">组件</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="front-end/263-velocity.html" class="sub-category J_subCategory">Velocity</a>
+</li>            </ul>
+          </li>
+      </ul>
+      <ul ux-channel="team" class="hidden">
+          <li><span class="category-name">团队活动</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/178-guanggao.html" class="sub-category J_subCategory">广告</a>
+</li>                <li>
+                  <a href="team/189-gongyi.html" class="sub-category J_subCategory">公益</a>
+</li>                <li>
+                  <a href="team/241-tuanjian.html" class="sub-category J_subCategory">团建</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">兴趣小组</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/180-tangmiaohui.html" class="sub-category J_subCategory">堂描绘</a>
+</li>                <li>
+                  <a href="team/181-shijuexingquxiaozu.html" class="sub-category J_subCategory">视觉兴趣小组</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">业界交流</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/253-upd.html" class="sub-category J_subCategory">UPA</a>
+</li>                <li>
+                  <a href="team/252-adc.html" class="sub-category J_subCategory">ADC</a>
+</li>                <li>
+                  <a href="team/283-hiued.html" class="sub-category J_subCategory">HIUED</a>
+</li>                <li>
+                  <a href="team/303-ucan.html" class="sub-category J_subCategory">UCAN</a>
+</li>                <li>
+                  <a href="team/301-ixdc.html" class="sub-category J_subCategory">IxDC</a>
+</li>            </ul>
+          </li>
+          <li><span class="category-name">随笔</span>
+            <ul class="sub-category-list">
+                <li>
+                  <a href="team/247-gongzuoxinde.html" class="sub-category J_subCategory">工作心德</a>
+</li>                <li>
+                  <a href="team/248-yuedubiji.html" class="sub-category J_subCategory">阅读笔记</a>
+</li>                <li>
+                  <a href="team/249-xinqinggushi.html" class="sub-category J_subCategory">心情故事</a>
+</li>            </ul>
+          </li>
+      </ul>
+  </div>
+</div>
+
+      <div id="main">
+        <div class="article">
+
+    <div class="article-hd-wrap">
+    <div class="article-hd">
+      <span class="article-hd-left"></span>
+      <span class="article-hd-right"></span>
+      <h3 class="title">
+        <span>无线前端资源管理方案</span>
+        <i class="iconfont toggle-toc">&#405;</i>
+      </h3>
+      <div class="publish-date">2012/10/09</div>
+      <div class="authors">
+           <a href="../users/234" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1TPvUXeXcXXaHvGbX.jpeg_30x30.jpg" /></a>
+      </div>
+
+
+<div class="actions J_bar_actions" data-target="#J_atAside_449">
+  <a class="comments" href="449.html#!comments" title="评论"><i class="iconfont">&#343</i>4</a>
+  <a class="likes" href="449.html#!likes" title="喜欢"><i class="iconfont">&#362</i>1/11349</a>
+  <a href="http://v.t.sina.com.cn/share/share.php?appkey=3069005291&amp;title=%25E6%2597%25A0%25E7%25BA%25BF%25E5%2589%258D%25E7%25AB%25AF%25E8%25B5%2584%25E6%25BA%2590%25E7%25AE%25A1%25E7%2590%2586%25E6%2596%25B9%25E6%25A1%2588%2520%2523%25E9%2598%25BF%25E9%2587%258C%25E5%25A6%2588%25E5%25A6%2588MUX%2523%2520&amp;url=http%3A%2F%2Fmux.alimama.com%2Fposts%2F449" class="weibo" data-aside="0" target="_blank"><i class="iconfont">&#468</i></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="article-bd">
+    <div class="article-content">
+      <div class="article-content-bd">
+        <p><span class="Apple-tab-span" style="white-space:pre;">&nbsp;<img style="float:none;margin:0px;" alt="" src="https://img.alicdn.com/tfscom/T1ZbDUXbRfXXaCwpjX.png" /> </span></p><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">在纠结站点费流量，想高效节省请求以并想二次访问0请求? &nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">身为重度seajs使用者更新基础库js却要一一通知其他开发人员重新打包发布，想让seajs支持独立的版本管理和存储管理?</span></div><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">如果有任何以上一点，那这篇文章或许对你将有所帮助&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">下文虽建立在seajs插件开发基础上，但方案可放纵四海。</span></div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;<span class="read-more"><!--more-->阅读全文</span></div><div>&nbsp;</div><div>&nbsp;</div><h3><strong>插件特色功能</strong></h3><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">1. 通过插件的方式让seajs支持了文件夹方式的版本管理（后续支持文件名形式）；</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">2. 对js的存储（存于localStorage）可配置，支持存储js的单点更新（更新方式模拟manifest实现）；</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">3. 插件内置combo支持，对combo请求亦可版本管理和获取后细粒度拆分存储。</span></p><div><span style="color:rgb(102, 102, 102);"><span style="color:rgb(111, 168, 220);"><span style="color:rgb(61, 133, 198);">插件github地址：</span>https://github.com/pigcan/seajs-plugin-storage.js</span></span></div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><p><strong>插件源来 &nbsp;- &nbsp;我们总是不停的碰到问题，接下来分析问题，并解决问题，又碰到问题 --</strong></p><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">回顾一下我们存储方案上的选择：</span></div><div>&nbsp;</div><p style="margin-left:40px;">1. cookie + localStorage</p><p style="margin-left:40px;">2. applicationCache</p><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">基于项目时间点的原因，我们选择了后者的方案</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);">再来说说方案2 - 因为要推倒一个方案的时候我们总需要很多理由嘛 XD</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">1. 含有manifest属性的当前请求页无论如何都会被缓存（<span style="background-color:rgb(255, 242, 204);">对于动态页而言很致命</span>）</span></p><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">2. 更新需要建立在manifest文件的更新，文件更新后是需要页面再次刷新的（<span style="background-color:rgb(255, 242, 204);">需要2次刷新才能获取新资源</span>）</span></p><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">3. 更新是全局性的，无法单独更新某个文件（<span style="background-color:rgb(255, 242, 204);">无法单点更新</span>）</span></p><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">4. 最有效的方式是让manifest文件找不到 可以大部分解决掉由于2)出现的问题</span></p><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">5. 对于链接的参数变化是敏感的，任何一个参数的修改都会被（master）重新缓存（<span style="background-color:rgb(255, 242, 204);">重复缓存含参页面</span>）</span></p><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">6. 所有自定义UI事件都发生在load事件执行完毕后 （<span style="background-color:rgb(255, 242, 204);">UI事件执行反馈结果太过延时</span>）</span></p><div><span style="color:rgb(153, 153, 153);">正因为applicationCache使用非常简便，所以在具体业务使用上可能会滥用，从目前http://m.taobao.com首页来看就是如此，缓存条目达到了60+条 ，缓存量达到近1MB ，这意味着什么呢？</span></div><div>&nbsp;</div><p><strong>再来回顾下manifest具体的执行：</strong></p><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">首次访问含有manifest属性的站点的时候：</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">1. 首先进行的过程是如同没有manifest属性时候是一致的（文档与资源文件的下载）</span></p><p style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">2. 接下来会触发manifest清单所列文件的下载</span></p><div><span style="color:rgb(153, 153, 153);">这是两个<span style="background-color:rgb(255, 242, 204);">同步的过程</span>。</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);">所以意味着：如果用户在进入淘宝首页时候，如果在资源并没有被完全下载完成的时候去点击了一个链接，那么manifest所列文件下载失败，再次进入首页的时候，资源还是重新开始下载，其实只要用户停留首页的时间并不能满足下载近1MB内容的时候，用户每次都必须去重新下载资源，所以流量是巨大的。</span></div><div>&nbsp;</div><p><strong>一般情况下我们都会设置 http expire header 以及 max-age ，这会什么时候生效呢？</strong></p><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">常见场景就是：浏览器回退。</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);">但是很多细心的人会发现如果我首先进入A页面，然后通过A页面点击进入B页面，此时如果直接点击浏览器返回，那么A页面将瞬间出现在我们视野，此时不会有任何的请求产生。 但是此时 如果我在 B页面操作时间够久后，我们再点击可以发现A是会刷新的 ， 和点击刷新按钮刷新页面是相当的。 通过测试 如上方式 资源文件都会以 <span style="background-color:rgb(255, 242, 204);">max-age:0</span>的参数方式去请求资源，由于此时<span style="background-color:rgb(255, 242, 204);">http expire header</span>是生效的所以返回304.</span></div><div>&nbsp;</div><div><strong>304是祸害</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">为何这么说：</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);">如下表格是不同手机网络下DNS查询时间，Conn网络连接三次握手时间，RTT网络延迟时间，还有Tran传输时间。以下分别对2G网络 、3G网络和wifi网络做的一次分析。</span></div><div>&nbsp;</div><div>网络类型 &nbsp; &nbsp;&nbsp;<span class="Apple-tab-span" style="white-space:pre;"> </span>DNS &nbsp; &nbsp; &nbsp;&nbsp;<span class="Apple-tab-span" style="white-space:pre;"> </span>Conn &nbsp; &nbsp;&nbsp;<span class="Apple-tab-span" style="white-space:pre;"> </span>RTT<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp;Tran</div><div>2G &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="Apple-tab-span" style="white-space:pre;"> </span>27% &nbsp; &nbsp; &nbsp;<span class="Apple-tab-span" style="white-space:pre;"> </span>25%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp;25%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp;&nbsp;27%</div><div>3G<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;31%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp; 26%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp;33%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp;&nbsp;10%</div><div>wifi &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;33%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp; 17%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; &nbsp;40%<span class="Apple-tab-span" style="white-space:pre;"> </span>&nbsp; &nbsp; 10%</div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">所以更新一个含60条条目的applicationCache是一个非常可怕的事情。</span></div><div><span style="color:rgb(102, 102, 102);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);"><strong><span style="background-color:rgb(255, 242, 204);">我们需要约定applicationCache应该存一些基本永远不会改变的数据！！！</span></strong></span></div><div>&nbsp;</div><div><strong>现在碰到的资源打包的问题</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">A同学引用了全局公用组件a，通过打包成一个js的方式发布上线，但是没过几天，B同学，由于项目需求，稍微更新了全局公共组件a， 这个时候存在的一个就在于B同学必须通知A同学重新进行打包再发布上线，如果涉及项目之多，这个工作量是相当之大的！又容易出错！怎么解决？</span></div><div>&nbsp;</div><div><strong>js,css文件如何存储如何打包才高效？如何最小化请求？</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">正因为这些个问题的出现才萌生了这个插件的由来，所以我们要有更好的存储管理方案，所以我们要有更好的管理机制！</span></div><div><span style="color:rgb(102, 102, 102);">&nbsp;</span></div><div><strong>所以plugin-storage的核心就是：</strong></div><div>&nbsp;</div><p style="margin-left:40px;">1. 高效管理资源文件版本</p><p style="margin-left:40px;">2. 彻底磨灭二次访问的网络请求数（主要指 js 和 css 文件），消灭 304 所带来的各种开销（RTT, TCP Connection setup - 3way - handshake）</p><p style="margin-left:40px;">3. 节省用户流量，提升用户体验</p><div><em><span style="color:rgb(153, 153, 153);">通俗意义上说，该插件想要达到的效果就是，在加载所需js的同时并予以存储，支持combo，并通过合理的方式进行版本的管理以及一对一的更新</span></em></div><div><span style="color:rgb(102, 102, 102);">&nbsp;</span></div><div>&nbsp;</div><div>&nbsp;</div><h2>迎插件而来的新技术方案 loader + localStorage + cookie</h2><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">目前我设想的方式为：</span></div><div>&nbsp;</div><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">1. 没有与之相关的cookie记录 ，判断为用户首次访问：则接下来资源文件会直接输出到页面（google gmail小组测试得出的最佳实践），与此同时设置到本地存储，接下来loader会直接从本地存储里面加载。</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);"></span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">2. 存在含有版本信息的cookie记录，提交服务器与之对比之后发现无改变，则输出页面本身，前端loader自动调用存储在localStorage的资源文件。</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);"></span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">3. 存在含有版本信息的cookie记录，提交服务器与之对比之后发现无改变，但是用户清除了缓存，也就是本地已经不存在相关资源文件存储信息，但此时页面根据cookie记录的信息也已经下来了没有相关脚本的html页面。此时就需要异步有序加载资源文件。loader能保证所有的东西正常有序加载</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);"></span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">4. 存在含有版本信息的cookie记录，提交服务器与之对比之后发现有改变，则接下来资源文件会直接输出到页面，与此同时设置到本地存储，server端会记录每个版本改动了什么js或者css，这边会有各个版本的匹配设置过程。</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);"></span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);">5. 在一切都顺利但是比较极端的情况是，本地存储空间耗尽，此时需要单独发送请求，请求相关资源文件，予以外链支持，这也由loader实现。</span></p><p style="margin-left:40px;"><span style="color:rgb(102, 102, 102);"></span></p><div><strong>这个方案的优点：</strong> <span style="color:rgb(153, 153, 153);">资源文件更新及时成本小，请求适量，通用性强大，可覆盖全网（只要用loader加载便可以通过该插件全面存储资源文件），非临界情况资源文件请求数为0</span></div><div>&nbsp;</div><div><strong>这个方案的缺点：</strong><span style="color:rgb(153, 153, 153);"> 需要描述文件的支持（之后会详细描述该文件的价值），不支持资源文件的跨域（之后会兼容），不支持对主体文件的存储（比如插件本身，之后也会兼容，但这已经在seajs之外了，在这不做详细说明）</span></div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><h3><strong>插件如何使用</strong></h3><div>&nbsp;</div><div><strong>《1》 页面端调用</strong></div><div>&nbsp;<strong>​</strong></div><div>在页面端如下调用seajs</div><div>&nbsp;</div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&lt;script src="http://path/??./libs/seajs/1.2.1/sea.js,./startup.js,./libs/seajs/1.2.0/plugin-base.js,./libs/store/0.1/store.js,./libs/seajs/1.2.0/plugin-storage.js,./index.js"&gt;&lt;/script&gt;</span></div><div>&nbsp;</div><div>须知：</div><div>&nbsp;</div><div><span style="color:rgb(153, 0, 0);">./startup.js 为seajs配置文件，相关文件说明见注释</span></div><div><span style="color:rgb(153, 0, 0);"></span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">seajs.config({</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; alias: {</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; &nbsp; //本地存储封装接口 - 必须！</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; &nbsp; 'store' : 'store/0.1/store.js',</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; &nbsp; //描述文件 - 必须！</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; &nbsp; 'manifest' : 'http://path/to/manifest.js'</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; },</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; preload: [ &nbsp; &nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; &nbsp; //预加载模块 - 必须！ &nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; &nbsp; 'seajs/plugin-storage' &nbsp;&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; ]</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">})</span></div><div>&nbsp;</div><div><span style="color:rgb(153, 0, 0);">./libs/seajs/1.2.1/plugin-base.js &nbsp; seajs基础插件</span></div><div><span style="color:rgb(153, 0, 0);"></span></div><div><span style="color:rgb(153, 0, 0);">./libs/store/0.1/store.js &nbsp; 本地存储封装接口</span></div><div><span style="color:rgb(153, 0, 0);"></span></div><div>&nbsp;</div><div><span style="color:rgb(61, 133, 198);">可以使用同时符合pc和mobile的store封装： https://github.com/seajs/modules/tree/gh-pages/store</span></div><div><span style="color:rgb(61, 133, 198);">&nbsp;</span></div><div><span style="color:rgb(61, 133, 198);">也可以使用我写的store封装，针对移动平台,也更加贴合本插件： https://github.com/pigcan/store&nbsp;</span></div><div>&nbsp;</div><div><span style="color:rgb(153, 0, 0);">./libs/seajs/1.2.1/plugin-storage.js &nbsp;主插件</span></div><div><span style="color:rgb(153, 0, 0);"></span></div><div><span style="color:rgb(153, 0, 0);">./index.js &nbsp;项目启动文件</span></div><div>&nbsp;</div><div>&nbsp;</div><div><strong>《2》manifest设置（描述文件）</strong></div><div>&nbsp;</div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">;define({</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; //#为不需要版本服务但是需要更新 &nbsp; !为需要版本服务同时需要更新但是无需缓存</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "version" : "12" ,</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "combo" : true,</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "http://localhost/test/SEAJS/a/a.js":"0.2" ,</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "http://localhost/test/SEAJS/b/b.js":"0.2" ,</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "http://localhost/test/SEAJS/c/c.js":"0.2" ,</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "http://localhost/test/SEAJS/pigcan/pigcan2.js":"#2",</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "http://localhost/test/SEAJS/index.js":"" ,</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; "http://localhost/test/SEAJS/libs/jquery/1.7.2/jquery-debug.js":"#123"</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">})</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(102, 102, 102);"><span style="background-color:rgb(255, 242, 204);">manifest.js 是一个非常重要的文件，设计思想上主要参考了manifest，但是它非常非常的简单，它一共才三个可用参数</span></span></div><div>&nbsp;</div><p style="margin-left:40px;">1. version — 指明了app资源文件总的版本号，资源文件的更新必须建立在version发生改变的基础上</p><p style="margin-left:40px;">2. combo — 指明了当前是否需要combo服务的支持， true : 为支持 false : 为不支持</p><p style="margin-left:40px;">3. entry — 指明了资源文件的条目</p><div><span style="color:rgb(153, 153, 153);">第一个字段写明了资源文件的地址，注意资源文件无需写明文件夹版本，</span></div><div><span style="color:rgb(153, 153, 153);">第二个字段，书写文件的文件夹版本号，同时附加<span style="background-color:rgb(255, 242, 204);"># </span>和 <span style="background-color:rgb(255, 242, 204);">!</span>两个特殊符号:</span></div><div><span style="color:rgb(153, 153, 153);"></span></div><div><span style="color:rgb(153, 153, 153);"><span style="background-color:rgb(255, 242, 204);"> #</span>为不需要版本服务但是我可以通过修改后续的字符来达到存储资源文件的更新；</span></div><div><span style="color:rgb(153, 153, 153);"> <span style="background-color:rgb(255, 242, 204);">!</span>为需要版本服务同时需要通过版本号来更新但是它无需缓存</span></div><div><span style="color:rgb(153, 153, 153);"></span></div><div><span style="color:rgb(153, 153, 153);">未来该js将自动化生成！ - 该工作徐宁同学风风火火进行中</span></div><div>&nbsp;</div><div><span style="color:rgb(153, 0, 0);">特别强调</span></div><div>&nbsp;</div><div><strong>《3》seajs.use</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 0, 0);">// Right !!!!!</span></div><div>&nbsp;</div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">seajs.use('./a/a.js',function(a){</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; // to do someting</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">})</span></div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div><span style="color:rgb(153, 0, 0);">// Wrong !!!!!</span></div><div>&nbsp;</div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">seajs.use('./a/0.2/a.js',function(a){</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; // to do someting</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">})</span></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);"><span style="background-color:rgb(255, 242, 204);">注意！！！！！！在seajs调用使用一个模块的时候，无需指明你需要哪个版本的模块，指明这个动作要体现在manifest上！</span></span></div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div><strong>插件设计原理</strong></div><div>&nbsp;</div><div><span style="color:rgb(102, 102, 102);">首先先来看seajs正常use一个模块其内部是如何运行的</span></div><div>&nbsp;</div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">seajs.use(‘./a’,function(a){ // to do something })</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">a.js</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">/* a.js */</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">define(function(require, exports, module) {</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp; var b = require(‘./b’) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">})</span></div><div>&nbsp;</div><p style="margin-left:40px;">1. 首先会从<span style="background-color:rgb(255, 242, 204);">seajs.config</span>中读取是否有需要预先加载<span style="background-color:rgb(255, 242, 204);">preload</span>的模块，存在则加载并执行，没有则正常执行流程</p><p style="margin-left:40px;">&nbsp;</p><p style="margin-left:40px;">2. 接下来使用<span style="background-color:rgb(255, 242, 204);">resolve</span>方法，其实质将调用id2Uri方法解析'./a'的绝对路径，即在该过程中[‘./a’] —&gt; [‘http://path/to/a.js’]</p><p style="margin-left:40px;">&nbsp;</p><p style="margin-left:40px;">3. 接下来将执行<span style="background-color:rgb(255, 242, 204);">Module._load(uris,callback)</span>,该方法主要会先判断那些资源文件还没有ready，如果全部资源文件都处于ready状态就执行callback()，在这其中还会做循环依赖的判断，以及对没有加载的js执行加载 ，经过该过程判断'http://path/to/a.js'并未被加载过</p><p style="margin-left:40px;">&nbsp;</p><p style="margin-left:40px;">4. 创建模块a信息<span style="background-color:rgb(255, 242, 204);"> cachedModules('http://path/to/a.js') = new Module('http://path/to/a.js',1)</span></p><p style="margin-left:40px;"><span style="background-color:rgb(255, 242, 204);"></span></p><p style="margin-left:40px;">5. 加载模块a , <span style="background-color:rgb(255, 242, 204);">fetch('http://localhost/test/SEAJS/a.js',onFetched)</span></p><p style="margin-left:40px;"><span style="background-color:rgb(255, 242, 204);"></span></p><p style="margin-left:80px;">1. 首先会根据请求的uri -&gt; http://path/to/a.js 会调用 map 去做一次匹配，如果map中已经存在相关规则，那么替换uri为匹配规则后的uri</p><p style="margin-left:80px;">2. 加载完毕后执行define ，保存meta信息，主要获取deps,和factory，即得到a的依赖b，并保存a的factory</p><p style="margin-left:80px;">3. define执行完后 紧接着 触发onload ， onload事件执行中 得到 meta 信息缺失的 id 并加载b</p><p style="margin-left:80px;">4. ……之上过程再走一遍</p><p style="margin-left:40px;">6. 执行a.factory（compile过程，会逐个对所依赖的模块从内到外执行回调链）,得到a的module.exports</p><div>&nbsp;</div><div><span style="color:rgb(111, 168, 220);">推荐阅读：</span></div><div><span style="color:rgb(111, 168, 220);"> seajs 1.2.0 中文注释版(玄寂) &nbsp;https://github.com/seajs/seajs/issues/305</span></div><div><span style="color:rgb(111, 168, 220);">seajs内部执行过程从seajs.use开始(玄寂) &nbsp;https://github.com/seajs/seajs/issues/308</span></div><div><span style="color:rgb(111, 168, 220);"> 模块状态(玉伯)&nbsp;https://github.com/seajs/seajs/issues/303</span></div><div>&nbsp;</div><div><span style="color:rgb(102, 102, 102);">之上我大概说明了seajs在use过程中所走的流程主线，实际情况更加复杂，涉及兼容性涉及循环依赖等。 但是在插件开发中了解这些其实差不多了 。</span></div><div>&nbsp;</div><div><strong>那plugin-storage到底如何工作的呢?</strong></div><div>&nbsp;</div><p style="margin-left:40px;">1. 为支持文件描述引入<span style="background-color:rgb(255, 242, 204);">manifest.js</span>: 该文件类似于在applicationCache中的manifest文件，但是此manifest并非彼manifest，但是有一点是相通的，他们都有严格的格式要求，尽量扁平化。在该插件中，manifest需要显示指明当前app的version，是否需要combo支持，以及一个个资源条目（链接以及版本），在版本处理上，考虑了灵活性加入了两个特殊符号，<span style="background-color:rgb(255, 242, 204);">#和!</span>，<span style="background-color:rgb(255, 242, 204);">#</span>为不需要版本服务但是我可以通过修改后续的字符来达到存储资源文件的更新； <span style="background-color:rgb(255, 242, 204);">!</span>为需要版本服务同时需要通过版本号来更新但是它无需缓存它。</p><p style="margin-left:80px;">1.1. 进入应用，事先将会加载manifest文件，如果本地存储中不存在该文件，则认为首次进入站点，不遍历产生需更新列表，并将该文件存入manifest中，即为manifest本身（在fetch阶段会判断到底是否需要存储）</p><p style="margin-left:80px;">1.2. 页面再次刷新会重新请求manifest文件</p><p style="margin-left:80px;">1.3. 首先我会判断version是否修改，不修改程序就会认为此次访问不需要任何更新，所有文件全部从本地存储中读取；</p><p style="margin-left:80px;">1.4. 如果version前后发生了改变，则程序就会认为存储的资源文件发生更动，于是会通过比对存在本地的manifest文件和请求而来的manifest循环递归出哪些资源文件需求修正更新，并在接下来的fetch阶段直接从网络下载（单点更新原理来源于此）</p><p style="margin-left:40px;">2. 为支持版本控制扩展<span style="background-color:rgb(255, 242, 204);"> Module._resolve() </span>：重点代码</p><p style="margin-left:80px;">2.1 修正refUri: Module.resolve = function(id, refUri) {return resolve(id, getRealPath(refUri, storedManifest)) ，refUri为参考Uri（就像参照物，因为在seajs中允许在内部使用相对路径），因为我们加入了版本的概念所以在真实文件路径选择中其参照Uri会发生改变，举例：http://path/to/a/a.js 在manifest中我们使用的a.js版本为0.2，那么实际访问的a.js路径为http://path/to/a/0.2/a.js ,如果在a.js中存在依赖b.js，b的版本为0.1，且b.js的目录与目录a平行，即http://path/to/b/0.1/b.js,因为我们已经约定了在js文件中我们不使用具体的版本号，所以在a.js中b.js引用为 var b = require(‘../../b/b.js’)</p><p style="margin-left:120px;">2.1.1 在不修正refUri情况下，针对于b.js其refUri为http://path/to/a/a.js 则最终其访问的js将为 http://path/b/0.2/b.js</p><p style="margin-left:120px;">2.1.2 修正refUri情况下，针对于b.js其refUri为http://path/to/a/0.2/a.js 则最终其访问的js将为 http://path/b/0.2/b.js</p><p style="margin-left:40px;">3. 为支持对文件获取的控制扩展 <span style="background-color:rgb(255, 242, 204);">Module._fetch</span>: 该阶段主要针对js的获取阶段，对uri敏感，如果在js获取过程中，发现该uri条目已经存储在本地存储中了，并且并未出现在更新列表中，并且在版本控制字段中出现了 并未"!“ 即并未指定其不需要存储，那么该js将直接从本地存储中获取反之都将发起网络请求获取。</p><p style="margin-left:80px;">3.1 如果获取阶段，发现uri是一个combo请求类型，具体combo标记符可以由seajs.config中指定。如果是combo请求，那么将会根据manifest中的相关指定拆分combo请求，并且根据需要存储的js拆分成细粒度并存储于本地存储中。</p><p style="margin-left:40px;">4. 为支持对combo请求的控制扩展<span style="background-color:rgb(255, 242, 204);"> Module._load</span>: 该阶段主要有两个过程，假设seajs.use([‘./a.js,./b.js,.c/d.js,./c.css’],function(a,b,c){})</p><p style="margin-left:80px;">4.1 过程1：划分资源 - [[‘http://path/to’, [‘a.js’, ‘b.js’, ‘c/d.js’, ‘a.css’, ‘b.css’]]并且根据资源文件的类型分组[[‘a.js’, ‘c/d.js’, ‘b.js’], [‘a.css’, ‘b.css’]] 注：目前阶段不支持除js和css的资源分组，将会在调用Module._load(uris,callback)时被过滤</p><p style="margin-left:80px;">4.2 过程2：创建map规则 ，即诸如 ‘http://path/to/a.js’ ==&gt; ‘http://path/to/??a.js,c/d.js,b.js’</p><div><strong>对于combo</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">场景</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">seajs.use(['a', 'b'], ...)</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">require.async(['a', 'b'], ...)</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div style="margin-left:40px;"><span style="color:rgb(153, 153, 153);">define('id', ['a', 'b'], ...)</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);">上面这些场景中的<span style="background-color:rgb(255, 242, 204);"> a.js</span> 和<span style="background-color:rgb(255, 242, 204);"> b.js</span> 会合并成：<span style="background-color:rgb(255, 242, 204);">http://example.com/path/to/??a.js,b.js</span> 一起下载。</span></div><div>&nbsp;</div><div><span style="color:rgb(111, 168, 220);">更多详见&nbsp;https://github.com/seajs/seajs/issues/226</span></div><div>&nbsp;</div><div><strong>特殊说明</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">plugin-storage已经自带combo功能，开启与关闭均需要在manifest配置中体现。</span></div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div><strong>致谢</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">该插件基于seajs开发，感谢玉伯在seajs社区的努力。&nbsp;</span></div><div>&nbsp;</div><div><strong>未来</strong></div><div>&nbsp;</div><div><span style="color:rgb(153, 153, 153);">后续工作</span></div><div><span style="color:rgb(153, 153, 153);">&nbsp;</span></div><div><span style="color:rgb(153, 153, 153);">开发不基于seajs的localStorage loader - 目标简约，无需管理依赖&nbsp;</span></div><div>&nbsp;</div><div>&nbsp;</div><div>ps 欢迎大家去github上讨论</div><p class="p1">&nbsp;</p><blockquote style="color:rgb(0, 0, 0);font-family:Georgia, Times New Roman, Bitstream Charter, Times, serif;font-size:13px;line-height:19px;"><p>&nbsp;</p><blockquote><p>&nbsp;</p></blockquote><p>&nbsp;</p></blockquote><p>&nbsp;</p><p>&nbsp;</p>
+      </div>
+      <div class="article-comment">
+  <div class="comment-hd">
+    <span class="comment-hd-title"><span class="count" id="J_comment_counts">4</span> 条评论 </span>
+    &nbsp; | &nbsp; 账号登录：
+
+    <a href="../login_domain.html"><i class="iconfont">&#232;</i>域账号</a> &nbsp;  &nbsp;
+    <a href="../auth/taobao.html"><i class="iconfont">&#440;</i>淘宝账号</a>  &nbsp;  &nbsp;
+    <a href="../auth/weibo.html"><i class="iconfont">&#468;</i>新浪微博</a>
+    <!-- <a href="#"><i class="iconfont">&#338;</i>小二账号</a>
+    <a href="#"><i class="iconfont">&#232;</i>域账号</a> -->
+
+  </div>
+  <div class="comment-lists" id="J_comment-lists">
+      <div class="comment-ls">
+  <a href="../users/291" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tps/i3/T1CDaDXlNuXXXXXXXX-100-100.png_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-10-11 12:32:17</span>
+      </div>
+      <div class="msg-body">
+        kissy 1.3 editor 有 code 插件：<br>
+http://docs.kissyui.com/docs/html/demo/component/editor/auto-combo.html
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/234" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1TPvUXeXcXXaHvGbX.jpeg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-10-11 09:48:42</span>
+      </div>
+      <div class="msg-body">
+        @逸才  确实不适合贴代码  --！ 要是支持markdown多美好 ：）       @白汀 是的 可以使用路径来定义版本号了，要在描述文件里面去说明，可以看下 manifest.js 这一块的设计
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/594" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T1KqL4XchlXXaCwpjX.png_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-10-10 13:36:57</span>
+      </div>
+      <div class="msg-body">
+        中午犯困，看的有点晕。<br>
+貌似用这个插件可以使用路径来定义版本号了，而不只是默认的?参数
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+      <div class="comment-ls">
+  <a href="../users/1" class="avatar avatar-30" title=""><span class="avatar-mask"></span><img alt="嘘..." src="https://img.alicdn.com/tfscom/T19LroXbdbXXb1upjX.jpg_30x30.jpg" /></a>
+  <div class="msg-box msg-arrow-top">
+    <div class="msg-main">
+      <div class="msg-head clearfix">
+        嘘...
+        <span class="msg-date">发表于: 2012-10-10 11:42:05</span>
+      </div>
+      <div class="msg-body">
+        唉，果然不适合贴代码；kissy editor --，wmd ++
+      </div>
+    </div>
+    <span class="msg-arrow msg-skin-arrow"><span></span></span>
+  </div>
+</div>
+  </div>
+</div>
+
+    </div>
+    <div id="J_atAside_449" class="article-aside J_atAside" pid="449">
+      <span class="sprite arrow J_arrow"></span>
+      <div class="article-aside-container J_atAside_container" >
+        <div class="article-aside-container-sub">
+          <div class="attachment-bd hidden J_attachmentsBox">
+            <ul>
+            </ul>
+              <p>木有附件</p>
+          </div>
+          <div class="comment-bd J_commentsBox">
+            loading...
+          </div>
+          <div class="likes-bd J_likesBox hidden">
+            loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      <div class="friendly-link">
+    <h2>友情链接</h2>
+    <div class="friendly-link-list">
+        <div class="banners_edit" data-editable="false" data-tkey="friendly_link_list"><ul>            <li><a href="http://ued.taobao.com/" target="_blank">淘宝UED</a> </li>            <li><a href="http://www.aliued.com/" target="_blank">Alibaba国际站UED</a> </li>            <li><a href="http://china.aliued.com/" target="_blank">Alibaba中文站UED</a> </li>            <li><a href="http://ued.alipay.com/" target="_blank"> 支付宝UED</a> </li>            <li><a href="http://ued.tmall.com/" target="_blank">天猫UED</a> </li></ul><ul> 	<li><a href="http://ur.alibaba-inc.com">阿里用户体验中心</a> </li>	 <li><a href="http://www.uisdc.com" target="_blank">优秀网页设计</a> </li><li><a href="http://www.bootcss.com" target="_blank">Bootstrap中文网</a> </li>            <li><a href="http://udc.weibo.com/" target="_blank">微博UDC</a> </li>            <li><a href="http://ued.sogou.com/" target="_blank">搜狗UED</a> </li>            <li><a href="http://mued.sohu.com/" target="_blank">搜狐UED</a> </li>            <li><a href="http://cdc.tencent.com/" target="_blank">腾讯CDC</a> </li></ul><ul>	    	<li><a href="http://ucdchina.com/" target="_blank">CDC大社区</a> </li>                        <li><a href="http://www.boxui.com/" target="_blank">UI盒子</a> </li>            <li><a href="http://www.trans4fun.com/" target="_blank">前端翻译小站 </a> </li>               </ul></div>
+    </div>
+    <div class="abouts">
+        <ul>
+            <li><a href="../feeds/posts.rss"><i class="iconfont">&#483</i>RSS订阅</a> </li>
+            <li><a href="http://weibo.com/alimamamux" target="_blank"><i class="iconfont">&#468</i>微博关注</a> </li>
+            <li><a href="../index.html"><i class="iconfont">&#349</i>联系我们</a> </li>
+        </ul>
+    </div>
+</div>
+<footer class="footer">
+<p>&copy;阿里妈妈MUX, All rights reserved.</p>
+<p>转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：sangxing#taobao.com</p>
+</footer>
+
+    </div>
+  </div>
+    <script src="https://assets.alicdn.com/??s/kissy/1.2.0/kissy-min.js" type="text/javascript"></script>
+  <script src="../assets/site/work-3078ff5dba6752b818be2c96bebf33d4.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27817535-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
