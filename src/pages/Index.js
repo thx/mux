@@ -117,7 +117,7 @@ function CreativeLab() {
 function About() {
   const jobList = [
     {
-      img: 'https://img.alicdn.com/tfs/TB1ygbKvFP7gK0jSZFjXXc5aXXa-404-404.png',
+      img: 'https://img.alicdn.com/tfs/TB1qUnOvHY1gK0jSZTEXXXDQVXa-404-404.png',
       title: '用户体验设计',
     },
     {
@@ -125,7 +125,7 @@ function About() {
       title: '前端技术',
     },
     {
-      img: 'https://img.alicdn.com/tfs/TB1qUnOvHY1gK0jSZTEXXXDQVXa-404-404.png',
+      img: 'https://img.alicdn.com/tfs/TB1ygbKvFP7gK0jSZFjXXc5aXXa-404-404.png',
       title: '行业趋势及用户研究',
     },
   ]
