@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: transparent;
+  position: absolute;
+  min-width: 1024px;
+  max-width: 1440px;
+  font-size: 18px;
+  justify-content: space-between;
+  .logo {
+    margin-top: 29px;
+    margin-left: 109px;
+    .logoImg {
+      width: 68px;
+      margin-right: 16px;
+      vertical-align: middle;
+    }
+    .logoText {
+      font-family: PingFangSC-Medium;
+      color: #333333;
+      vertical-align: middle;
+    }
+  }
+  .nav {
+    display: flex;
+    margin-top: 50px;
+    margin-right: 113px;
+    .navItem {
+      margin-right: 20px;
+      list-style: none;
+      .navLink {
+        padding: 8px;
+        display: block;
+      }
+      .active {
+        border-bottom: 1px solid #333333;
+        color: #333333;
+      }
+    }
+
+  }
+}

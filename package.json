@@ -1,0 +1,56 @@
+{
+  "name": "mux",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "craco-cli start",
+    "build": "craco-cli build",
+    "daily": "craco-cli daily",
+    "publish": "craco-cli publish",
+    "test": "craco-cli test",
+    "bundle-report": "cross-env GENERATE_BUNDLE_REPORT=true npm run build",
+    "dll:prod": "cross-env NODE_ENV=production craco-cli dll",
+    "dll:dev": "cross-env NODE_ENV=development craco-cli dll",
+    "lint": "eslint --cache --ext .js,.jsx ./src"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "rc-trigger": "^4.0.0-rc.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@ali/craco-cli": "^1.0.16",
+    "@ali/customize-cra-extra": "^1.0.6",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.6.0",
+    "http-proxy-middleware": "^0.19.1",
+    "husky": "^1.3.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
