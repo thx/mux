@@ -10,7 +10,7 @@ function A(props) {
   return props.href ? (
     <a {...props}>{props.children}</a>
   ) : (
-    <span className={styles.notAllowed}>{props.children}</span>
+    <span className={cx(styles.notAllowed, props.className)}>{props.children}</span>
   )
 }
 
@@ -18,8 +18,8 @@ export default function ProductCard(props) {
   const appContext = useContext(AppContext)
   const isSonner = appContext.netEnv === 'outter' && props.netEnv === 'sooner'
   return (
-    <Card className={cx(props.className, styles.productCard)}>
-      <A href={isSonner ? '' : props.link} target="_blank" rel="noopener noreferrer">
+    <A href={isSonner ? '' : props.link} target="_blank" rel="noopener noreferrer" className={styles.productCardWrapper}>
+      <Card className={cx(props.className, styles.productCard)}>
         <div className={styles.imageWrapper}>
           <img src={props.img} alt={props.title} />
         </div>
@@ -36,7 +36,7 @@ export default function ProductCard(props) {
             )}
           </div>
         </div>
-      </A>
-    </Card>
+      </Card>
+    </A>
   )
 }

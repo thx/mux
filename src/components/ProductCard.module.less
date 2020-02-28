@@ -1,13 +1,14 @@
+.productCardWrapper {
+  &.notAllowed {
+    cursor: not-allowed;
+  }
+}
 .productCard {
   height: 277px;
   overflow: hidden;
   padding: 0 23px;
   padding-bottom: 23px;
   width: 220px;
-
-  .notAllowed {
-    cursor: not-allowed;
-  }
 
   &:hover {
     .imageWrapper {
@@ -59,7 +60,7 @@
       transform: translateY(50px);
       font-family: PingFangSC-Medium;
       font-size: 12px;
-      color: #FF5000;
+      color: #ff5000;
       .text {
         margin-right: 5px;
       }
