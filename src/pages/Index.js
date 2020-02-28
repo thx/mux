@@ -56,7 +56,8 @@ function Gallery() {
                 .filter(
                   p =>
                     appContext.netEnv === 'inner' ||
-                    (appContext.netEnv === 'outter' && p.netEnv === 'outter'),
+                    (appContext.netEnv === 'outter' &&
+                      (p.netEnv === 'outter' || p.netEnv === 'sooner')),
                 )
                 .map((p, index) => (
                   <ProductCard
@@ -66,6 +67,7 @@ function Gallery() {
                     desc={p.desc}
                     img={p.img}
                     link={p.link}
+                    netEnv={p.netEnv}
                   ></ProductCard>
                 ))}
             </div>

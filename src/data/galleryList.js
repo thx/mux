@@ -3,7 +3,7 @@ export const GalleryList = [
     title: '创意能力',
     list: [
       {
-        img: 'https://img.alicdn.com/tfs/TB1js18vF67gK0jSZPfXXahhFXa-256-258.png',
+        img: 'https://img.alicdn.com/tfs/TB1PYI2wxz1gK0jSZSgXXavwpXa-260-260.png',
         title: '创意中心',
         desc: '全方位的营销创意平台，支持图文、视频再到落地页的素材及智能化创意',
         link: 'https://chuangyi.taobao.com/',
@@ -17,7 +17,7 @@ export const GalleryList = [
         netEnv: 'outter',
       },
       {
-        img: 'https://img.alicdn.com/tfs/TB1js18vF67gK0jSZPfXXahhFXa-256-258.png',
+        img: 'https://img.alicdn.com/tfs/TB1X030wEY1gK0jSZFMXXaWcVXa-260-260.png',
         title: '短视频工具',
         desc: '强大的视频模板库和编辑器，推广新手也可轻松制作',
         link: 'https://chuangyi.taobao.com/pages/video',
@@ -40,7 +40,7 @@ export const GalleryList = [
         title: 'Intergral Design',
         desc: '为商业而设计，商业环境的设计解决方案和组件规范',
         link: 'http://integral.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB1puLMvQT2gK0jSZFkXXcIQFXa-256-256.png',
@@ -54,7 +54,7 @@ export const GalleryList = [
         title: 'Marquex',
         desc: '健壮、高效的全链路React解决方案',
         link: 'http://marquex.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB1LhLHvNz1gK0jSZSgXXavwpXa-260-260.png',
