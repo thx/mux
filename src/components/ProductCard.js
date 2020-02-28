@@ -3,22 +3,16 @@ import cx from 'classnames'
 import styles from './ProductCard.module.less'
 import Card from './Card'
 import { ReactComponent as RightArrow } from '../image/right.svg'
+import A from './A'
 
 import { AppContext } from '../AppContext'
 
-function A(props) {
-  return props.href ? (
-    <a {...props}>{props.children}</a>
-  ) : (
-    <span className={cx(styles.notAllowed, props.className)}>{props.children}</span>
-  )
-}
 
 export default function ProductCard(props) {
   const appContext = useContext(AppContext)
   const isSonner = appContext.netEnv === 'outter' && props.netEnv === 'sooner'
   return (
-    <A href={isSonner ? '' : props.link} target="_blank" rel="noopener noreferrer" className={styles.productCardWrapper}>
+    <A href={isSonner ? '' : props.link} target="_blank" rel="noopener noreferrer">
       <Card className={cx(props.className, styles.productCard)}>
         <div className={styles.imageWrapper}>
           <img src={props.img} alt={props.title} />
