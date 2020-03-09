@@ -120,7 +120,7 @@ function About() {
   const jobList = [
     {
       img: 'https://img.alicdn.com/tfs/TB1qUnOvHY1gK0jSZTEXXXDQVXa-404-404.png',
-      title: '用户体验设计',
+      title: '设计',
     },
     {
       img: 'https://img.alicdn.com/tfs/TB11K2XvF67gK0jSZPfXXahhFXa-404-404.png',
