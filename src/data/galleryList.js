@@ -28,7 +28,7 @@ export const GalleryList = [
         title: 'ALP',
         desc: '落地页搭建平台，能够帮助开发和运营快速搭建广告页面',
         link: 'https://alp.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
     ],
   },
@@ -110,7 +110,7 @@ export const GalleryList = [
         title: 'Chartpark',
         desc: '丰富的图表组件，助力项目数据可视化开发与管理',
         link: 'http://chartpark.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB1cX6NvHj1gK0jSZFuXXcrHpXa-260-260.png',
