@@ -75,7 +75,7 @@ export const GalleryList = [
         title: 'AIP',
         desc: '可视化接口编排平台',
         link: 'https://alp.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB1F4fGvLb2gK0jSZK9XXaEgFXa-260-260.png',
@@ -89,7 +89,7 @@ export const GalleryList = [
         title: 'Lalaline',
         desc: '简单、高效、清晰的项目资源管理工具',
         link: 'https://lalaline.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB12nnHvUT1gK0jSZFrXXcNCXXa-260-260.png',
@@ -103,7 +103,7 @@ export const GalleryList = [
         title: 'Chartx',
         desc: '数据可视化解决方案，配合辅助组件，赋能数据表达',
         link: 'https://thx.github.io/chartx',
-        netEnv: 'outter',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB1ypvHvQL0gK0jSZFtXXXQCXXa-256-256.png',
@@ -117,7 +117,7 @@ export const GalleryList = [
         title: 'Fether',
         desc: 'Node.js FaaS 平台',
         link: 'https://fether.alibaba-inc.com/',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
       {
         img: 'https://img.alicdn.com/tfs/TB1quLMvQT2gK0jSZFkXXcIQFXa-256-256.png',
@@ -131,7 +131,7 @@ export const GalleryList = [
         title: 'GoGoCode',
         desc: '最简单的代码转换分析工具',
         link: 'http://gitlab.alibaba-inc.com/mm/gogocode',
-        netEnv: 'inner',
+        netEnv: 'sooner',
       },
     ],
   },
