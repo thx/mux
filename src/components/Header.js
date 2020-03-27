@@ -38,7 +38,12 @@ export default function Header() {
             }}
             popupTransitionName="rc-trigger-popup-zoom"
           >
-            <NavLink to="/">能力</NavLink>
+            <a
+              href="#"
+              className={styles.navLink}
+            >
+              能力
+            </a>
           </Trigger>
         </li>
         <li className={styles.navItem}>

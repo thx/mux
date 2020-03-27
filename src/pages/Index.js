@@ -6,6 +6,7 @@ import { AppContext } from '../AppContext'
 
 import ProductCard from '../components/ProductCard'
 import CreativeCard from '../components/CreativeCard'
+import Clock from '../components/Clock'
 
 import { GalleryList } from '../data/galleryList'
 
@@ -28,6 +29,7 @@ function Cover() {
         User Experience
       </div>
       <div className={styles.subtitle}>营销研究和用户体验中心</div>
+      <Clock className={styles.clock}/>
     </div>
   )
 }

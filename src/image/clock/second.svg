@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1px" height="36px" viewBox="0 0 1 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Hand</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="83" y="-34" width="1440" height="846"></rect>
+        <filter x="-0.5%" y="-0.6%" width="101.0%" height="101.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M451.362455,781 C749.187029,781 951.235694,781 1135.97706,781 C1288.3755,765.987931 1428.74846,371.464391 892.854798,423.357548 C777.342632,281.194361 376.064767,49.7455669 193.955423,371.464391 C170.34533,410.13034 95.5084415,708.426146 451.362455,781 Z" id="path-3"></path>
+        <pattern id="pattern-4" patternUnits="objectBoundingBox" y="-46.4160839%" height="146.416084%" width="100%">
+            <use xlink:href="#image-5" transform="scale(2.15429688,2.15429688)"></use>
+        </pattern>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-905.000000, -306.000000)">
+            <g id="Clock" transform="translate(757.000000, 281.000000)" fill="#FC592B">
+                <polygon id="Hand" points="148.5 25 148.90455 54.1275974 149 61 148 61"></polygon>
+                <polygon id="Hand" transform="translate(145.762417, 43.063193) rotate(8.000000) translate(-145.762417, -43.063193) " points="142.981016 25.2160327 147.504242 60.9101524 148.543819 60.7640494"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

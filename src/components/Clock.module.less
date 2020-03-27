@@ -1,0 +1,43 @@
+.clock {
+  width: 88px;
+  height: 88px;
+  background-image: url(https://img.alicdn.com/tfs/TB1lIwdzQT2gK0jSZPcXXcKkpXa-500-500.png);
+  background-repeat: no-repeat;
+  background-size: 88px 88px;
+  @keyframes tiktok {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .dot {
+    position: absolute;
+    top: 41px;
+    left: 41px;
+    background: #C5CFD6;
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+  }
+  .hour {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 2px);
+    transform-origin: center bottom;
+  }
+  .minute {
+    position: absolute;
+    top: 15px;
+    left: 43px;
+    transform-origin: center bottom;
+  }
+  .second {
+    position: absolute;
+    top: calc(50% - 36px);
+    left: 44px;
+    transform-origin: center bottom;
+  }
+}

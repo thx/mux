@@ -22,6 +22,8 @@ module.exports = {
     "no-mixed-operators": 0,
     "no-cond-assign": 0,
     'strict': 0,
-    "eqeqeq": 0
+    "eqeqeq": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "no-script-url": 0
   }
 };
