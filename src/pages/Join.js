@@ -42,12 +42,24 @@ function Cover() {
 }
 
 function Hire() {
-  function A(props) {
-    if (props.link.indexOf('mailto:') === 0) {
-      return <a href={props.link} className={props.className}>{props.children}</a>
+  function Apply(props) {
+    if(!props.link) return <></>
+    if (props.link.indexOf('img.alicdn.com') > -1) {
+      return (
+        <div className={styles.applyImg}>
+          <img src={props.link} alt="扫码投递"></img>
+          <p>校招扫码投递</p>
+        </div>
+      )
+    } else if (props.link.indexOf('mailto:') === 0) {
+      return (
+        <a href={props.link} className={styles.btn}>
+          {props.children}
+        </a>
+      )
     } else {
       return (
-        <a href={props.link} className={props.className} target="_blank" rel="noopener noreferrer">
+        <a href={props.link} className={styles.btn} target="_blank" rel="noopener noreferrer">
           {props.children}
         </a>
       )
@@ -55,19 +67,14 @@ function Hire() {
   }
   return (
     <div className={styles.hire}>
-      {JobList.map(cat => (
+      {JobList.map((cat) => (
         <div className={styles.cat} key={cat.title}>
           <div className={styles.catTitle}>{cat.title}</div>
-          {cat.list.map(job => (
+          {cat.list.map((job) => (
             <div className={styles.job} key={job.jobTitle}>
               <div className={styles.jobTitle}>{job.jobTitle}</div>
               <div className={styles.desc} dangerouslySetInnerHTML={{ __html: job.desc }}></div>
-              <A
-                link={job.applyLink}
-                className={styles.btn}
-              >
-                投递简历
-              </A>
+              <Apply link={job.applyLink}>投递简历</Apply>
             </div>
           ))}
         </div>
