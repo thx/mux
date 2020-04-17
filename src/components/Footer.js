@@ -63,6 +63,11 @@ const friendLinks = [
     link: 'https://thx.github.io/',
     netEnv: 'outter',
   },
+  {
+    name: '优设教程网',
+    link: 'https://uiiiuiii.com/',
+    netEnv: 'outter'
+  }
 ]
 
 export default function Footer() {
