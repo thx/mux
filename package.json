@@ -1,6 +1,6 @@
 {
   "name": "mux",
-  "version": "20200408.183335.39",
+  "version": "20210127.215910.63",
   "private": true,
   "scripts": {
     "start": "craco-cli start",
