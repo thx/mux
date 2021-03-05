@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styles from './ProductPopover.module.less'
 import { GalleryList } from '../data/galleryList'
 import A from './A'
+import { ReactComponent as TagNew } from '../image/tag-new.svg'
 import { AppContext } from '../AppContext'
 
 export default function ProductPopover(props) {
@@ -35,6 +36,7 @@ export default function ProductPopover(props) {
                   rel="noopener noreferrer"
                 >
                   {product.title}
+                  {product.isNew && <TagNew className={styles.tagNew}/>}
                 </A>
               ))}
           </div>

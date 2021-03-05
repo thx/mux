@@ -36,6 +36,14 @@ export const GalleryList = [
     title: '体验与开发能力',
     list: [
       {
+        img: 'https://img.alicdn.com/tfs/TB17V2NvHj1gK0jSZFuXXcrHpXa-256-256.png',
+        title: 'GoGoCode',
+        desc: '最简单的代码转换分析工具',
+        link: 'https://gogocode.io',
+        netEnv: 'outter',
+        isNew: true,
+      },
+      {
         img: 'https://img.alicdn.com/tfs/TB1M1bIvHr1gK0jSZFDXXb9yVXa-256-256.png',
         title: 'Intergral Design',
         desc: '为商业而设计，商业环境的设计解决方案和组件规范',
@@ -124,13 +132,6 @@ export const GalleryList = [
         title: 'Fether',
         desc: 'Node.js FaaS 平台',
         link: 'https://fether.alibaba-inc.com/',
-        netEnv: 'sooner',
-      },
-      {
-        img: 'https://img.alicdn.com/tfs/TB17V2NvHj1gK0jSZFuXXcrHpXa-256-256.png',
-        title: 'GoGoCode',
-        desc: '最简单的代码转换分析工具',
-        link: 'http://gitlab.alibaba-inc.com/mm/gogocode',
         netEnv: 'sooner',
       },
       {

@@ -70,6 +70,7 @@ function Gallery() {
                     img={p.img}
                     link={p.link}
                     netEnv={p.netEnv}
+                    isNew={p.isNew}
                   ></ProductCard>
                 ))}
             </div>

@@ -1,63 +1,76 @@
-.productCard {
-  height: 277px;
-  overflow: hidden;
-  padding: 0 23px;
-  padding-bottom: 23px;
-  width: 220px;
+.productCardWrapper {
+  position: relative;
+  display: inline-block;
 
-  &:hover {
+  .tagNew {
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    width: 60px;
+    height: 44.5px;
+  }
+
+  .productCard {
+    height: 277px;
+    overflow: hidden;
+    padding: 0 23px;
+    padding-bottom: 23px;
+    width: 220px;
+
+    &:hover {
+      .imageWrapper {
+        img {
+          transform: translate(-58px, -15px) scale(0.828);
+        }
+      }
+      .sub {
+        transform: translateY(-30px);
+        .link {
+          transform: translateY(26px);
+        }
+      }
+    }
+
     .imageWrapper {
-      img {
-        transform: translate(-58px, -15px) scale(0.828);
-      }
-    }
-    .sub {
-      transform: translateY(-30px);
-      .link {
-        transform: translateY(26px);
-      }
-    }
-  }
-
-  .imageWrapper {
-    height: 128px;
-    padding: 23px 0;
-    text-align: center;
-    transition: all 0.5s;
-    img {
-      transition: all 0.5s;
-      width: 128px;
       height: 128px;
+      padding: 23px 0;
+      text-align: center;
+      transition: all 0.5s;
+      img {
+        transition: all 0.5s;
+        width: 128px;
+        height: 128px;
+      }
     }
-  }
 
-  .sub {
-    font-family: PingFangSC-Regular;
-    transition: all 0.5s;
-    .title {
-      font-size: 20px;
-      color: #333333;
-      margin-bottom: 20px;
-    }
-    .desc {
-      font-size: 12px;
-      color: #666666;
-      overflow: hidden;
-      min-height: 32px;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-    }
-    .link {
-      transition: all 0.6s;
-      font-weight: 600;
-      transform: translateY(50px);
-      font-family: PingFangSC-Medium;
-      font-size: 12px;
-      color: #ff5000;
-      .text {
-        margin-right: 5px;
+    .sub {
+      font-family: PingFangSC-Regular;
+      transition: all 0.5s;
+      .title {
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+      .desc {
+        font-size: 12px;
+        color: #666666;
+        overflow: hidden;
+        min-height: 32px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .link {
+        transition: all 0.6s;
+        font-weight: 600;
+        transform: translateY(50px);
+        font-family: PingFangSC-Medium;
+        font-size: 12px;
+        color: #ff5000;
+        .text {
+          margin-right: 5px;
+        }
       }
     }
   }
